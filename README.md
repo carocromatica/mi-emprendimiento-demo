@@ -1,6 +1,6 @@
-# [Nombre del emprendimiento] — Sitio web
+# Brote — Sitio web
 
-[Descripción del emprendimiento en una o dos líneas.]
+Brote es una tienda de jardinería en Santiago que ayuda a quienes están empezando con plantas a mantenerlas vivas y sanas.
 Incluye landing, blog y prototipo de tienda online.
 
 > Proyecto de la **Evaluación Parcial 02 — Sitios Web y Landing Pages (DUOC)**.
@@ -30,8 +30,8 @@ Incluye landing, blog y prototipo de tienda online.
 
 ## Sitio publicado
 
-[Aquí va el link de GitHub Pages en la Fase 3]
+Pendiente: se publica en GitHub Pages en la Fase 3.
 
 ## Uso de IA
 
-- **[Herramienta]:** para qué la usé y qué ajusté yo.
+- **Claude (Claude Code):** este es un proyecto de demostración para probar el enunciado, las guías y las plantillas. Claude redactó los documentos a partir de las guías de `evaluacion/`, usando Brote como emprendimiento ficticio.
