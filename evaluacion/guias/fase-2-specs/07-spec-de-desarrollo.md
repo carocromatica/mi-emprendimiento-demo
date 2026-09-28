@@ -38,7 +38,7 @@ Para cada página, define qué etiquetas HTML5 la estructuran: `header`, `nav`, 
 
 - **Variables en `:root`** con todas las foundations de tu spec de diseño. Así, si cambias un color, cambia en todo el sitio.
 - **Nombres de clases** claros y consistentes, en inglés o en español, pero siempre en el mismo idioma (`.product-card`, `.btn-primary`).
-- **Breakpoints**: en qué anchos cambia el diseño.
+- **Breakpoints**: en qué anchos cambia el diseño. Usa los mismos de la tabla responsive de tu spec de diseño.
 - **Archivos**: un solo `styles.css` o varios (`base.css`, `components.css`...).
 
 ### 5. Criterios de aceptación
@@ -166,7 +166,7 @@ brote-jardineria/
 - [ ] Los botones tienen estado hover.
 
 **Responsive**
-- [ ] En mobile la tienda muestra 1 producto por fila; en desktop, 3.
+- [ ] En mobile la tienda muestra 1 producto por fila; en tablet, 2; en desktop, 3.
 - [ ] No hay scroll horizontal en 375 px de ancho.
 
 **Accesibilidad y publicación**

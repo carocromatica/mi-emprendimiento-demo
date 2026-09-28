@@ -37,7 +37,13 @@ En vez de "Lorem ipsum", escribe los títulos y textos reales: "Sustrato para pl
 
 En Whimsical puedes unir con flechas los botones con la pantalla a la que llevan. Recorre tu user flow sobre los wireframes: si en algún paso no hay un botón para avanzar, falta algo.
 
-### 6. (Recomendado) Haz también la versión mobile
+### 6. Revisa que estén todas tus funcionalidades
+
+Abre tu tabla de funcionalidades y, para cada una **imprescindible y deseable**, busca en qué wireframe ocurre. Si una funcionalidad no aparece en ninguna pantalla, falta un componente o una sección. Por ejemplo, en Brote los kits por tipo de planta necesitan una fila en la tienda, y el diagnóstico por síntoma, un bloque en el blog.
+
+Las funcionalidades de prioridad **futuro** no necesitan aparecer.
+
+### 7. (Recomendado) Haz también la versión mobile
 
 Tu proto-persona probablemente compra desde el celular. Haz la versión mobile al menos de la landing y la tienda: te va a ayudar a definir el comportamiento responsive en la spec.
 
@@ -75,11 +81,13 @@ Y las 6 pantallas de Brote, más la versión mobile de la landing y la tienda. L
 - **Pantallas que no siguen el user flow**: botones que no llevan a ninguna parte o pasos sin botón.
 - **Inventar componentes nuevos en cada pantalla** en vez de reutilizar los calcados.
 - **Faltan pantallas**: son 6.
+- **Funcionalidades sin lugar**: están en la tabla de funcionalidades, pero no aparecen en ninguna pantalla.
 
 ## Checklist
 
 - [ ] Wireframes de landing, blog, artículo, tienda, ficha de producto y carrito
 - [ ] Construidos con los componentes calcados
 - [ ] Los botones y enlaces permiten recorrer el user flow
+- [ ] Cada funcionalidad imprescindible y deseable aparece en algún wireframe
 - [ ] Textos reales o cercanos a los reales
 - [ ] Link del tablero abierto, pegado en la spec de diseño

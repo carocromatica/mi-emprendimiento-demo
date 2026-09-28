@@ -76,11 +76,13 @@ Componentes en orden:
 2. Título "Tienda" y buscador "Buscar productos o plantas".
 3. Chips de categoría: Todos, Sustratos, Fertilizantes, Plagas y
    enfermedades, Herramientas, Insumos.
-4. Columna de filtros a la izquierda (tipo de planta, precio) y grilla de
+4. Fila de 3 kits por tipo de planta (interior, suculentas, huerto), cada
+   uno con lo que incluye, precio y ahorro.
+5. Columna de filtros a la izquierda (tipo de planta, precio) y grilla de
    3 columnas de product cards.
-5. Product card: imagen cuadrada, etiqueta de tipo de planta, nombre
+6. Product card: imagen cuadrada, etiqueta de tipo de planta, nombre
    (máx. 2 líneas), precio siempre visible, botón "Ver producto".
-6. Footer con enlaces a preguntas frecuentes, términos, privacidad y redes.
+7. Footer con enlaces a preguntas frecuentes, términos, privacidad y redes.
 ```
 
 ## Errores comunes

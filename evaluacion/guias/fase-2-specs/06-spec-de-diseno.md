@@ -60,7 +60,7 @@ Para cada una de las 6 pantallas, lista los componentes en orden, de arriba haci
 
 ### 4. Responsive
 
-Describe qué cambia en mobile: cuántas columnas, qué se oculta, qué se transforma (por ejemplo, el menú pasa a ser un botón de hamburguesa, los filtros se abren en un panel).
+Describe qué cambia en **mobile** y en **tablet** respecto de desktop: cuántas columnas, qué se oculta, qué se transforma (por ejemplo, el menú pasa a ser un botón de hamburguesa, los filtros se abren en un panel). Usa los mismos anchos que vas a definir como breakpoints en la spec de desarrollo: mobile hasta 767 px, tablet desde 768 px y desktop desde 1024 px.
 
 ## Ejemplo (fragmento)
 
@@ -112,17 +112,18 @@ Escala: 4 · 8 · 16 · 24 · 32 · 48 · 64 px.
 1. Navbar
 2. Título "Tienda" + buscador
 3. Chips de categoría (Todos, Sustratos, Fertilizantes, Plagas y enfermedades, Herramientas, Insumos)
-4. Columna de filtros (tipo de planta, precio) + grilla de product cards
-5. Footer
+4. Fila de kits por tipo de planta (Kit interior, Kit suculentas, Kit huerto)
+5. Columna de filtros (tipo de planta, precio) + grilla de product cards
+6. Footer
 
 ## 4. Responsive
 
-| Elemento | Desktop | Mobile |
-|---|---|---|
-| Navbar | Enlaces visibles | Menú hamburguesa; carrito siempre visible |
-| Grilla de productos | 3 columnas | 1 columna |
-| Filtros | Columna a la izquierda | Botón "Filtrar" que abre un panel |
-| Hero | Texto e imagen lado a lado | Imagen arriba, texto abajo |
+| Elemento | Desktop (desde 1024 px) | Tablet (768 a 1023 px) | Mobile (hasta 767 px) |
+|---|---|---|---|
+| Navbar | Enlaces visibles | Enlaces visibles | Menú hamburguesa; carrito siempre visible |
+| Grilla de productos | 3 columnas | 2 columnas | 1 columna |
+| Filtros | Columna a la izquierda | Botón "Filtrar" que abre un panel | Botón "Filtrar" que abre un panel |
+| Hero | Texto e imagen lado a lado | Texto e imagen lado a lado | Imagen arriba, texto abajo |
 ```
 
 Así se ven la product card, los botones, los chips y los campos de texto de Brote con sus foundations y estados. Fíjate en la regla del nombre: si ocupa más de 2 líneas, termina en "…".
@@ -156,5 +157,5 @@ Revisa todo lo que proponga: tú decides las reglas.
 - [ ] Foundations: colores, tipografías, espaciados, bordes, radios, sombras
 - [ ] Cada componente con contenido, reglas, estilo y estados
 - [ ] Componentes de las 6 pantallas, con link a los wireframes
-- [ ] Tabla de comportamiento responsive
+- [ ] Tabla de comportamiento responsive para desktop, tablet y mobile
 - [ ] Todas las reglas son concretas y verificables
