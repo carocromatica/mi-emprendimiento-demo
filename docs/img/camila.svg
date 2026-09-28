@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Avatar ilustrado de Camila">
+  <rect width="240" height="240" rx="120" fill="#EDE4D3"/>
+  <!-- planta al fondo -->
+  <path d="M186 150 C 170 110, 196 86, 214 96 C 206 116, 200 132, 186 150 Z" fill="#8DB08F"/>
+  <path d="M190 160 C 206 128, 232 128, 236 142 C 222 150, 208 158, 190 160 Z" fill="#A9C6A2"/>
+  <path d="M178 196 L 204 196 L 199 222 L 183 222 Z" fill="#C0643A"/>
+  <path d="M191 196 C 190 180, 188 166, 186 152" stroke="#3F5E4A" stroke-width="3" fill="none"/>
+  <!-- cuerpo -->
+  <path d="M52 240 C 52 186, 84 166, 120 166 C 156 166, 188 186, 188 240 Z" fill="#3F5E4A"/>
+  <path d="M104 166 L 120 190 L 136 166 Z" fill="#FBF8F2"/>
+  <!-- pelo -->
+  <path d="M74 112 C 70 58, 108 40, 128 44 C 162 48, 176 80, 170 120 C 168 146, 172 160, 180 170 C 150 176, 132 160, 126 146 L 110 146 C 104 160, 86 176, 62 170 C 72 158, 76 140, 74 112 Z" fill="#2B2B28"/>
+  <!-- cara -->
+  <ellipse cx="120" cy="112" rx="34" ry="40" fill="#E8B993"/>
+  <path d="M86 102 C 92 74, 120 64, 150 80 C 146 92, 120 96, 86 102 Z" fill="#2B2B28"/>
+  <circle cx="107" cy="114" r="3.5" fill="#2B2B28"/>
+  <circle cx="133" cy="114" r="3.5" fill="#2B2B28"/>
+  <path d="M110 132 C 116 137, 124 137, 130 132" stroke="#2B2B28" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- cuello -->
+  <rect x="110" y="146" width="20" height="20" fill="#E8B993"/>
+</svg>
