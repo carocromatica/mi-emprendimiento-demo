@@ -106,7 +106,7 @@ Evita mensajes como `cambios`, `update` o `asdf`: restan puntos en el criterio d
 
 Si durante el proyecto se corrige algo del enunciado o de las guías, en tu fork aparecerá el aviso *"This branch is X commits behind"*. Para traer los cambios, haz clic en **Sync fork → Update branch** y luego `git pull` en tu computador.
 
-Como tú no modificas la carpeta `evaluacion/`, la actualización no va a chocar con tu trabajo.
+Las actualizaciones solo cambian la carpeta `evaluacion/`, que tú no modificas, así que no deberían chocar con tu trabajo. Si GitHub te avisa que hay **conflictos**, no descartes tus commits: avísale a tu profesora antes de hacer nada.
 
 ## Errores comunes
 
