@@ -29,6 +29,8 @@ Inicio (landing)
 
 Las categorías no son páginas nuevas: son la misma página de tienda o de blog, filtrada.
 
+![Mapa de sitio de Brote](img/mapa-de-sitio.png)
+
 ### Dónde ocurre cada funcionalidad
 
 | Funcionalidad | Página |
@@ -77,6 +79,10 @@ Google ("hojas amarillas monstera")
    └── No → [Vuelve al artículo y deja su correo para recibir la guía de cuidados]
           → Fin: lead captado
 ```
+
+### Diagrama de los dos flujos
+
+![User flows de Camila](img/user-flows.png)
 
 ## Categorías
 
