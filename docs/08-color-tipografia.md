@@ -10,7 +10,8 @@
 |---|---|---|---|
 | Principal | Verde salvia oscuro | #3F5E4A | Botones principales, enlaces, logo |
 | Secundario | Arena | #EDE4D3 | Fondos de secciones, tarjetas |
-| Acento | Terracota (color greda) | #C0643A | Etiquetas de oferta, contador del carrito |
+| Acento | Terracota (color greda) | #C0643A | Contador del carrito, íconos y detalles |
+| Acento oscuro | Terracota oscuro | #A9552F | Fondo de etiquetas con texto blanco (ofertas, ahorro) |
 | Fondo | Crema | #FBF8F2 | Fondo general |
 | Texto | Carbón | #2B2B28 | Textos y títulos |
 | Texto suave | Gris cálido | #6B675E | Bajadas, textos secundarios |
@@ -29,9 +30,11 @@ Verificado con el [verificador de contraste de WebAIM](https://webaim.org/resour
 | Texto #2B2B28 sobre secundario #EDE4D3 | 11.3:1 | AA ✅ |
 | Texto blanco sobre principal #3F5E4A | 7.2:1 | AA ✅ |
 | Texto suave #6B675E sobre fondo #FBF8F2 | 5.3:1 | AA ✅ |
-| Terracota #C0643A sobre fondo #FBF8F2 | 3.9:1 | Solo texto grande o íconos ⚠️ |
+| Terracota #C0643A sobre fondo #FBF8F2 | 3.9:1 | Solo íconos y detalles ⚠️ |
+| Texto blanco sobre terracota #C0643A | 4.1:1 | No alcanza AA ❌ |
+| Texto blanco sobre terracota oscuro #A9552F | 5.2:1 | AA ✅ |
 
-El terracota no alcanza 4.5:1, así que solo se usa en etiquetas con texto grande en negrita o en íconos, nunca en párrafos.
+El terracota no alcanza 4.5:1 ni como texto ni como fondo de texto blanco (lo detectó el linter de `DESIGN.md`). Por eso se agregó el terracota oscuro para las etiquetas con texto, y el terracota original queda para íconos y detalles.
 
 ## Tipografía
 

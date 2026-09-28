@@ -2,6 +2,27 @@
 
 > Guía: [Spec de desarrollo](../evaluacion/guias/fase-2-specs/07-spec-de-desarrollo.md)
 
+## Insumos
+
+Esta spec se entrega a un asistente de código (Claude Code o Antigravity) junto con:
+
+- **[`DESIGN.md`](../DESIGN.md):** de ahí salen todos los valores de color, tipografía, espaciado y radios.
+- **El código exportado de Stitch** de cada pantalla: se usa como referencia visual y de estructura, pero el resultado final debe cumplir esta spec (HTML + CSS propio, sin Tailwind ni otras librerías).
+
+### Prompt para el asistente
+
+```text
+Lee DESIGN.md, docs/09-spec-diseno.md y docs/10-spec-desarrollo.md.
+En la carpeta stitch/ está el código exportado de Stitch de cada pantalla.
+Construye el sitio siguiendo exactamente docs/10-spec-desarrollo.md:
+solo HTML y CSS, la estructura de archivos y la navegación definidas,
+las variables de :root con los valores de DESIGN.md y la estructura
+semántica de cada página. Usa el código de Stitch solo como referencia
+visual. Empieza por css/styles.css y index.html, y después sigue el
+orden del flujo de compra. Al terminar, revisa cada criterio de
+aceptación y dime cuáles se cumplen y cuáles no.
+```
+
 ## 1. Estructura de archivos
 
 ```text
@@ -24,6 +45,8 @@ mi-emprendimiento-demo/
 │   ├── productos/
 │   ├── blog/
 │   └── marca/                  ← logo e imágenes del hero
+├── stitch/                     ← código exportado de Stitch (solo referencia)
+├── DESIGN.md
 ├── docs/
 └── evaluacion/
 ```
@@ -139,7 +162,7 @@ Cada página tiene un solo `<h1>`.
 
 ## 4. Organización del CSS
 
-Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, componentes, páginas, responsive.
+Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, componentes, páginas, responsive. Los valores de las variables son los tokens de `DESIGN.md`; si se cambia un valor, se cambia primero en `DESIGN.md`.
 
 ```css
 :root {
@@ -149,10 +172,12 @@ Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, comp
   --color-primary-active: #2A4033;
   --color-secondary: #EDE4D3;
   --color-accent: #C0643A;
+  --color-accent-strong: #A9552F;
   --color-bg: #FBF8F2;
   --color-text: #2B2B28;
   --color-text-soft: #6B675E;
   --color-border: #E2D9C6;
+  --color-border-strong: #D9CFBB;
   --color-disabled: #CFCAC0;
   --color-success: #2F7A4A;
   --color-error: #B23A2E;
@@ -200,7 +225,8 @@ Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, comp
 - [ ] El artículo tiene producto recomendado, botones para compartir, comentarios y formulario de correo.
 
 **Diseño**
-- [ ] Todos los colores del CSS salen de las variables de `:root`.
+- [ ] Todos los colores del CSS salen de las variables de `:root`, y sus valores coinciden con `DESIGN.md`.
+- [ ] El sitio no usa Tailwind ni el CSS exportado de Stitch.
 - [ ] Los títulos usan Fraunces y los textos Inter.
 - [ ] El precio es visible en todas las product cards.
 - [ ] El nombre de los productos ocupa máximo 2 líneas.
