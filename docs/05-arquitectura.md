@@ -9,7 +9,7 @@ Inicio (landing)
 ├── Tienda
 │   ├── Categoría: Sustratos
 │   ├── Categoría: Fertilizantes
-│   ├── Categoría: Fitosanitarios
+│   ├── Categoría: Plagas y enfermedades
 │   ├── Categoría: Herramientas
 │   ├── Categoría: Insumos
 │   ├── Ficha de producto
@@ -88,9 +88,11 @@ Google ("hojas amarillas monstera")
 |---|---|
 | Sustratos | Tierra de hoja, sustrato para plantas de interior, sustrato para suculentas, perlita |
 | Fertilizantes | Humus de lombriz, fertilizante líquido para plantas de interior, fertilizante para floración |
-| Fitosanitarios | Aceite de neem, jabón potásico, fungicida de cobre |
+| Plagas y enfermedades | Aceite de neem, jabón potásico, fungicida de cobre |
 | Herramientas | Tijera de podar, pala de mano, regadera, pulverizador |
 | Insumos | Maceteros de greda, platos para macetero, guías de plantas impresas, tutores |
+
+La categoría que vende fitosanitarios se llama **Plagas y enfermedades**: a Camila le frustran los nombres técnicos y busca por el problema que tiene, no por el tipo de producto.
 
 Filtros adicionales de la tienda: **tipo de planta** (interior, exterior, suculentas y cactus, huerto) y **precio**.
 
