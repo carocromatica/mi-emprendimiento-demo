@@ -6,12 +6,13 @@
 
 Si la spec de diseño dice **cómo se ve** el sitio, la **spec de desarrollo** dice **cómo se construye**: qué archivos existen, cómo se enlazan, qué etiquetas HTML se usan y cómo se organiza el CSS.
 
-Es el documento que le vas a entregar a tu asistente de IA (Antigravity, Claude Code) en la Fase 3 para pasar el diseño a código. También es tu lista de control: sus **criterios de aceptación** son los que vas a revisar en el QA.
+Es el documento que le vas a entregar a tu asistente de IA (Antigravity, Claude Code) en la Fase 3, junto con tu `DESIGN.md` y el código exportado de Stitch, para pasar el diseño a código. Stitch diseña pantallas, pero no arma un sitio con tus archivos y tus enlaces: eso lo decide esta spec. También es tu lista de control: sus **criterios de aceptación** son los que vas a revisar en el QA.
 
 ## Qué entregas
 
-Un documento con 5 partes:
+Un documento con 6 partes:
 
+0. **Insumos y prompt para el asistente**: qué archivos recibe y qué debe hacer con ellos.
 1. **Estructura de archivos y carpetas.**
 2. **Páginas y navegación**: qué páginas HTML existen y cómo se enlazan.
 3. **Estructura semántica** de cada página.
@@ -20,9 +21,24 @@ Un documento con 5 partes:
 
 ## Paso a paso
 
+### 0. Insumos y prompt para el asistente
+
+Al comienzo de la spec, deja escrito el prompt que le vas a dar a tu asistente en la Fase 3. Así, tu spec queda lista para usar:
+
+```text
+Lee DESIGN.md, docs/09-spec-diseno.md y docs/10-spec-desarrollo.md.
+En la carpeta stitch/ está el código exportado de Stitch de cada pantalla.
+Construye el sitio siguiendo exactamente docs/10-spec-desarrollo.md:
+solo HTML y CSS, la estructura de archivos y la navegación definidas,
+las variables de :root con los valores de DESIGN.md y la estructura
+semántica de cada página. Usa el código de Stitch solo como referencia
+visual. Al terminar, revisa cada criterio de aceptación y dime cuáles
+se cumplen y cuáles no.
+```
+
 ### 1. Estructura de archivos
 
-Define cómo se organiza tu proyecto. Usa nombres en minúsculas, sin espacios ni tildes.
+Define cómo se organiza tu proyecto. Incluye `DESIGN.md` en la raíz y una carpeta `stitch/` para guardar el código que exportes de Stitch (solo como referencia). Usa nombres en minúsculas, sin espacios ni tildes.
 
 ### 2. Páginas y navegación
 
@@ -36,9 +52,9 @@ Para cada página, define qué etiquetas HTML5 la estructuran: `header`, `nav`, 
 
 ### 4. Organización del CSS
 
-- **Variables en `:root`** con todas las foundations de tu spec de diseño. Así, si cambias un color, cambia en todo el sitio.
+- **Variables en `:root`** con los tokens de tu `DESIGN.md` (colores, tipografía, espaciados, radios). Así, si cambias un color, cambia en todo el sitio. Si un valor cambia, se cambia primero en el `DESIGN.md`.
 - **Nombres de clases** claros y consistentes, en inglés o en español, pero siempre en el mismo idioma (`.product-card`, `.btn-primary`).
-- **Breakpoints**: en qué anchos cambia el diseño. Usa los mismos de la tabla responsive de tu spec de diseño.
+- **Breakpoints**: en qué anchos cambia el diseño. Usa los mismos de la sección `## Layout` de tu `DESIGN.md`.
 - **Archivos**: un solo `styles.css` o varios (`base.css`, `components.css`...).
 
 ### 5. Criterios de aceptación
@@ -47,7 +63,7 @@ Son afirmaciones que se pueden responder con **sí o no**. Salen de:
 
 - Tus **funcionalidades** (¿se puede hacer lo que prometí?).
 - Tu **user flow** (¿se puede recorrer?).
-- Tu **spec de diseño** (¿se cumplen las reglas?).
+- Tu **DESIGN.md** (¿se cumplen las reglas de los componentes?).
 - Las **buenas prácticas** (accesibilidad, responsive, publicación).
 
 ## Ejemplo (fragmento)
@@ -70,11 +86,13 @@ brote-jardineria/
 ├── terminos.html
 ├── privacidad.html
 ├── 404.html
+├── DESIGN.md
 ├── css/
 │   └── styles.css
 ├── img/
 │   ├── productos/
 │   └── blog/
+├── stitch/             ← código exportado de Stitch (solo referencia)
 └── docs/
 ```
 
@@ -115,6 +133,7 @@ brote-jardineria/
   --color-primary: #3F5E4A;
   --color-secondary: #EDE4D3;
   --color-accent: #C0643A;
+  --color-accent-strong: #A9552F;
   --color-bg: #FBF8F2;
   --color-text: #2B2B28;
   --color-text-soft: #6B675E;
@@ -161,7 +180,8 @@ brote-jardineria/
 - [ ] El artículo tiene botones para compartir y una sección de comentarios.
 
 **Diseño**
-- [ ] Todos los colores del CSS salen de las variables de `:root`.
+- [ ] Todos los colores del CSS salen de las variables de `:root`, con los valores de `DESIGN.md`.
+- [ ] El sitio usa solo HTML y CSS propios (sin Tailwind ni el CSS exportado de Stitch).
 - [ ] El precio es visible en todas las product cards.
 - [ ] Los botones tienen estado hover.
 
@@ -178,13 +198,15 @@ brote-jardineria/
 ## Cómo usar la IA
 
 ```text
-Te comparto mi mapa de sitio [pega], mi user flow [pega], mis
-funcionalidades [pega] y mi spec de diseño [pega]. El sitio se
-construye solo con HTML y CSS. Escribe una spec de desarrollo con:
-estructura de archivos, tabla de navegación entre páginas, estructura
-semántica de cada página, variables CSS en :root con mis foundations,
-convención de clases, breakpoints y una lista de criterios de
-aceptación verificables (que se respondan con sí o no).
+Lee docs/05-arquitectura.md (mapa de sitio y user flows),
+docs/03-funcionalidades.md, DESIGN.md y docs/09-spec-diseno.md.
+El sitio se construye solo con HTML y CSS. Escribe en
+docs/10-spec-desarrollo.md una spec de desarrollo con: el prompt para
+el asistente de la Fase 3, estructura de archivos, tabla de navegación
+entre páginas, estructura semántica de cada página, variables CSS en
+:root con los tokens de DESIGN.md, convención de clases, breakpoints y
+una lista de criterios de aceptación verificables (que se respondan
+con sí o no).
 ```
 
 ## Errores comunes
@@ -196,8 +218,9 @@ aceptación verificables (que se respondan con sí o no).
 
 ## Checklist
 
-- [ ] Estructura de archivos y carpetas
+- [ ] Prompt para el asistente de la Fase 3
+- [ ] Estructura de archivos y carpetas, con `DESIGN.md` y `stitch/`
 - [ ] Tabla de navegación entre páginas, coherente con el user flow
 - [ ] Estructura semántica de cada página
-- [ ] Variables CSS con las foundations, convención de clases y breakpoints
+- [ ] Variables CSS con los tokens de `DESIGN.md`, convención de clases y breakpoints
 - [ ] Criterios de aceptación verificables que cubren funcionalidades, flujos, diseño, responsive y accesibilidad

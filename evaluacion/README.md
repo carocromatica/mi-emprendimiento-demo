@@ -88,6 +88,7 @@ Los documentos se escriben en **Markdown**, igual que las specs que vimos en el 
 ```text
 mi-emprendimiento/             ← puedes renombrar tu fork con el nombre de tu emprendimiento
 ├── README.md                  ← portada del proyecto + declaración de uso de IA
+├── DESIGN.md                  ← design system para Stitch (Fase 2)
 ├── evaluacion/                ← este enunciado y las guías (no lo modifiques)
 ├── docs/
 │   ├── 01-brief.md            ┐
@@ -109,7 +110,8 @@ mi-emprendimiento/             ← puedes renombrar tu fork con el nombre de tu 
 ├── producto.html              │
 ├── carrito.html               │
 ├── css/                       │
-└── img/                       ┘
+├── img/                       │
+└── stitch/                    ┘ ← código exportado de Stitch (referencia)
 ```
 
 ### Uso de IA
@@ -262,26 +264,28 @@ El martes 6 y miércoles 7 de octubre revisamos en clases tu Fase 1. Aplica la r
 - **Tipografía:** una para títulos y otra para textos (Google Fonts), con la escala de tamaños (h1, h2, h3, párrafo, botón).
 - Justifica la paleta y la tipografía a partir del moodboard.
 
-### 6. Spec de diseño — `docs/09-spec-diseno.md`
+### 6. Spec de diseño — `DESIGN.md` + `docs/09-spec-diseno.md`
 
-Aquí construyes tu **mini design system**: las reglas compartidas que hacen que todas las pantallas se vean y se comporten igual. Describe:
+La spec de diseño se escribe para que en la Fase 3 la subas a **Google Stitch** y genere tus pantallas siguiendo tus reglas. Tiene dos partes:
 
-- **Foundations:** los colores y tipografías que definiste en el paso anterior, más los espaciados, bordes, radios y sombras.
-- **Componentes:** los que calcaste en Whimsical, ahora con tu estilo, su contenido, reglas y estados (normal, hover, active, disabled). Ejemplo: *"La product card muestra imagen, nombre (máx. 2 líneas), precio siempre visible y botón 'Ver producto'."*
-- Qué componentes lleva cada pantalla (según tus wireframes): landing, blog, artículo, tienda, ficha de producto y carrito.
-- Comportamiento responsive: qué cambia entre desktop y mobile.
+- **`DESIGN.md`** (en la raíz): tu **mini design system** en el formato [DESIGN.md](https://github.com/google-labs-code/design.md), que Stitch importa directamente.
+  - **Tokens:** colores, tipografía, radios, espaciados y componentes con sus estados (normal, hover, active, disabled).
+  - **Secciones:** Overview, Colors, Typography, Layout (incluye el responsive para mobile, tablet y desktop), Elevation & Depth, Shapes, Components (con las reglas de cada uno, por ejemplo *"el precio siempre es visible; el nombre ocupa máximo 2 líneas"*) y Do's and Don'ts.
+  - **Validación:** debe pasar el validador oficial (`npx @google/design.md lint DESIGN.md`) sin errores.
+- **`docs/09-spec-diseno.md`**: el link a tus wireframes y **un prompt para Stitch por cada pantalla** (landing, tienda, ficha de producto, carrito, blog y artículo), con el objetivo de la pantalla, sus componentes en orden (con los nombres de tu `DESIGN.md`) y textos reales, más un prompt para la versión mobile.
 
 ### 7. Spec de desarrollo — `docs/10-spec-desarrollo.md`
 
 Describe **cómo se construye**:
 
+- El **prompt para tu asistente de IA** de la Fase 3, con los archivos que debe leer (`DESIGN.md`, tus specs y el código exportado de Stitch).
 - Estructura de archivos y carpetas del proyecto.
 - Páginas HTML que existirán y cómo se enlazan (según tu mapa de sitio).
 - Estructura semántica de cada página (`header`, `nav`, `main`, `section`, `article`, `footer`).
-- Organización del CSS: variables (`:root`) con los tokens de tu design system, nombres de clases, breakpoints.
+- Organización del CSS: variables (`:root`) con los tokens de tu `DESIGN.md`, nombres de clases, breakpoints.
 - Criterios de aceptación: una lista verificable de lo que debe cumplir el sitio para darse por terminado (por ejemplo: "Todas las imágenes tienen `alt`", "En mobile la tienda muestra 1 producto por fila").
 
-Esta spec es la que le entregarás a Stitch y a tu asistente de IA en la Fase 3: mientras más clara, mejor resultado.
+Esta spec es la que le entregarás a tu asistente de IA en la Fase 3, junto con tu `DESIGN.md` y el código exportado de Stitch: mientras más clara, mejor resultado.
 
 ### Rúbrica Fase 2
 
@@ -292,8 +296,8 @@ Esta spec es la que le entregarás a Stitch y a tu asistente de IA en la Fase 3:
 | **Calco de componentes en Whimsical** | 4 | Mínimo 6 componentes calcados que cubren landing, blog y tienda, con referencia y necesidad que resuelven. | Menos de 6 componentes, o sin referencia o justificación. | Ausente o sin link a Whimsical. |
 | **Wireframes** | 4 | Wireframes de las 6 pantallas, construidos con los componentes calcados y coherentes con el user flow. | Faltan pantallas o no siguen el user flow. | Ausentes o sin link. |
 | **Paleta y tipografía** | 5 | Paleta completa con HEX y usos, contraste verificado, tipografías con escala y justificación desde el moodboard. | Paleta o tipografía incompleta, sin verificar contraste o sin justificar. | Ausente. |
-| **Spec de diseño** | 9 | Foundations, componentes con reglas y estados, composición de cada pantalla y comportamiento responsive. | Spec incompleta o con reglas vagas ("que se vea moderno"). | Ausente o es solo un prompt. |
-| **Spec de desarrollo** | 9 | Estructura de archivos, páginas y enlaces, semántica, organización del CSS con variables y criterios de aceptación verificables. | Faltan criterios de aceptación o partes de la estructura. | Ausente. |
+| **Spec de diseño** | 9 | `DESIGN.md` válido (0 errores en el validador) con tokens, componentes con estados, reglas concretas y responsive; `09-spec-diseno.md` con un prompt por pantalla que usa los componentes del `DESIGN.md`. | `DESIGN.md` con errores, sin estados o con reglas vagas ("que se vea moderno"), o faltan prompts de pantallas. | Ausente, o es un solo prompt sin design system. |
+| **Spec de desarrollo** | 9 | Prompt para el asistente, estructura de archivos, páginas y enlaces, semántica, CSS con variables tomadas del `DESIGN.md` y criterios de aceptación verificables. | Faltan criterios de aceptación o partes de la estructura. | Ausente. |
 | **Total** | **40** | | | |
 
 ---
@@ -304,11 +308,11 @@ Esta spec es la que le entregarás a Stitch y a tu asistente de IA en la Fase 3:
 
 ### 1. Prototipo en Stitch
 
-Genera en **Google Stitch** las pantallas del sitio a partir de tus specs: landing, blog, artículo, tienda, ficha de producto y carrito. Pega el link y capturas en `docs/11-qa.md`.
+Importa tu `DESIGN.md` en un proyecto de **Google Stitch** y genera las pantallas con los prompts de `docs/09-spec-diseno.md`: landing, tienda, ficha de producto, carrito, blog y artículo, en desktop y mobile. Exporta el código de cada pantalla a la carpeta `stitch/` y pega el link y las capturas en `docs/11-qa.md`.
 
 ### 2. Implementación en código
 
-- Pasa el prototipo a **HTML + CSS** (puedes exportar desde Stitch y ajustar con tu asistente de IA usando tu spec de desarrollo).
+- Pasa el prototipo a **HTML + CSS** con tu asistente de IA, usando el prompt de tu spec de desarrollo, tu `DESIGN.md` y el código exportado de Stitch como referencia.
 - Mínimo: landing, blog con listado y un artículo, tienda con catálogo, ficha de producto y carrito (el carrito puede ser visual, sin lógica de compra).
 - El CSS usa las variables de tu design system y el sitio se adapta a mobile.
 
@@ -333,7 +337,7 @@ En `docs/11-qa.md`, recorre tu sitio siguiendo los **user flows** de la Fase 1 y
 
 | Criterio | Pts | Logro completo | Logro parcial (50 %) | Logro insuficiente (0) |
 |---|---|---|---|---|
-| **Prototipo en Stitch** | 5 | Todas las pantallas generadas a partir de las specs, con link y capturas. | Faltan pantallas o no se reconoce la spec en el resultado. | Sin prototipo. |
+| **Prototipo en Stitch** | 5 | Todas las pantallas generadas con el `DESIGN.md` importado y los prompts de la spec, con link y capturas. | Faltan pantallas o no se reconoce la spec en el resultado. | Sin prototipo. |
 | **Implementación en HTML + CSS** | 9 | Landing, blog, artículo, tienda, ficha y carrito navegables entre sí, con HTML semántico y fieles a la spec y al design system. | Faltan páginas, hay enlaces rotos o se aleja de la spec. | Sin código o no corresponde a las specs. |
 | **Responsive** | 3 | Se adapta a mobile y desktop sin scroll horizontal ni contenido cortado, según lo definido en la spec. | Problemas de adaptación en algunas páginas. | No se adapta a mobile. |
 | **QA spec vs. resultado** | 5 | Revisa todos los criterios de aceptación y documenta las correcciones realizadas. | Revisión parcial o sin correcciones documentadas. | Sin QA. |
@@ -358,12 +362,13 @@ En `docs/11-qa.md`, recorre tu sitio siguiendo los **user flows** de la Fase 1 y
 
 - [ ] Fase 1 corregida según la retroalimentación
 - [ ] `06-moodboard.md` a `10-spec-desarrollo.md` completos
+- [ ] `DESIGN.md` en la raíz, validado sin errores
 - [ ] Links de Whimsical (moodboard, componentes y wireframes) abiertos para cualquiera con el enlace
 - [ ] Commit subido
 
 **Fase 3 — miércoles 14 de octubre, 23:59**
 
-- [ ] Link y capturas de Stitch en `11-qa.md`
+- [ ] `DESIGN.md` importado en Stitch, código exportado en `stitch/` y link y capturas en `11-qa.md`
 - [ ] Sitio en HTML + CSS con landing, blog y tienda
 - [ ] Tabla de QA completa y reflexión de coherencia
 - [ ] Sitio publicado en GitHub Pages y link en el `README.md`

@@ -18,6 +18,7 @@ Incluye landing, blog y prototipo de tienda online.
 
 **Fase 2 — Construcción de specs**
 
+- [Design system (DESIGN.md)](DESIGN.md)
 - [Moodboard](docs/06-moodboard.md)
 - [Componentes](docs/07-componentes.md)
 - [Color y tipografía](docs/08-color-tipografia.md)

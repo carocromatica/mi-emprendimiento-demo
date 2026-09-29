@@ -6,96 +6,94 @@
 
 [Google Stitch](https://stitch.withgoogle.com) es una herramienta de IA que genera pantallas de alta fidelidad (con colores, tipografías e imágenes) a partir de instrucciones de texto o imágenes.
 
-En este proyecto, Stitch es una **herramienta de ejecución**: las decisiones ya las tomaste tú en tus specs. Stitch solo las visualiza. Por eso, la calidad del prototipo depende de la calidad de tus specs.
+En este proyecto, Stitch es una **herramienta de ejecución**: las decisiones ya las tomaste tú en tus specs. Si tu spec de diseño está bien hecha, este paso es casi mecánico:
+
+- **`DESIGN.md`** → lo importas en Stitch y todas las pantallas siguen tu design system.
+- **`docs/09-spec-diseno.md`** → pegas un prompt por pantalla.
 
 > La IA no debería tomar todas las decisiones por nosotros.
 
 ## Qué entregas
 
-- Las 6 pantallas generadas en Stitch: **landing, blog, artículo, tienda, ficha de producto y carrito**.
+- Las 6 pantallas generadas en Stitch: **landing, tienda, ficha de producto, carrito, blog y artículo**, en desktop y mobile.
 - En `docs/11-qa.md`: el link del proyecto de Stitch y una captura de cada pantalla (en `docs/img/`).
+- En la carpeta `stitch/` de tu repositorio: el código que exportes de cada pantalla, como referencia para la implementación.
 
 ## Paso a paso
 
-### 1. Prepara el contexto
+### 1. Crea el proyecto e importa tu DESIGN.md
 
-Stitch no conoce tu proyecto. Antes de pedir pantallas, arma un texto de contexto con lo esencial de tus specs:
-
-- Qué es el emprendimiento y para quién es el sitio (brief y proto-persona, en 2 o 3 líneas).
-- Paleta con HEX y tipografías.
-- Foundations: espaciados, radios, sombras.
-- Estilo en palabras clave (de tu moodboard).
+1. Entra a [stitch.withgoogle.com](https://stitch.withgoogle.com) con tu cuenta de Google y crea un proyecto **web**.
+2. Importa tu `DESIGN.md` como **design system del proyecto** (en las opciones de design system del proyecto). Si la interfaz no ofrece importar un archivo, abre tu `DESIGN.md`, copia todo su contenido y pégalo donde Stitch te pida el design system.
+3. Revisa que Stitch haya tomado tus colores y tipografías antes de generar pantallas.
 
 ### 2. Genera una pantalla a la vez
 
-Parte por la **landing**, que define el estilo del resto. Para cada pantalla, dale a Stitch:
+Copia desde `docs/09-spec-diseno.md` el prompt de la **landing** y pégalo en Stitch. Si Stitch permite adjuntar imágenes, sube también la captura de tu **wireframe** de esa pantalla: le ayuda a respetar tu estructura.
 
-- El contexto del paso anterior.
-- Los componentes de esa pantalla, en orden (de tu spec de diseño).
-- Las reglas de los componentes más importantes.
-- Si es para desktop o mobile.
+Sigue con el resto, **una por prompt**: tienda, ficha de producto, carrito, blog y artículo. Hazlas en el **mismo proyecto** para que compartan el design system.
 
-Si Stitch permite adjuntar imágenes, sube la captura de tu **wireframe** de esa pantalla: le ayuda a respetar tu estructura.
+### 3. Pide la versión mobile
 
-### 3. Revisa contra tu spec y corrige
+Cuando tengas las 6 pantallas en desktop, usa el prompt mobile de tu spec en cada una.
 
-Stitch se va a equivocar o va a inventar cosas. Compara cada pantalla con tu spec y pídele correcciones puntuales:
+### 4. Revisa contra tu spec y corrige
+
+Stitch se puede equivocar o inventar cosas. Compara cada pantalla con tu `DESIGN.md` y tu spec, y pídele correcciones puntuales:
 
 ```text
-Cambia el color del botón a #3F5E4A. El precio tiene que verse en
-todas las tarjetas. Quita la sección de testimonios: no está en mi spec.
+Usa button-primary en "Agregar al carrito". El precio tiene que verse
+en todas las card-product. Quita la sección de testimonios: no está
+en mi spec.
 ```
 
-Anota lo que tuviste que corregir: te sirve para el QA.
+Anota lo que tuviste que corregir: te sirve para el QA. Si corriges muchas veces lo mismo, el problema probablemente está en tu spec: mejórala y vuelve a generar.
 
-### 4. Mantén la consistencia
+### 5. Exporta el código y guarda las capturas
 
-Cuando la landing te guste, genera las demás pantallas **en el mismo proyecto** y pide que mantengan el mismo estilo. Revisa que la navbar y el footer sean iguales en todas.
-
-### 5. Guarda el link y las capturas
-
-Toma una captura de cada pantalla y guárdala en `docs/img/`. Copia el link del proyecto.
+1. Exporta el código de cada pantalla y guárdalo en una carpeta `stitch/` de tu repositorio (por ejemplo, `stitch/tienda.html`). No es tu sitio final: es la referencia que usará tu asistente en el siguiente paso.
+2. Toma una captura de cada pantalla y guárdala en `docs/img/`.
+3. Copia el link del proyecto de Stitch en `docs/11-qa.md`.
 
 ## Ejemplo de prompt
 
-```text
-Contexto: Brote es una tienda chilena de jardinería: sustratos,
-fertilizantes, productos contra plagas, herramientas y maceteros.
-El sitio es para Camila, 29 años, que compra desde el celular, quiere
-una casa bonita con plantas y necesita que la guíen para que no se le mueran.
-Estilo: natural, fresco, cálido, simple, vivo. Mucho espacio en blanco.
-Colores: principal #3F5E4A, secundario #EDE4D3, acento #C0643A,
-fondo #FBF8F2, texto #2B2B28.
-Tipografías: Fraunces para títulos, Inter para textos.
-Radios: 8 px en tarjetas, botones tipo píldora.
+Este es el prompt de la tienda de Brote, tal como está en su `docs/09-spec-diseno.md`. No repite colores ni tipografías: esos ya vienen del `DESIGN.md` importado.
 
-Pantalla: Tienda, versión desktop.
-Componentes en orden:
-1. Navbar: logo, enlaces Tienda / Blog / Nosotros / Contacto, buscador,
-   ícono de carrito con contador.
-2. Título "Tienda" y buscador "Buscar productos o plantas".
-3. Chips de categoría: Todos, Sustratos, Fertilizantes, Plagas y
+```text
+Pantalla: Tienda de Brote, versión desktop. Usa el design system del proyecto.
+Objetivo: que Camila encuentre rápido lo que necesita su planta.
+Componentes, de arriba hacia abajo:
+1. Navbar.
+2. h1 "Tienda" y buscador con el texto "Buscar productos o plantas…".
+3. Chips de categoría: Todos, Sustratos (activo), Fertilizantes, Plagas y
    enfermedades, Herramientas, Insumos.
-4. Fila de 3 kits por tipo de planta (interior, suculentas, huerto), cada
-   uno con lo que incluye, precio y ahorro.
-5. Columna de filtros a la izquierda (tipo de planta, precio) y grilla de
-   3 columnas de product cards.
-6. Product card: imagen cuadrada, etiqueta de tipo de planta, nombre
-   (máx. 2 líneas), precio siempre visible, botón "Ver producto".
-7. Footer con enlaces a preguntas frecuentes, términos, privacidad y redes.
+4. Fila de 3 card-kit: Kit plantas de interior (ahorra $2.500), Kit
+   suculentas (ahorra $1.900), Kit huerto (ahorra $3.200).
+5. A la izquierda, columna de filtros de 240px: "Tipo de planta" (Interior
+   marcado, Exterior, Suculentas y cactus, Huerto) y rango de precio.
+   A la derecha, grilla de 3 columnas con 6 card-product:
+   Sustrato para plantas de interior 10 L $7.990 (Interior),
+   Tierra de hoja 20 L $5.490 (Interior), Sustrato para suculentas 5 L
+   $6.490 (Suculentas), Perlita 5 L $4.990, Humus de lombriz 5 L $6.990,
+   Sustrato para huerto 20 L $8.490 (Huerto).
+6. Footer.
 ```
 
 ## Errores comunes
 
+- **No importar el `DESIGN.md`** y generar pantallas con los colores y tipografías que Stitch quiera.
 - **Prompts de una línea** ("hazme una tienda de jardinería bonita"): Stitch decide todo y el resultado no tiene nada que ver con tus specs.
+- **Todo el sitio en un solo prompt**: Stitch funciona mejor con una pantalla a la vez.
 - **Aceptar lo primero que genera** sin compararlo con la spec.
-- **Pantallas con estilos distintos entre sí.**
+- **Pantallas en proyectos distintos**, con estilos distintos entre sí.
 - **Componentes inventados** por Stitch que no están en tu spec.
 
 ## Checklist
 
-- [ ] 6 pantallas generadas en el mismo proyecto
-- [ ] Colores, tipografías y componentes de tus specs
+- [ ] `DESIGN.md` importado en el proyecto de Stitch
+- [ ] 6 pantallas generadas con los prompts de `docs/09-spec-diseno.md`, en desktop y mobile
+- [ ] Colores, tipografías y componentes de tu `DESIGN.md`
 - [ ] Navbar y footer iguales en todas
+- [ ] Código exportado en `stitch/`
 - [ ] Link del proyecto y capturas en `docs/11-qa.md`
 - [ ] Correcciones anotadas para el QA

@@ -44,7 +44,7 @@ No copies el ejemplo: úsalo para entender qué se espera y aplícalo a tu empre
 3. [Calco de componentes en Whimsical](fase-2-specs/03-calco-de-componentes.md)
 4. [Wireframes](fase-2-specs/04-wireframes.md)
 5. [Paleta de color y tipografía](fase-2-specs/05-color-y-tipografia.md)
-6. [Spec de diseño](fase-2-specs/06-spec-de-diseno.md)
+6. [Spec de diseño](fase-2-specs/06-spec-de-diseno.md): `DESIGN.md` + prompts de pantallas para Stitch
 7. [Spec de desarrollo](fase-2-specs/07-spec-de-desarrollo.md)
 
 ### Fase 3 — Implementación de specs y paso a producción (entrega: miércoles 14 de octubre, 23:59)

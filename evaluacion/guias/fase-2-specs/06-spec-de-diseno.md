@@ -1,12 +1,17 @@
 # Spec de diseño
 
-**Archivo:** `docs/09-spec-diseno.md` · **Fase 2** · **9 pts**
+**Archivos:** `DESIGN.md` (en la raíz) + `docs/09-spec-diseno.md` · **Fase 2** · **9 pts**
 
 ## Qué es y para qué sirve
 
 Una **spec** (especificación) describe qué hay que construir y cuáles son sus reglas, con tanta claridad que otra persona (o una IA) podría construirlo sin preguntarte nada.
 
-La **spec de diseño** describe **cómo se ve y cómo se comporta** tu sitio. Aquí construyes tu **mini design system**: las reglas compartidas que hacen que todas las pantallas se vean como parte del mismo sitio. En la Fase 3 se la vas a entregar a Stitch, así que mientras más clara, mejor resultado.
+La **spec de diseño** describe **cómo se ve y cómo se comporta** tu sitio. La vas a escribir para que en la Fase 3 la subas a **Google Stitch** y genere tus pantallas siguiendo tus reglas, sin improvisar. Por eso tiene dos partes:
+
+| Archivo | Qué contiene | Qué se hace con él en la Fase 3 |
+|---|---|---|
+| **`DESIGN.md`** | Tu **design system**: colores, tipografía, espaciados, formas y componentes con sus estados y reglas | Se **importa** en Stitch como design system del proyecto |
+| **`docs/09-spec-diseno.md`** | Tus **6 pantallas**, escritas como prompts: qué componentes lleva cada una, en qué orden y con qué textos | Se **pega** en Stitch, una pantalla a la vez |
 
 No queremos esto:
 
@@ -14,148 +19,304 @@ No queremos esto:
 
 Queremos esto:
 
-> La tienda tiene navbar, buscador, filtro de categorías y una grilla de product cards. Cada card muestra imagen, nombre, precio y el botón "Ver producto". En desktop hay 3 cards por fila; en mobile, 1.
+> Pantalla: Tienda. Componentes: navbar, buscador, chips de categoría y una grilla de 3 columnas de `card-product` con imagen, nombre, precio y el botón "Ver producto".
+
+Y que `card-product` ya esté definido en tu `DESIGN.md`, con sus colores, radios y estados.
+
+## Qué es un DESIGN.md
+
+**DESIGN.md** es un formato abierto creado por Google para describir un design system en un archivo Markdown, de forma que lo entiendan las personas **y** las herramientas de IA. Stitch lo importa directamente, y también lo leen asistentes de código como Claude Code o Antigravity.
+
+Un DESIGN.md tiene dos partes:
+
+1. **Tokens** (arriba, entre dos líneas `---`): los **valores exactos** de tu design system, escritos en un formato de datos llamado YAML. Es lo que la herramienta aplica al pie de la letra.
+2. **Texto** (abajo, con títulos `##`): el **porqué y el cómo**: la personalidad de la marca, cuándo usar cada color, las reglas de cada componente.
+
+```markdown
+---
+name: Brote
+colors:
+  primary: "#3F5E4A"
+typography:
+  body-md:
+    fontFamily: Inter
+    fontSize: 16px
+---
+
+## Overview
+
+Brote es una tienda de jardinería para personas que están empezando con plantas...
+
+## Colors
+
+- **Primary (#3F5E4A):** Verde salvia oscuro, el color de la marca...
+```
+
+La especificación completa está en [github.com/google-labs-code/design.md](https://github.com/google-labs-code/design.md).
 
 ## Qué entregas
 
-Un documento con 4 partes:
-
-1. **Foundations**: colores, tipografías, espaciados, bordes, radios y sombras.
-2. **Componentes**: contenido, reglas y estados.
-3. **Pantallas**: qué componentes lleva cada una (según tus wireframes), con el link de Whimsical.
-4. **Responsive**: qué cambia entre desktop y mobile.
+1. **`DESIGN.md`** en la raíz de tu repositorio (el repositorio base trae una plantilla), con:
+   - los **tokens** de colores, tipografía, radios, espaciados y componentes;
+   - las secciones **Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components y Do's and Don'ts**, en ese orden.
+2. **`docs/09-spec-diseno.md`** con el link a tus wireframes y **un prompt por pantalla** (landing, tienda, ficha de producto, carrito, blog y artículo), más un prompt para la versión mobile.
 
 ## Paso a paso
 
-### 1. Foundations
+### 1. Escribe los tokens de color y tipografía
 
-Las foundations son las decisiones base que se repiten en todo el sitio. Los colores y tipografías ya los tienes; ahora suma:
+Parte por lo que ya definiste en `08-color-tipografia.md`. Cada color lleva un **nombre** y su **HEX entre comillas**:
 
-- **Espaciados**: una escala fija (por ejemplo, 4, 8, 16, 24, 32, 48, 64 px). Usar siempre los mismos valores es lo que hace que un sitio se vea ordenado.
-- **Bordes**: grosor y color.
-- **Radios**: qué tan redondeadas son las esquinas de botones, tarjetas e inputs.
-- **Sombras**: si usas, cuáles y dónde.
+```yaml
+colors:
+  primary: "#3F5E4A"
+  secondary: "#EDE4D3"
+  tertiary: "#C0643A"
+  neutral: "#FBF8F2"
+  on-primary: "#FFFFFF"
+```
 
-### 2. Componentes
+Nombres recomendados: `primary`, `secondary`, `tertiary` (acento), `neutral` (fondo), `surface` (tarjetas), `on-surface` (texto), `error`. El prefijo `on-` significa "lo que va encima": `on-primary` es el color del texto sobre un fondo `primary`.
 
-Toma los componentes que calcaste en Whimsical y define para cada uno:
+Para la tipografía, cada nivel de tu escala es un token:
 
-- **Contenido**: qué elementos tiene, en qué orden.
-- **Reglas**: lo que siempre se cumple ("el precio siempre es visible", "el nombre ocupa máximo 2 líneas").
-- **Estilo**: qué foundations usa (color, tipografía, radio, espaciado).
-- **Estados**: cómo se ve en cada situación.
+```yaml
+typography:
+  headline-display:
+    fontFamily: Fraunces
+    fontSize: 48px
+    fontWeight: 600
+    lineHeight: 1.1
+  body-md:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 1.6
+```
 
-| Estado | Cuándo ocurre |
-|---|---|
-| Normal | Estado por defecto |
-| Hover | El mouse pasa por encima |
-| Active | Se está presionando, o es la opción seleccionada |
-| Disabled | No se puede usar (por ejemplo, producto agotado) |
+### 2. Suma radios y espaciados
+
+```yaml
+rounded:
+  md: 8px
+  full: 9999px
+spacing:
+  sm: 8px
+  md: 16px
+  lg: 24px
+  xl: 32px
+```
+
+Usar siempre los mismos valores es lo que hace que un sitio se vea ordenado.
+
+### 3. Define tus componentes y sus estados
+
+Toma los componentes que calcaste en Whimsical. Cada componente es un token con sus propiedades, y puede **referenciar** otros tokens con llaves: `"{colors.primary}"`.
+
+```yaml
+components:
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+    padding: 12px 24px
+  button-primary-hover:
+    backgroundColor: "{colors.primary-hover}"
+```
+
+Propiedades válidas: `backgroundColor`, `textColor`, `typography`, `rounded`, `padding`, `size`, `height`, `width`.
+
+Los **estados** se escriben como componentes aparte, con el estado al final del nombre:
+
+| Estado | Cuándo ocurre | Nombre del token |
+|---|---|---|
+| Normal | Estado por defecto | `button-primary` |
+| Hover | El mouse pasa por encima | `button-primary-hover` |
+| Active | Se está presionando, o es la opción seleccionada | `button-primary-active` |
+| Disabled | No se puede usar (por ejemplo, producto agotado) | `button-primary-disabled` |
 
 No todos los componentes tienen los 4 estados; los botones, enlaces, inputs y filtros sí.
 
-### 3. Pantallas
+### 4. Escribe las secciones de texto
 
-Para cada una de las 6 pantallas, lista los componentes en orden, de arriba hacia abajo. Pega el link de tus wireframes.
+Después de la segunda línea `---`, escribe estas secciones **en este orden** (puedes omitir alguna, pero no cambiar el orden ni repetirlas):
 
-### 4. Responsive
+| Sección | Qué va |
+|---|---|
+| `## Overview` | Qué es la marca, para quién es (tu proto-persona) y qué sensación debe transmitir (tu moodboard) |
+| `## Colors` | Para qué se usa cada color y dónde **no** se usa |
+| `## Typography` | Qué familia va en títulos y cuál en textos, y la escala |
+| `## Layout` | Ancho máximo, márgenes, escala de espaciado, **breakpoints** y columnas por dispositivo |
+| `## Elevation & Depth` | Cómo se marca la jerarquía: sombras, bordes o capas de color |
+| `## Shapes` | Radios de botones, tarjetas e inputs |
+| `## Components` | Cada componente: qué contiene, sus **reglas** y sus estados |
+| `## Do's and Don'ts` | Lo que siempre y lo que nunca se hace |
 
-Describe qué cambia en **mobile** y en **tablet** respecto de desktop: cuántas columnas, qué se oculta, qué se transforma (por ejemplo, el menú pasa a ser un botón de hamburguesa, los filtros se abren en un panel). Usa los mismos anchos que vas a definir como breakpoints en la spec de desarrollo: mobile hasta 767 px, tablet desde 768 px y desktop desde 1024 px.
+Las **reglas** de los componentes van en el texto. Por ejemplo: "El precio siempre es visible. El nombre ocupa máximo 2 líneas; si es más largo, termina en '…'".
 
-## Ejemplo (fragmento)
+El **responsive** va en `## Layout`: mobile hasta 767 px, tablet de 768 a 1023 px y desktop desde 1024 px, y qué cambia en cada uno (columnas, menú, filtros, imágenes).
 
-```markdown
-# Spec de diseño — Brote
+### 5. Valida tu DESIGN.md
 
-**Wireframes:** https://whimsical.com/... (link de ejemplo)
+Google entrega un validador que revisa la estructura, encuentra referencias rotas y **calcula el contraste** de cada componente. Pídele a tu asistente (Claude Code o Antigravity) que lo corra, o hazlo tú en la terminal si tienes Node instalado:
 
-## 1. Foundations
-
-### Colores y tipografía
-Ver `08-color-tipografia.md`.
-
-### Espaciados
-Escala: 4 · 8 · 16 · 24 · 32 · 48 · 64 px.
-- Separación entre secciones: 64 px (desktop), 48 px (mobile).
-- Padding interno de tarjetas: 16 px.
-
-### Bordes, radios y sombras
-- Borde: 1 px, color #E2D9C6.
-- Radio: 8 px en tarjetas e inputs; 999 px (píldora) en botones y chips.
-- Sombra: solo en tarjetas al hacer hover, `0 4px 12px rgba(0,0,0,.08)`.
-
-## 2. Componentes
-
-### Botón principal
-- **Contenido:** texto en verbo ("Agregar al carrito", "Ver productos").
-- **Estilo:** fondo principal #3F5E4A, texto blanco, Inter 600 1rem,
-  padding 12 × 24 px, radio píldora.
-- **Estados:**
-  - Hover: fondo 10 % más oscuro.
-  - Active: fondo 20 % más oscuro.
-  - Disabled: fondo #CFCAC0, texto #6B675E, sin cursor de mano.
-
-### Product card
-- **Contenido:** imagen cuadrada, etiqueta de tipo de planta, nombre,
-  precio, botón secundario "Ver producto".
-- **Reglas:**
-  - El precio siempre es visible.
-  - El nombre ocupa máximo 2 líneas; si es más largo, termina en "…".
-  - Si el producto está agotado, la imagen va en gris y el botón queda
-    disabled con el texto "Agotado".
-- **Estilo:** fondo secundario #EDE4D3, radio 8 px, padding 16 px.
-- **Estados:** hover con sombra y la imagen se agranda 3 %.
-
-## 3. Pantallas
-
-### Tienda
-1. Navbar
-2. Título "Tienda" + buscador
-3. Chips de categoría (Todos, Sustratos, Fertilizantes, Plagas y enfermedades, Herramientas, Insumos)
-4. Fila de kits por tipo de planta (Kit interior, Kit suculentas, Kit huerto)
-5. Columna de filtros (tipo de planta, precio) + grilla de product cards
-6. Footer
-
-## 4. Responsive
-
-| Elemento | Desktop (desde 1024 px) | Tablet (768 a 1023 px) | Mobile (hasta 767 px) |
-|---|---|---|---|
-| Navbar | Enlaces visibles | Enlaces visibles | Menú hamburguesa; carrito siempre visible |
-| Grilla de productos | 3 columnas | 2 columnas | 1 columna |
-| Filtros | Columna a la izquierda | Botón "Filtrar" que abre un panel | Botón "Filtrar" que abre un panel |
-| Hero | Texto e imagen lado a lado | Texto e imagen lado a lado | Imagen arriba, texto abajo |
+```bash
+npx @google/design.md lint DESIGN.md
 ```
 
-Así se ven la product card, los botones, los chips y los campos de texto de Brote con sus foundations y estados. Fíjate en la regla del nombre: si ocupa más de 2 líneas, termina en "…".
+El resultado muestra un resumen:
+
+```text
+"summary": { "errors": 0, "warnings": 0, "infos": 1 }
+```
+
+- **errors:** el archivo tiene un problema de formato y Stitch podría no leerlo. Hay que corregirlo.
+- **warnings:** por ejemplo, un texto sin contraste suficiente o un color que no usa ningún componente. Revísalos: casi siempre esconden un problema real.
+
+En Brote, el validador detectó que el texto blanco sobre el terracota de las etiquetas de oferta tenía contraste 4.1:1, bajo el mínimo de 4.5:1. Por eso se agregó un terracota más oscuro para esas etiquetas.
+
+### 6. Escribe un prompt por pantalla
+
+En `docs/09-spec-diseno.md`, escribe las 6 pantallas como prompts listos para pegar en Stitch. Cada prompt tiene:
+
+1. **Pantalla** y dispositivo ("Tienda, versión desktop") + "Usa el design system del proyecto".
+2. **Objetivo**: qué quiere lograr tu proto-persona en esa pantalla.
+3. **Componentes de arriba hacia abajo** (según tus wireframes), llamándolos **con los mismos nombres de tu DESIGN.md** (`card-product`, `button-primary`).
+4. **Textos y datos reales**: títulos, nombres de productos, precios, categorías.
+
+Al final, agrega un prompt para pedir la versión mobile de cada pantalla, basado en tu sección `## Layout`.
+
+## Ejemplo
+
+El DESIGN.md de Brote (fragmento):
+
+```markdown
+---
+version: alpha
+name: Brote
+colors:
+  primary: "#3F5E4A"
+  primary-hover: "#34503F"
+  on-primary: "#FFFFFF"
+  secondary: "#EDE4D3"
+  tertiary: "#C0643A"
+  tertiary-strong: "#A9552F"
+  neutral: "#FBF8F2"
+  on-surface: "#2B2B28"
+typography:
+  title-md:
+    fontFamily: Fraunces
+    fontSize: 18px
+    fontWeight: 600
+    lineHeight: 1.2
+rounded:
+  md: 8px
+  full: 9999px
+spacing:
+  md: 16px
+components:
+  card-product:
+    backgroundColor: "{colors.secondary}"
+    textColor: "{colors.on-surface}"
+    typography: "{typography.title-md}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.md}"
+  tag-offer:
+    backgroundColor: "{colors.tertiary-strong}"
+    textColor: "{colors.on-primary}"
+    rounded: "{rounded.full}"
+---
+
+## Overview
+
+Brote es una tienda online de jardinería para personas que están empezando
+con plantas. Su usuaria principal es Camila, que compra desde el celular,
+quiere una casa bonita con plantas y necesita que la guíen para que no se
+le mueran. El estilo es natural, fresco, cálido, simple y vivo.
+
+## Components
+
+### Product card (`card-product`)
+
+Imagen cuadrada, etiqueta de tipo de planta, nombre en `title-md`, precio y
+botón secundario "Ver producto".
+
+- El precio siempre es visible.
+- El nombre ocupa máximo 2 líneas; si es más largo, termina en "…".
+- Agotado: imagen en escala de grises y botón deshabilitado "Agotado".
+- Hover: sombra y la imagen se agranda al 103 %.
+```
+
+Y un prompt de pantalla de `docs/09-spec-diseno.md`:
+
+```text
+Pantalla: Tienda de Brote, versión desktop. Usa el design system del proyecto.
+Objetivo: que Camila encuentre rápido lo que necesita su planta.
+Componentes, de arriba hacia abajo:
+1. Navbar.
+2. h1 "Tienda" y buscador "Buscar productos o plantas…".
+3. Chips de categoría: Todos, Sustratos (activo), Fertilizantes, Plagas y
+   enfermedades, Herramientas, Insumos.
+4. Fila de 3 card-kit: Kit plantas de interior (ahorra $2.500), Kit
+   suculentas (ahorra $1.900), Kit huerto (ahorra $3.200).
+5. A la izquierda, filtros "Tipo de planta" (Interior marcado, Exterior,
+   Suculentas y cactus, Huerto) y precio. A la derecha, grilla de 3
+   columnas con 6 card-product: Sustrato para plantas de interior 10 L
+   $7.990, Tierra de hoja 20 L $5.490, ...
+6. Footer.
+```
+
+Así se ven los componentes de Brote con estilo y estados:
 
 ![Componentes de Brote con estilo y estados: product card, botones, chips y campo de texto](../img/brote-componentes-con-estilo.png)
 
 ## Cómo usar la IA
 
+Para el DESIGN.md:
+
 ```text
-Te comparto mis componentes calcados [tabla], mis wireframes [captura],
-mi paleta y tipografía [pega]. Ayúdame a escribir una spec de diseño con:
-foundations (espaciados, bordes, radios, sombras), cada componente con
-contenido, reglas, estilo y estados (normal, hover, active, disabled),
-los componentes de cada pantalla y el comportamiento responsive.
-Usa solo mis colores y tipografías. Escribe reglas concretas y
-verificables, nada de "moderno" o "limpio".
+Lee la especificación de DESIGN.md en https://github.com/google-labs-code/design.md.
+Con mi paleta y tipografía (docs/08-color-tipografia.md), mis componentes
+calcados (docs/07-componentes.md), mi moodboard (docs/06-moodboard.md) y
+mi proto-persona (docs/02-proto-personas.md), escribe un DESIGN.md para mi
+sitio. Incluye tokens de colores, tipografía, radios, espaciados y cada
+componente con sus estados (hover, active, disabled), y las secciones en
+el orden de la especificación. Las reglas deben ser concretas y
+verificables. Después córrelo con npx @google/design.md lint DESIGN.md y
+corrige los errores y advertencias.
+```
+
+Para las pantallas:
+
+```text
+Con mi DESIGN.md y mis wireframes [adjunta la imagen], escribe en
+docs/09-spec-diseno.md un prompt para Stitch por cada pantalla (landing,
+tienda, ficha de producto, carrito, blog y artículo): pantalla y
+dispositivo, objetivo de la proto-persona, componentes de arriba hacia
+abajo usando los nombres de mi DESIGN.md, y textos y datos reales.
+Agrega al final un prompt para la versión mobile.
 ```
 
 Revisa todo lo que proponga: tú decides las reglas.
 
 ## Errores comunes
 
+- **HEX sin comillas en los tokens:** en YAML, el `#` inicia un comentario. Escribe siempre `"#3F5E4A"`, con comillas.
+- **Sangría incorrecta:** en YAML, la sangría (los espacios al inicio) define qué está dentro de qué. Usa siempre 2 espacios y nunca tabulaciones.
+- **Secciones fuera de orden o repetidas:** dos `## Colors` hacen que el archivo sea rechazado.
+- **Nombres distintos** en el DESIGN.md y en los prompts (`card-product` en uno y "tarjeta de producto" en el otro).
 - **Reglas vagas**: "que se vea moderno", "botones bonitos". Una regla tiene que poder verificarse.
 - **Inventar colores o tipografías** que no están en tu paleta.
 - **Componentes sin estados.**
-- **Olvidar el responsive.**
-- **Que sea solo un prompt**: la spec es un documento con reglas, no una instrucción de una línea.
+- **Un solo prompt para todo el sitio**: Stitch funciona mejor con una pantalla por prompt.
 
 ## Checklist
 
-- [ ] Foundations: colores, tipografías, espaciados, bordes, radios, sombras
-- [ ] Cada componente con contenido, reglas, estilo y estados
-- [ ] Componentes de las 6 pantallas, con link a los wireframes
-- [ ] Tabla de comportamiento responsive para desktop, tablet y mobile
-- [ ] Todas las reglas son concretas y verificables
+- [ ] `DESIGN.md` en la raíz, con tokens de colores, tipografía, radios, espaciados y componentes
+- [ ] Componentes con sus estados (hover, active, disabled cuando corresponda)
+- [ ] Secciones Overview, Colors, Typography, Layout, Elevation & Depth, Shapes, Components y Do's and Don'ts, en ese orden
+- [ ] Reglas de los componentes concretas y verificables
+- [ ] Responsive para mobile, tablet y desktop en `## Layout`
+- [ ] Validado con `npx @google/design.md lint DESIGN.md`: 0 errores
+- [ ] `docs/09-spec-diseno.md` con el link a los wireframes y un prompt por cada una de las 6 pantallas, más el prompt mobile

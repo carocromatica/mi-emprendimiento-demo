@@ -13,6 +13,7 @@ Los plazos se revisan con los commits: cada fase se evalúa con el **último com
 ```text
 mi-emprendimiento/
 ├── README.md        ← portada de tu proyecto (la completas tú)
+├── DESIGN.md        ← tu design system para Stitch (lo completas en la Fase 2)
 ├── evaluacion/      ← el enunciado y estas guías (no lo modifiques)
 └── docs/            ← una plantilla por cada documento que vas a entregar
     ├── 01-brief.md

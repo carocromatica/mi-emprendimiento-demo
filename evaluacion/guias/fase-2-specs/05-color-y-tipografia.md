@@ -75,7 +75,8 @@ Usa `rem` (1rem = 16px).
 |---|---|---|---|
 | Principal | Verde salvia oscuro | #3F5E4A | Botones principales, enlaces, logo |
 | Secundario | Arena | #EDE4D3 | Fondos de secciones, tarjetas |
-| Acento | Terracota (color greda) | #C0643A | Etiquetas de oferta, contador del carrito |
+| Acento | Terracota (color greda) | #C0643A | Contador del carrito, íconos y detalles |
+| Acento oscuro | Terracota oscuro | #A9552F | Fondo de etiquetas con texto blanco (ofertas, ahorro) |
 | Fondo | Crema | #FBF8F2 | Fondo general |
 | Texto | Carbón | #2B2B28 | Textos y títulos |
 | Texto suave | Gris cálido | #6B675E | Bajadas, textos secundarios |
@@ -89,7 +90,9 @@ Usa `rem` (1rem = 16px).
 | Texto #2B2B28 sobre fondo #FBF8F2 | 13.4:1 | AA ✅ |
 | Texto blanco sobre principal #3F5E4A | 7.2:1 | AA ✅ |
 | Texto suave #6B675E sobre fondo #FBF8F2 | 5.3:1 | AA ✅ |
-| Terracota #C0643A sobre fondo #FBF8F2 | 3.9:1 | Solo texto grande o íconos ⚠️ |
+| Terracota #C0643A sobre fondo #FBF8F2 | 3.9:1 | Solo íconos y detalles ⚠️ |
+| Texto blanco sobre terracota #C0643A | 4.1:1 | No alcanza AA ❌ |
+| Texto blanco sobre terracota oscuro #A9552F | 5.2:1 | AA ✅ |
 
 ## Tipografía
 
@@ -113,7 +116,9 @@ los títulos, e Inter asegura que Camila pueda leer las guías de cuidado y de
 uso sin esfuerzo en su celular.
 ```
 
-Fíjate en la última fila: el terracota no alcanza 4.5:1, así que en Brote solo se usa para etiquetas con texto grande en negrita o para íconos, nunca para párrafos. Verificar el contraste no es solo aprobar o reprobar un color: te dice **dónde** puedes usarlo.
+Fíjate en las tres últimas filas: el terracota no alcanza 4.5:1 ni como texto ni como fondo de un texto blanco. Por eso Brote suma un **terracota oscuro** para las etiquetas con texto, y deja el terracota original para íconos y detalles. Verificar el contraste no es solo aprobar o reprobar un color: te dice **dónde** puedes usarlo, y a veces te obliga a agregar una variante.
+
+En la spec de diseño vas a pasar esta paleta a tu `DESIGN.md`, y su validador vuelve a revisar el contraste de cada componente.
 
 Así se ve el ejemplo como lámina, que puedes armar en Whimsical, Canva o Figma para presentar tu paleta:
 

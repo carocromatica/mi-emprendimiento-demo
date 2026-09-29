@@ -18,14 +18,16 @@ Las páginas obligatorias (contacto, preguntas frecuentes, términos, privacidad
 
 ## Paso a paso
 
-### 1. Decide el punto de partida
+### 1. Entrega tus specs al asistente
 
-Tienes dos caminos:
+Tu spec de desarrollo ya trae el prompt para el asistente (sección "Insumos"). Abre tu repositorio en Antigravity o Claude Code y pégale ese prompt. El asistente va a leer:
 
-- **Desde el código de Stitch:** Stitch permite exportar el código de las pantallas. Ese código suele venir con estilos propios (a veces con clases de Tailwind), así que vas a tener que adaptarlo a tu estructura y a tus variables CSS.
-- **Desde tu spec de desarrollo:** le entregas tu spec de desarrollo y las capturas de Stitch a tu asistente de IA y le pides que construya el sitio desde cero siguiendo tu spec.
+- **`DESIGN.md`**: de ahí salen los valores de `:root` (colores, tipografía, espaciados, radios).
+- **`docs/09-spec-diseno.md`**: qué componentes lleva cada pantalla.
+- **`docs/10-spec-desarrollo.md`**: archivos, navegación, estructura semántica y criterios de aceptación.
+- **La carpeta `stitch/`**: el código exportado de Stitch, como referencia visual.
 
-Cualquiera sirve. Lo importante es que el resultado **cumpla tu spec de desarrollo**: HTML + CSS, tus archivos, tus variables.
+El código de Stitch suele venir con estilos propios (a veces con clases de Tailwind). Por eso no se usa tal cual: el resultado tiene que **cumplir tu spec de desarrollo**, con HTML + CSS propios, tus archivos y tus variables.
 
 ### 2. Parte por la base
 
@@ -64,12 +66,12 @@ Haz los dos flujos de la Fase 1 haciendo clic, como si fueras tu proto-persona. 
 Entrégale al asistente **tus documentos**, no una descripción de memoria. En Antigravity o Claude Code puedes referenciar los archivos directamente:
 
 ```text
-Lee docs/09-spec-diseno.md y docs/10-spec-desarrollo.md.
+Lee DESIGN.md, docs/09-spec-diseno.md y docs/10-spec-desarrollo.md.
 Construye tienda.html siguiendo exactamente esas specs: usa solo
 HTML y CSS, las variables de :root en css/styles.css y la estructura
 semántica definida. La navbar y el footer deben ser iguales a los de
 index.html. No agregues componentes que no estén en la spec.
-Te adjunto la captura de Stitch como referencia visual.
+Usa stitch/tienda.html solo como referencia visual.
 ```
 
 Si el asistente propone algo distinto de tu spec, **tú decides**: o corriges el código o actualizas la spec (y lo anotas en el QA).
