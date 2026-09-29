@@ -1,5 +1,5 @@
 // ==========================================================================
-// BROTE - INTERACTIVE JAVASCRIPT
+// BROTE - INTERACTIVE JAVASCRIPT (Local Assets Edition)
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Global Cart State
 const state = {
   cart: [
-    { id: 'brote-1', title: 'Monstera Deliciosa (Jardín de Interior)', price: 24500, qty: 1, image: 'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80' }
+    { id: 'brote-1', title: 'Monstera Deliciosa + Maceta Terracota', price: 24500, qty: 1, image: './assets/monstera.jpg' }
   ]
 };
 
@@ -71,7 +71,7 @@ function initCart() {
       const title = card ? (card.querySelector('.title-md, h1')?.textContent || 'Planta Brote') : 'Planta Brote';
       const priceText = card ? (card.querySelector('.price')?.textContent || '$24.500') : '$24.500';
       const price = parseInt(priceText.replace(/[^0-9]/g, '')) || 24500;
-      const image = card ? (card.querySelector('img')?.src || '') : '';
+      const image = card ? (card.querySelector('img')?.src || './assets/monstera.jpg') : './assets/monstera.jpg';
 
       addToCart({ id, title, price, image });
       showToast(`Añadido al carrito: ${title}`);
