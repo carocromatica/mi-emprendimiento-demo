@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog · Brote</title>
+  <meta name="description" content="Guías simples para cuidar tus plantas: riego, plagas y decoración.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="navbar-logo" href="index.html"><img src="img/marca/logo.svg" alt="Brote, ir al inicio" width="132" height="36"></a>
+      <span class="navbar-spacer"></span>
+      <a class="cart-link navbar-cart" href="carrito.html" aria-label="Carrito, 2 productos">🛒<span class="cart-count" aria-hidden="true">2</span></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button" aria-label="Abrir menú">☰</label>
+      <div class="navbar-menu">
+        <nav aria-label="Principal">
+          <ul class="navbar-links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="blog.html" aria-current="page">Blog</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <form class="search-form" role="search" action="tienda.html">
+          <label for="buscar" class="visually-hidden">Buscar productos o plantas</label>
+          <input type="search" id="buscar" name="q" placeholder="Buscar productos o plantas…">
+        </form>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container section">
+      <h1>Blog</h1>
+      <section class="diagnosis" aria-labelledby="titulo-diagnostico">
+        <h2 id="titulo-diagnostico">¿Qué le pasa a tu planta?</h2>
+        <div class="btn-row">
+          <a class="btn-secondary" href="articulo.html">🍂 Hojas amarillas</a>
+          <a class="btn-secondary" href="articulo.html">🔸 Manchas en las hojas</a>
+          <a class="btn-secondary" href="articulo.html">🐛 Plagas</a>
+        </div>
+      </section>
+      <nav class="chips" aria-label="Categorías del blog" style="margin-bottom:var(--space-lg)">
+        <a class="chip is-active" href="blog.html" aria-current="true">Todos</a>
+        <a class="chip" href="blog.html">Cuidados básicos</a>
+        <a class="chip" href="blog.html">Plagas y enfermedades</a>
+        <a class="chip" href="blog.html">Decoración con plantas</a>
+      </nav>
+      <section class="post-grid" aria-label="Artículos">
+        <div class="grid-3">
+            <article class="article-card">
+              <img src="img/blog/hojas-amarillas.svg" alt="Monstera con hojas amarillas" width="300" height="300">
+              <span class="label-caps">Plagas y enfermedades</span>
+              <h3><a href="articulo.html">Hojas amarillas: 5 causas y cómo solucionarlas</a></h3>
+              <p class="reading-time">5 min de lectura</p>
+            </article>
+            <article class="article-card">
+              <img src="img/blog/riego.svg" alt="Regadera junto a una monstera" width="300" height="300">
+              <span class="label-caps">Cuidados básicos</span>
+              <h3><a href="articulo.html">Cuánto regar tus plantas de interior (y por qué se te mueren)</a></h3>
+              <p class="reading-time">4 min de lectura</p>
+            </article>
+            <article class="article-card">
+              <img src="img/blog/poca-luz.svg" alt="Monstera en un rincón con poca luz" width="300" height="300">
+              <span class="label-caps">Decoración con plantas</span>
+              <h3><a href="articulo.html">5 plantas fáciles para un departamento con poca luz</a></h3>
+              <p class="reading-time">3 min de lectura</p>
+            </article>
+            <article class="article-card">
+              <img src="img/blog/trasplante.svg" alt="Potus junto a una pala de mano" width="300" height="300">
+              <span class="label-caps">Cuidados básicos</span>
+              <h3><a href="articulo.html">Cuándo trasplantar una planta</a></h3>
+              <p class="reading-time">4 min de lectura</p>
+            </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="img/marca/logo.svg" alt="Brote, ir al inicio" width="132" height="36"></a>
+        <p>Todo lo que tus plantas necesitan, con guías simples para cuidarlas.</p>
+      </div>
+      <nav aria-label="Información">
+        <ul class="footer-links">
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="terminos.html">Términos y condiciones</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Redes sociales">
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

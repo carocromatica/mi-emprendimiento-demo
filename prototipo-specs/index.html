@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantas sanas, casa bonita · Brote</title>
+  <meta name="description" content="Brote: sustratos, fertilizantes, herramientas y guías simples para que tus plantas no se mueran.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="navbar-logo" href="index.html"><img src="img/marca/logo.svg" alt="Brote, ir al inicio" width="132" height="36"></a>
+      <span class="navbar-spacer"></span>
+      <a class="cart-link navbar-cart" href="carrito.html" aria-label="Carrito, 2 productos">🛒<span class="cart-count" aria-hidden="true">2</span></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button" aria-label="Abrir menú">☰</label>
+      <div class="navbar-menu">
+        <nav aria-label="Principal">
+          <ul class="navbar-links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <form class="search-form" role="search" action="tienda.html">
+          <label for="buscar" class="visually-hidden">Buscar productos o plantas</label>
+          <input type="search" id="buscar" name="q" placeholder="Buscar productos o plantas…">
+        </form>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div>
+          <h1>Plantas sanas, casa bonita</h1>
+          <p class="lead">Todo lo que tus plantas necesitan, con guías simples para cuidarlas.</p>
+          <div class="btn-row">
+            <a class="btn-primary" href="tienda.html">Ver productos</a>
+            <a class="btn-secondary" href="blog.html">Leer guías</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="img/marca/hero-balcon.svg" alt="Ilustración de un balcón de departamento con una monstera, un potus y una suculenta en maceteros de greda" width="640" height="480">
+        </div>
+      </section>
+    </div>
+
+    <section class="section easy-plants">
+      <div class="container">
+        <h2 class="section-title">Plantas fáciles para empezar</h2>
+        <div class="grid-3">
+          <article class="easy-card">
+            <img src="img/productos/planta-potus.svg" alt="Potus en macetero de greda" width="300" height="300">
+            <h3>Potus</h3>
+            <p>Aguanta poca luz y te avisa cuando tiene sed.</p>
+            <a href="tienda.html">Ver lo que necesita</a>
+          </article>
+          <article class="easy-card">
+            <img src="img/productos/planta-monstera.svg" alt="Monstera en macetero de greda" width="300" height="300">
+            <h3>Monstera</h3>
+            <p>Crece rápido con luz indirecta y riego moderado.</p>
+            <a href="tienda.html">Ver lo que necesita</a>
+          </article>
+          <article class="easy-card">
+            <img src="img/productos/planta-suculenta.svg" alt="Suculenta en macetero de greda" width="300" height="300">
+            <h3>Suculentas</h3>
+            <p>Necesitan sol y muy poca agua: ideales para balcones.</p>
+            <a href="tienda.html">Ver lo que necesita</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-form">
+      <div class="container">
+        <div class="lead-box">
+          <h2>Guía gratis de cuidados + 10 % en tu primera compra</h2>
+          <form action="#">
+            <div class="field">
+              <label for="correo">Tu correo</label>
+              <input type="email" id="correo" name="correo" placeholder="tu@correo.cl" required>
+            </div>
+            <button class="btn-primary" type="submit">Quiero la guía</button>
+          </form>
+          <p class="privacy">Al suscribirte aceptas la <a href="privacidad.html">política de privacidad</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section latest-posts">
+      <div class="container">
+        <h2 class="section-title">Del blog</h2>
+        <div class="grid-3">
+            <article class="article-card">
+              <img src="img/blog/hojas-amarillas.svg" alt="Monstera con hojas amarillas" width="300" height="300">
+              <span class="label-caps">Plagas y enfermedades</span>
+              <h3><a href="articulo.html">Hojas amarillas: 5 causas y cómo solucionarlas</a></h3>
+              <p class="reading-time">5 min de lectura</p>
+            </article>
+            <article class="article-card">
+              <img src="img/blog/riego.svg" alt="Regadera junto a una monstera" width="300" height="300">
+              <span class="label-caps">Cuidados básicos</span>
+              <h3><a href="articulo.html">Cuánto regar tus plantas de interior (y por qué se te mueren)</a></h3>
+              <p class="reading-time">4 min de lectura</p>
+            </article>
+            <article class="article-card">
+              <img src="img/blog/poca-luz.svg" alt="Monstera en un rincón con poca luz" width="300" height="300">
+              <span class="label-caps">Decoración con plantas</span>
+              <h3><a href="articulo.html">5 plantas fáciles para un departamento con poca luz</a></h3>
+              <p class="reading-time">3 min de lectura</p>
+            </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="img/marca/logo.svg" alt="Brote, ir al inicio" width="132" height="36"></a>
+        <p>Todo lo que tus plantas necesitan, con guías simples para cuidarlas.</p>
+      </div>
+      <nav aria-label="Información">
+        <ul class="footer-links">
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="terminos.html">Términos y condiciones</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Redes sociales">
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

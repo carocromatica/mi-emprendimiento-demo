@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu carrito · Brote</title>
+  <meta name="description" content="Revisa tus productos y calcula el despacho antes de pagar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="navbar-logo" href="index.html"><img src="img/marca/logo.svg" alt="Brote, ir al inicio" width="132" height="36"></a>
+      <span class="navbar-spacer"></span>
+      <a class="cart-link navbar-cart" href="carrito.html" aria-label="Carrito, 2 productos">🛒<span class="cart-count" aria-hidden="true">2</span></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button" aria-label="Abrir menú">☰</label>
+      <div class="navbar-menu">
+        <nav aria-label="Principal">
+          <ul class="navbar-links">
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <form class="search-form" role="search" action="tienda.html">
+          <label for="buscar" class="visually-hidden">Buscar productos o plantas</label>
+          <input type="search" id="buscar" name="q" placeholder="Buscar productos o plantas…">
+        </form>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container section">
+      <h1>Tu carrito</h1>
+      <div class="cart-layout">
+        <section class="cart" aria-label="Productos en el carrito">
+          <ul class="cart-items">
+            <li class="cart-item">
+              <img src="img/productos/sustrato-interior.svg" alt="Sustrato para plantas de interior" width="88" height="88">
+              <div>
+                <h2>Sustrato para plantas de interior</h2>
+                <div class="meta"><span>10 L</span><span class="qty"><button type="button" aria-label="Quitar uno">−</button><span>1</span><button type="button" aria-label="Agregar uno">+</button></span><strong class="price">$7.990</strong></div>
+              </div>
+            </li>
+            <li class="cart-item">
+              <img src="img/productos/fertilizante-liquido.svg" alt="Fertilizante líquido para plantas de interior" width="88" height="88">
+              <div>
+                <h2>Fertilizante líquido para plantas de interior</h2>
+                <div class="meta"><span>500 ml</span><span class="qty"><button type="button" aria-label="Quitar uno">−</button><span>1</span><button type="button" aria-label="Agregar uno">+</button></span><strong class="price">$5.990</strong></div>
+              </div>
+            </li>
+          </ul>
+          <p style="margin-top:var(--space-md)"><a href="tienda.html">← Seguir comprando</a></p>
+        </section>
+        <aside class="cart-summary" aria-labelledby="titulo-resumen">
+          <h2 id="titulo-resumen" style="font-size:1.375rem">Resumen</h2>
+          <div class="summary-row"><span>Subtotal</span><strong>$13.980</strong></div>
+          <form class="shipping-form" action="#">
+            <div class="field">
+              <label for="comuna">Tu comuna</label>
+              <input type="text" id="comuna" name="comuna" placeholder="Ej.: Ñuñoa">
+            </div>
+            <button class="btn-secondary" type="submit">Calcular</button>
+          </form>
+          <div class="summary-row"><span>Despacho</span><strong>$3.490</strong></div>
+          <div class="summary-row summary-total"><span>Total</span><span>$17.470</span></div>
+          <a class="btn-primary btn-block" href="#" aria-disabled="true">Ir a pagar</a>
+          <p class="reading-time" style="margin-top:var(--space-sm)">Prototipo: el pago no está disponible.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="img/marca/logo.svg" alt="Brote, ir al inicio" width="132" height="36"></a>
+        <p>Todo lo que tus plantas necesitan, con guías simples para cuidarlas.</p>
+      </div>
+      <nav aria-label="Información">
+        <ul class="footer-links">
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="terminos.html">Términos y condiciones</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Redes sociales">
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

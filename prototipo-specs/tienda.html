@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda · Brote</title>
+  <meta name="description" content="Sustratos, fertilizantes, productos contra plagas, herramientas e insumos para tus plantas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="navbar-logo" href="index.html"><img src="img/marca/logo.svg" alt="Brote, ir al inicio" width="132" height="36"></a>
+      <span class="navbar-spacer"></span>
+      <a class="cart-link navbar-cart" href="carrito.html" aria-label="Carrito, 2 productos">🛒<span class="cart-count" aria-hidden="true">2</span></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button" aria-label="Abrir menú">☰</label>
+      <div class="navbar-menu">
+        <nav aria-label="Principal">
+          <ul class="navbar-links">
+          <li><a href="tienda.html" aria-current="page">Tienda</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <form class="search-form" role="search" action="tienda.html">
+          <label for="buscar" class="visually-hidden">Buscar productos o plantas</label>
+          <input type="search" id="buscar" name="q" placeholder="Buscar productos o plantas…">
+        </form>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="shop-header section" style="padding-bottom:0">
+        <h1>Tienda</h1>
+        <form class="search-form" role="search" action="tienda.html">
+          <label for="buscar-tienda" class="visually-hidden">Buscar productos o plantas</label>
+          <input type="search" id="buscar-tienda" name="q" placeholder="Buscar productos o plantas…">
+        </form>
+        <nav class="chips" aria-label="Categorías">
+          <a class="chip" href="tienda.html">Todos</a>
+          <a class="chip is-active" href="tienda.html" aria-current="true">Sustratos</a>
+          <a class="chip" href="tienda.html">Fertilizantes</a>
+          <a class="chip" href="tienda.html">Plagas y enfermedades</a>
+          <a class="chip" href="tienda.html">Herramientas</a>
+          <a class="chip" href="tienda.html">Insumos</a>
+        </nav>
+      </section>
+
+      <section class="kits section">
+        <h2 class="section-title">Kits para empezar</h2>
+        <div class="grid-3">
+          <article class="kit-card">
+            <img src="img/productos/kit-interior.svg" alt="Kit con potus, sustrato y fertilizante" width="96" height="96">
+            <div>
+              <h3>Kit plantas de interior</h3>
+              <ul><li>Sustrato 10 L</li><li>Fertilizante líquido 500 ml</li><li>Macetero de greda 18 cm</li></ul>
+              <div class="price-row"><span class="price">$17.490</span><span class="tag-offer">Ahorra $2.500</span></div>
+              <a class="btn-primary" href="carrito.html">Agregar kit</a>
+            </div>
+          </article>
+          <article class="kit-card">
+            <img src="img/productos/kit-suculentas.svg" alt="Kit con suculenta y sustrato" width="96" height="96">
+            <div>
+              <h3>Kit suculentas</h3>
+              <ul><li>Sustrato para suculentas 5 L</li><li>Fertilizante suave 250 ml</li><li>Macetero de greda 12 cm</li></ul>
+              <div class="price-row"><span class="price">$12.990</span><span class="tag-offer">Ahorra $1.900</span></div>
+              <a class="btn-primary" href="carrito.html">Agregar kit</a>
+            </div>
+          </article>
+          <article class="kit-card">
+            <img src="img/productos/kit-huerto.svg" alt="Kit con planta y sustrato para huerto" width="96" height="96">
+            <div>
+              <h3>Kit huerto</h3>
+              <ul><li>Sustrato para huerto 20 L</li><li>Humus de lombriz 5 L</li><li>Pala de mano</li></ul>
+              <div class="price-row"><span class="price">$19.990</span><span class="tag-offer">Ahorra $3.200</span></div>
+              <a class="btn-primary" href="carrito.html">Agregar kit</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="shop-layout">
+        <div>
+          <input type="checkbox" id="filters-toggle" class="filters-toggle">
+          <label for="filters-toggle" class="btn-secondary btn-block filters-toggle-button">Filtrar (1)</label>
+          <div class="filters-panel">
+            <aside class="filters" aria-labelledby="titulo-filtros">
+              <h2 id="titulo-filtros" class="visually-hidden">Filtrar</h2>
+              <fieldset>
+                <legend>Tipo de planta</legend>
+                <label><input type="checkbox" name="tipo" value="interior" checked> Interior</label>
+                <label><input type="checkbox" name="tipo" value="exterior"> Exterior</label>
+                <label><input type="checkbox" name="tipo" value="suculentas"> Suculentas y cactus</label>
+                <label><input type="checkbox" name="tipo" value="huerto"> Huerto</label>
+              </fieldset>
+              <fieldset>
+                <legend>Precio máximo</legend>
+                <label for="precio" class="visually-hidden">Precio máximo</label>
+                <input type="range" id="precio" name="precio" min="2000" max="30000" step="1000" value="10000">
+                <p class="reading-time">Hasta $10.000</p>
+              </fieldset>
+            </aside>
+          </div>
+        </div>
+        <section class="product-grid" aria-labelledby="titulo-productos">
+          <h2 id="titulo-productos" class="visually-hidden">Productos</h2>
+          <div class="grid-3">
+            <article class="product-card">
+              <div class="media"><img src="img/productos/sustrato-interior.svg" alt="Bolsa de sustrato para plantas de interior" width="300" height="300"></div>
+              <span class="tag-plant">Interior</span>
+              <h3 class="product-name">Sustrato para plantas de interior 10 L</h3>
+              <p class="price">$7.990</p>
+              <a class="btn-secondary" href="producto.html">Ver producto</a>
+            </article>
+            <article class="product-card">
+              <div class="media"><img src="img/productos/tierra-de-hoja.svg" alt="Bolsa de tierra de hoja" width="300" height="300"></div>
+              <span class="tag-plant">Interior</span>
+              <h3 class="product-name">Tierra de hoja 20 L</h3>
+              <p class="price">$5.490</p>
+              <a class="btn-secondary" href="producto.html">Ver producto</a>
+            </article>
+            <article class="product-card">
+              <div class="media"><img src="img/productos/sustrato-suculentas.svg" alt="Bolsa de sustrato para suculentas" width="300" height="300"></div>
+              <span class="tag-plant">Suculentas</span>
+              <h3 class="product-name">Sustrato para suculentas y cactus con arena de río 5 L</h3>
+              <p class="price">$6.490</p>
+              <a class="btn-secondary" href="producto.html">Ver producto</a>
+            </article>
+            <article class="product-card">
+              <div class="media"><img src="img/productos/perlita.svg" alt="Bolsa de perlita" width="300" height="300"></div>
+              
+              <h3 class="product-name">Perlita 5 L</h3>
+              <p class="price">$4.990</p>
+              <a class="btn-secondary" href="producto.html">Ver producto</a>
+            </article>
+            <article class="product-card">
+              <div class="media"><img src="img/productos/humus.svg" alt="Bolsa de humus de lombriz" width="300" height="300"></div>
+              
+              <h3 class="product-name">Humus de lombriz 5 L</h3>
+              <p class="price">$6.990</p>
+              <a class="btn-secondary" href="producto.html">Ver producto</a>
+            </article>
+            <article class="product-card">
+              <div class="media"><img src="img/productos/sustrato-huerto.svg" alt="Bolsa de sustrato para huerto" width="300" height="300"></div>
+              <span class="tag-plant">Huerto</span>
+              <h3 class="product-name">Sustrato para huerto 20 L</h3>
+              <p class="price">$8.490</p>
+              <a class="btn-secondary" href="producto.html">Ver producto</a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-logo" href="index.html"><img src="img/marca/logo.svg" alt="Brote, ir al inicio" width="132" height="36"></a>
+        <p>Todo lo que tus plantas necesitan, con guías simples para cuidarlas.</p>
+      </div>
+      <nav aria-label="Información">
+        <ul class="footer-links">
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="terminos.html">Términos y condiciones</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Redes sociales">
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
