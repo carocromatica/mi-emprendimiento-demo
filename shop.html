@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda de Plantas & Kits | Brote</title>
+  <meta name="description" content="Catálogo completo de plantas de interior, sustratos orgánicos y macetas artesanales."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="material-symbols-outlined fill-icon" style="color: var(--primary-sage);">potted_plant</span>
+        brote.
+      </a>
+      <nav class="hidden md:flex">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="shop.html" class="nav-link active">Tienda</a></li>
+          <li><a href="product.html" class="nav-link">Ficha de Producto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn cart-toggle-btn" aria-label="Shopping Bag">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="cart-badge">1</span>
+        </button>
+        <button class="icon-btn mobile-menu-btn" aria-label="Menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <a href="index.html">Inicio</a>
+    <a href="shop.html">Tienda de Plantas</a>
+    <a href="product.html">Ficha de Producto</a>
+  </div>
+
+  <main class="container shop-layout">
+    <!-- Sidebar Filters -->
+    <aside class="filter-sidebar">
+      <h2 class="headline-md" style="margin-bottom: 4px;">Catálogo Brote</h2>
+      <p class="body-sm" style="margin-bottom: 24px;">Filtra por necesidad de tu hogar.</p>
+
+      <div class="filter-group">
+        <div class="filter-title">Nivel de Cuidado</div>
+        <label class="checkbox-label">
+          <input type="checkbox" data-filter="facil" />
+          <span>Fácil (Ideal principiantes)</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" data-filter="medio" />
+          <span>Medio (Atención regular)</span>
+        </label>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">Iluminación Necesaria</div>
+        <label class="checkbox-label">
+          <input type="checkbox" data-filter="luz-filtrada" />
+          <span>Luz indirecta / Filtrada</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" data-filter="sombra" />
+          <span>Tolerante a sombra</span>
+        </label>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">Categoría</div>
+        <label class="checkbox-label">
+          <input type="checkbox" data-filter="plantas" />
+          <span>Plantas de Interior</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" data-filter="kits" />
+          <span>Kits de Cultivo</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" data-filter="sustratos" />
+          <span>Sustratos & Macetas</span>
+        </label>
+      </div>
+    </aside>
+
+    <!-- Product Catalog Grid -->
+    <section>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <span class="body-sm">Mostrando 6 Productos Botánicos</span>
+        <select class="form-control" style="width: auto; padding: 8px 16px; border-radius: var(--radius-pill); border: 1px solid var(--border-sand-strong);">
+          <option>Ordenar por: Destacados</option>
+          <option>Precio: Menor a Mayor</option>
+          <option>Precio: Mayor a Menor</option>
+        </select>
+      </div>
+
+      <div class="grid-3">
+        <!-- Item 1 -->
+        <article class="card-product" data-tags="facil plantas luz-filtrada">
+          <span class="card-tag">Bestseller</span>
+          <div class="card-product-img">
+            <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80" alt="Monstera Deliciosa" />
+          </div>
+          <div>
+            <span class="label-sm" style="color: var(--text-olive-grey);">PLANTAS • CUIDADO FÁCIL</span>
+            <h3 class="title-md" style="margin: 4px 0 8px 0;">Monstera Deliciosa (Costilla de Adán)</h3>
+            <p class="body-sm">Planta de interior de crecimiento vigoroso y hojas caladas.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">$24.500</span>
+            <button class="add-cart-btn" data-id="brote-1">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="card-product" data-tags="facil plantas sombra">
+          <span class="card-tag">Ultra Resistente</span>
+          <div class="card-product-img">
+            <img src="https://images.unsplash.com/photo-1593482892290-f54927ae1bac?auto=format&fit=crop&w=600&q=80" alt="Sansevieria" />
+          </div>
+          <div>
+            <span class="label-sm" style="color: var(--text-olive-grey);">PLANTAS • SOMBRA OK</span>
+            <h3 class="title-md" style="margin: 4px 0 8px 0;">Sansevieria Trifasciata (Lengua de Suegra)</h3>
+            <p class="body-sm">Purifica el aire, tolera poca luz y requiere muy poco riego.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">$18.900</span>
+            <button class="add-cart-btn" data-id="brote-4">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="card-product" data-tags="facil plantas luz-filtrada">
+          <div class="card-product-img">
+            <img src="https://images.unsplash.com/photo-1617540209635-433b2e5927ad?auto=format&fit=crop&w=600&q=80" alt="Pothos Dorado" />
+          </div>
+          <div>
+            <span class="label-sm" style="color: var(--text-olive-grey);">COLGANTE • CUIDADO FÁCIL</span>
+            <h3 class="title-md" style="margin: 4px 0 8px 0;">Pothos Dorado en Maceta Terracota</h3>
+            <p class="body-sm">Planta trepadora o colgante de rápido crecimiento y tonos dorados.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">$16.500</span>
+            <button class="add-cart-btn" data-id="brote-5">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="card-product" data-tags="medio plantas luz-filtrada">
+          <div class="card-product-img">
+            <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=600&q=80" alt="Ficus Lyrata" />
+          </div>
+          <div>
+            <span class="label-sm" style="color: var(--text-olive-grey);">PLANTAS • LUZ FILTRADA</span>
+            <h3 class="title-md" style="margin: 4px 0 8px 0;">Ficus Lyrata (Higuera Hoja de Violín)</h3>
+            <p class="body-sm">Elegante arbolito de interior para rincones bien iluminados.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">$28.900</span>
+            <button class="add-cart-btn" data-id="brote-3">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 5 -->
+        <article class="card-product" data-tags="kits sustratos">
+          <span class="card-tag">Kit Recomendado</span>
+          <div class="card-product-img">
+            <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=600&q=80" alt="Kit Sustrato Vivo" />
+          </div>
+          <div>
+            <span class="label-sm" style="color: var(--text-olive-grey);">SUSTRATOS • NUTRICIÓN</span>
+            <h3 class="title-md" style="margin: 4px 0 8px 0;">Kit Sustrato Vivo & Humus Orgánico</h3>
+            <p class="body-sm">Mezcla aireada de turba, perlita, corteza de pino y humus.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">$14.900</span>
+            <button class="add-cart-btn" data-id="brote-2">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 6 -->
+        <article class="card-product" data-tags="sustratos">
+          <div class="card-product-img">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" alt="Maceta Terracota" />
+          </div>
+          <div>
+            <span class="label-sm" style="color: var(--text-olive-grey);">MACETAS • ARTESANAL</span>
+            <h3 class="title-md" style="margin: 4px 0 8px 0;">Maceta Terracota Cónica Handmade 22cm</h3>
+            <p class="body-sm">Barro poroso natural que permite respirar a las raíces.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">$12.000</span>
+            <button class="add-cart-btn" data-id="brote-6">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer">
+    <div class="cart-header">
+      <h3 class="headline-md" style="display: flex; align-items: center; gap: 8px;">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        Tu Carrito Brote
+      </h3>
+      <button class="icon-btn close-cart-btn" aria-label="Cerrar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 18px;">
+        <span>Total:</span>
+        <span class="cart-total-price">$24.500</span>
+      </div>
+      <button class="btn btn-terracotta" onclick="alert('¡Gracias por elegir Brote!')">
+        Finalizar Pedido
+      </button>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="font-family: var(--font-headline); font-size: 28px; font-weight: 700; margin-bottom: 12px;">brote.</div>
+          <p class="body-md" style="opacity: 0.9; max-width: 320px;">
+            Cultivo urbano fácil y sin complicaciones.
+          </p>
+        </div>
+        <div>
+          <h4 class="label-sm" style="margin-bottom: 16px;">Navegación</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="shop.html">Tienda</a></li>
+            <li><a href="product.html">Ficha de Producto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="label-sm" style="margin-bottom: 16px;">Soporte Botánico</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+            <li><a href="index.html#diagnostic">Diagnóstico de Planta</a></li>
+            <li><a href="#">Garantía de Brote Vivo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="label-sm" style="margin-bottom: 16px;">Contacto</h4>
+          <p style="font-size: 14px; opacity: 0.9;">hola@broteplantas.cl</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Brote Urban Botanical Care. Conectado desde Stitch MCP.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

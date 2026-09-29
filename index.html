@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brote | Plantas de Interior & Cuidado Sin Complicaciones</title>
+  <meta name="description" content="Plantas de interior saludables, kits de cultivo urbano y guías de cuidado sencillas."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="material-symbols-outlined fill-icon" style="color: var(--primary-sage);">potted_plant</span>
+        brote.
+      </a>
+      <nav class="hidden md:flex">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Inicio</a></li>
+          <li><a href="shop.html" class="nav-link">Tienda</a></li>
+          <li><a href="product.html" class="nav-link">Ficha de Producto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn cart-toggle-btn" aria-label="Shopping Bag">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="cart-badge">1</span>
+        </button>
+        <button class="icon-btn mobile-menu-btn" aria-label="Menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav">
+    <a href="index.html">Inicio</a>
+    <a href="shop.html">Tienda de Plantas</a>
+    <a href="product.html">Ficha de Producto</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="container hero-section">
+      <div class="hero-content">
+        <div class="chip" style="width: fit-content;">
+          <span class="material-symbols-outlined fill-icon" style="font-size: 16px; color: var(--accent-terracotta);">eco</span>
+          <span>Urban Botanical Care</span>
+        </div>
+        <h1 class="headline-display">
+          Plantas de interior <span style="color: var(--accent-terracotta); font-style: italic;">sin complicaciones</span> para tu hogar.
+        </h1>
+        <p class="body-md" style="color: var(--text-olive-grey); max-width: 500px;">
+          Cultivamos tranquilidad en espacios urbanos. Recibe plantas saludables con instrucciones de cuidado claras, sustratos orgánicos y soporte permanente.
+        </p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="shop.html" class="btn btn-primary">Ver la Tienda</a>
+          <a href="#diagnostic" class="btn btn-secondary">Diagnóstico de Planta</a>
+        </div>
+      </div>
+
+      <div class="hero-img-box">
+        <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=800&q=80" alt="Monstera deliciosa en salón iluminado" />
+      </div>
+    </section>
+
+    <!-- Diagnostic Triage Section -->
+    <section id="diagnostic" class="container">
+      <div class="diagnostic-box">
+        <div class="diagnostic-header">
+          <span class="label-sm" style="color: var(--accent-terracotta-strong);">Triage Botánico</span>
+          <h2 class="headline-lg" style="margin: 8px 0 12px 0;">¿Qué le pasa a tu planta?</h2>
+          <p class="body-sm">Selecciona el síntoma principal para obtener una guía instantánea de recuperación.</p>
+        </div>
+
+        <div class="diagnostic-options">
+          <div class="diagnostic-card" data-target="result-yellow">
+            <span class="material-symbols-outlined" style="font-size: 36px; color: #D4A373;">warning</span>
+            <h3 class="title-md">Hojas Amarillas</h3>
+            <p class="body-sm">Suelen ser síntoma de riego excesivo o drenaje deficiente.</p>
+          </div>
+
+          <div class="diagnostic-card" data-target="result-spots">
+            <span class="material-symbols-outlined" style="font-size: 36px; color: var(--accent-terracotta);">grain</span>
+            <h3 class="title-md">Manchas Marrones</h3>
+            <p class="body-sm">Falta de humedad ambiental o luz solar directa abrasadora.</p>
+          </div>
+
+          <div class="diagnostic-card" data-target="result-pests">
+            <span class="material-symbols-outlined" style="font-size: 36px; color: var(--primary-sage);">bug_report</span>
+            <h3 class="title-md">Bichitos / Plagas</h3>
+            <p class="body-sm">Cochinilla algodonosa o arañita roja en el envés de las hojas.</p>
+          </div>
+        </div>
+
+        <!-- Result Panels -->
+        <div id="result-yellow" class="diagnostic-result">
+          <h4 class="title-md" style="color: var(--primary-sage); margin-bottom: 8px;">Diagnóstico: Exceso de Riego o Falta de Drenaje</h4>
+          <p class="body-sm">Espacia los riegos hasta que el sustrato se seque 2 cm en la superficie. Asegúrate de que la maceta tenga orificios de salida. Te recomendamos nuestro <strong>Sustrato Orgánico Aireado</strong> con perlita.</p>
+        </div>
+
+        <div id="result-spots" class="diagnostic-result">
+          <h4 class="title-md" style="color: var(--primary-sage); margin-bottom: 8px;">Diagnóstico: Ambiente Seco</h4>
+          <p class="body-sm">Rocía las hojas con agua filtrada 2 veces por semana y aleja la planta de corrientes de aire acondicionado o radiadores de calefacción.</p>
+        </div>
+
+        <div id="result-pests" class="diagnostic-result">
+          <h4 class="title-md" style="color: var(--primary-sage); margin-bottom: 8px;">Diagnóstico: Presencia de Cochinilla</h4>
+          <p class="body-sm">Limpia las hojas afectadas con un algodón impregnado en jabón potásico o aceite de neem diluido. Repite cada 5 días hasta eliminar la plaga.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Kits & Catalog -->
+    <section class="container" style="margin-bottom: var(--section-gap);">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px;">
+        <div>
+          <span class="label-sm" style="color: var(--accent-terracotta-strong);">Selección Destacada</span>
+          <h2 class="headline-lg">Kits de Cultivo & Plantas de Casa</h2>
+        </div>
+        <a href="shop.html" class="btn btn-secondary hidden md:flex">Ver Todo el Catálogo →</a>
+      </div>
+
+      <div class="grid-3">
+        <!-- Card 1 -->
+        <article class="card-product" data-tags="facil interior">
+          <span class="card-tag">Principiantes</span>
+          <div class="card-product-img">
+            <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80" alt="Monstera Deliciosa" />
+          </div>
+          <div>
+            <span class="label-sm" style="color: var(--text-olive-grey);">INTERIOR • CUIDADO FÁCIL</span>
+            <h3 class="title-md" style="margin: 4px 0 8px 0;">Monstera Deliciosa + Maceta Sand</h3>
+            <p class="body-sm">Planta de hojas majestuosas, resistente a luz indirecta media.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">$24.500</span>
+            <button class="add-cart-btn" data-id="brote-1">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card-product" data-tags="kit sustrato">
+          <span class="card-tag">Kit Recomendado</span>
+          <div class="card-product-img">
+            <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=600&q=80" alt="Kit Nutrición Orgánica" />
+          </div>
+          <div>
+            <span class="label-sm" style="color: var(--text-olive-grey);">KIT COMPLETO</span>
+            <h3 class="title-md" style="margin: 4px 0 8px 0;">Kit Sustrato Vivo & Humus de Lombriz</h3>
+            <p class="body-sm">Mezcla nutritiva con perlita, turba y microorganismos benéficos.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">$14.900</span>
+            <button class="add-cart-btn" data-id="brote-2">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card-product" data-tags="medio interior">
+          <div class="card-product-img">
+            <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=600&q=80" alt="Ficus Lyrata" />
+          </div>
+          <div>
+            <span class="label-sm" style="color: var(--text-olive-grey);">INTERIOR LUMINOSO</span>
+            <h3 class="title-md" style="margin: 4px 0 8px 0;">Ficus Lyrata (Higuera Hoja de Violín)</h3>
+            <p class="body-sm">Elegante arbolito de interior para espacios con abundante luz indirecta.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price">$28.900</span>
+            <button class="add-cart-btn" data-id="brote-3">
+              <span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+              Agregar
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Structured Usage Guide Box -->
+    <section class="container" style="margin-bottom: var(--section-gap);">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="label-sm" style="color: var(--accent-terracotta-strong);">Guía de Uso Sencilla</span>
+        <h2 class="headline-lg">Cuidar tus plantas nunca fue tan fácil</h2>
+      </div>
+
+      <div class="box-usage-guide">
+        <div class="guide-item">
+          <span class="material-symbols-outlined">wb_sunny</span>
+          <h3 class="title-md">¿Para qué plantas?</h3>
+          <p class="body-sm">Nuestras plantas y sustratos están formulados para departamentos y casas con luz filtrada (luz solar indirecta).</p>
+        </div>
+
+        <div class="guide-item">
+          <span class="material-symbols-outlined">water_drop</span>
+          <h3 class="title-md">¿Cómo regar?</h3>
+          <p class="body-sm">Riega abundante únicamente cuando el primer tercio de la tierra esté seco al tacto (método de inmersión o regadera).</p>
+        </div>
+
+        <div class="guide-item">
+          <span class="material-symbols-outlined">calendar_today</span>
+          <h3 class="title-md">¿Cada cuánto?</h3>
+          <p class="body-sm">En primavera/verano cada 7 a 10 días. En otoño/invierno reduce la frecuencia a cada 14 a 20 días.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer">
+    <div class="cart-header">
+      <h3 class="headline-md" style="display: flex; align-items: center; gap: 8px;">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        Tu Carrito Brote
+      </h3>
+      <button class="icon-btn close-cart-btn" aria-label="Cerrar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 18px;">
+        <span>Total:</span>
+        <span class="cart-total-price">$24.500</span>
+      </div>
+      <button class="btn btn-terracotta" onclick="alert('¡Gracias por elegir Brote! Procesando pedido.')">
+        Finalizar Pedido
+      </button>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="font-family: var(--font-headline); font-size: 28px; font-weight: 700; margin-bottom: 12px;">brote.</div>
+          <p class="body-md" style="opacity: 0.9; max-width: 320px;">
+            Haciendo que el cultivo urbano sea accesible, reconfortante y sin complicaciones.
+          </p>
+        </div>
+        <div>
+          <h4 class="label-sm" style="margin-bottom: 16px;">Navegación</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="shop.html">Tienda de Plantas</a></li>
+            <li><a href="product.html">Ficha de Producto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="label-sm" style="margin-bottom: 16px;">Soporte Botánico</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+            <li><a href="#diagnostic">Diagnóstico de Planta</a></li>
+            <li><a href="#">Guía de Riego</a></li>
+            <li><a href="#">Garantía de Brote Vivo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="label-sm" style="margin-bottom: 16px;">Contacto</h4>
+          <p style="font-size: 14px; opacity: 0.9;">hola@broteplantas.cl</p>
+          <p style="font-size: 14px; opacity: 0.9; margin-top: 4px;">Santiago, Chile</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Brote Urban Botanical Care. Conectado desde Stitch MCP.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

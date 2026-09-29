@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Journal Botánico | Botanica Rituals</title>
+  <meta name="description" content="Artículos de bienestar, guías de infusión botánica y sabiduría sobre plantas medicianles orgánicas."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="material-symbols-outlined fill-icon" style="color: var(--primary);">eco</span>
+        Botanica Rituals
+      </a>
+      <nav class="hidden md:flex">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="shop.html" class="nav-link">Tienda</a></li>
+          <li><a href="blog.html" class="nav-link active">Journal</a></li>
+          <li><a href="contact.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn cart-toggle-btn" aria-label="Shopping Bag">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="cart-badge">1</span>
+        </button>
+        <button class="icon-btn mobile-menu-btn" aria-label="Menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-nav">
+    <a href="index.html">Inicio</a>
+    <a href="shop.html">Tienda</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html">Contacto</a>
+  </div>
+
+  <main style="padding-top: 120px; padding-bottom: var(--section-gap);">
+    <!-- Blog Hero -->
+    <section class="container" style="margin-bottom: 60px;">
+      <div class="chip" style="margin-bottom: 16px;">Infusiones de Conocimiento</div>
+      <h1 class="headline-xl" style="color: var(--primary); max-width: 700px; margin-bottom: 20px;">
+        Sabiduría botánica para revitalizar tu cuerpo y mente.
+      </h1>
+      <p class="body-lg" style="color: var(--on-surface-variant); max-width: 600px;">
+        Aprende sobre las propiedades curativas de las flores, las frutas deshidratadas y los rituales ancestrales de infusión.
+      </p>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="container" style="margin-bottom: 80px;">
+      <article class="ambient-shadow" style="background-color: var(--surface-container-lowest); border-radius: 28px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--surface-container-high);">
+        <div style="padding: 48px; display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+          <span class="chip" style="width: fit-content;">Artículo Principal</span>
+          <h2 class="headline-lg" style="color: var(--on-surface);">El arte de la extracción lenta: Cold Brew Botánico</h2>
+          <p class="body-md" style="color: var(--on-surface-variant);">
+            Descubre cómo la maceración en agua fría durante 8 horas resalta los aceites esenciales del hibisco y las frutas sin extraer taninos amargos.
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--outline);">
+            <span>Por Clara Silva, Herborista</span>
+            <span>•</span>
+            <span>8 min de lectura</span>
+          </div>
+        </div>
+        <div style="height: 100%; min-height: 340px;">
+          <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=800&q=80" alt="Maceración fría botánica" style="width: 100%; height: 100%; object-fit: cover;" />
+        </div>
+      </article>
+    </section>
+
+    <!-- Article Grid -->
+    <section class="container">
+      <div class="grid-3">
+        <!-- Post 1 -->
+        <article class="product-card">
+          <div class="card-img-box">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Lavanda" />
+          </div>
+          <div class="card-content" style="padding-top: 12px;">
+            <span class="label-sm" style="color: var(--tertiary);">RELAJACIÓN & SUEÑO</span>
+            <h3 class="card-title">Por qué la lavanda mejora la calidad del descanso profundo</h3>
+            <p class="card-desc">Investigaciones recientes respaldan el efecto del linalool en la modulación del estrés antes de dormir.</p>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="product-card">
+          <div class="card-img-box">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" alt="Cultivo orgánico" />
+          </div>
+          <div class="card-content" style="padding-top: 12px;">
+            <span class="label-sm" style="color: var(--tertiary);">AGRICULTURA BIODINÁMICA</span>
+            <h3 class="card-title">Cosechando flores según los ciclos lunares</h3>
+            <p class="card-desc">Conoce nuestras fincas asociadas en el Valle Central y sus técnicas tradicionales de cultivo sin pesticidas.</p>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="product-card">
+          <div class="card-img-box">
+            <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=600&q=80" alt="Té frutal" />
+          </div>
+          <div class="card-content" style="padding-top: 12px;">
+            <span class="label-sm" style="color: var(--tertiary);">RECETAS BOTÁNICAS</span>
+            <h3 class="card-title">Mocktail herbal de Frambuesa y Azahar para compartir</h3>
+            <p class="card-desc">Una bebida sin alcohol sofisticada, refrescante e ideal para tardes de sol.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer">
+    <div class="cart-header">
+      <h3 class="headline-md" style="color: var(--primary);">Tu Carrito</h3>
+      <button class="icon-btn close-cart-btn" aria-label="Cerrar">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; font-weight: 700;">
+        <span>Total:</span>
+        <span class="cart-total-price">$18.50</span>
+      </div>
+      <button class="btn btn-primary" onclick="alert('¡Gracias por tu pedido!')">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Botanica Rituals</div>
+          <p class="body-md" style="color: var(--on-surface-variant);">Cultivando energía serena a través de infusiones orgánicas.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="shop.html">Tienda</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Compromiso</h4>
+          <ul>
+            <li><a href="#">Cultivo Orgánico</a></li>
+            <li><a href="#">Empaques Compostables</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li>hola@botanicarituals.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Botanica Rituals. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
