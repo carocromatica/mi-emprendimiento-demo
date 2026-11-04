@@ -3,58 +3,64 @@ version: alpha
 name: Brote
 description: Design system de Brote, tienda de jardinería para personas que están empezando con plantas.
 colors:
-  primary: "#3F5E4A"
-  primary-hover: "#34503F"
-  primary-active: "#2A4033"
+  primary: "#305941"
+  primary-hover: "#284A36"
+  primary-active: "#203B2B"
   on-primary: "#FFFFFF"
-  secondary: "#EDE4D3"
-  on-secondary: "#2B2B28"
-  tertiary: "#C0643A"
-  tertiary-strong: "#A9552F"
+  secondary: "#E6ECB7"
+  on-secondary: "#202924"
+  secondary-soft: "#E7E9CD"
+  tertiary: "#A93B6A"
+  tertiary-hover: "#92315A"
   on-tertiary: "#FFFFFF"
-  neutral: "#FBF8F2"
+  accent-green: "#4C8D62"
+  accent-olive: "#ACB84A"
+  accent-pink: "#F8E8F0"
+  accent-mint: "#E8F3EC"
+  neutral: "#FEFDF9"
   surface: "#FFFFFF"
-  on-surface: "#2B2B28"
-  on-surface-variant: "#6B675E"
-  outline: "#E2D9C6"
-  disabled: "#CFCAC0"
-  on-disabled: "#4F4B44"
+  on-surface: "#202924"
+  on-surface-variant: "#5E6B63"
+  footer: "#3A5745"
+  outline: "#D5DBBE"
+  disabled: "#CFD3CB"
+  on-disabled: "#4B544E"
   success: "#2F7A4A"
   error: "#B23A2E"
 typography:
   headline-display:
-    fontFamily: Fraunces
+    fontFamily: Bree Serif
     fontSize: 48px
     fontWeight: 600
     lineHeight: 1.1
     letterSpacing: -0.01em
   headline-display-mobile:
-    fontFamily: Fraunces
+    fontFamily: Bree Serif
     fontSize: 36px
     fontWeight: 600
     lineHeight: 1.1
   headline-lg:
-    fontFamily: Fraunces
+    fontFamily: Bree Serif
     fontSize: 32px
     fontWeight: 600
     lineHeight: 1.2
   headline-lg-mobile:
-    fontFamily: Fraunces
+    fontFamily: Bree Serif
     fontSize: 28px
     fontWeight: 600
     lineHeight: 1.2
   headline-md:
-    fontFamily: Fraunces
+    fontFamily: Bree Serif
     fontSize: 24px
     fontWeight: 600
     lineHeight: 1.25
   headline-md-mobile:
-    fontFamily: Fraunces
+    fontFamily: Bree Serif
     fontSize: 20px
     fontWeight: 600
     lineHeight: 1.25
   title-md:
-    fontFamily: Fraunces
+    fontFamily: Bree Serif
     fontSize: 18px
     fontWeight: 600
     lineHeight: 1.2
@@ -81,6 +87,7 @@ typography:
     letterSpacing: 0.06em
 rounded:
   md: 8px
+  lg: 24px
   full: 9999px
 spacing:
   xs: 4px
@@ -102,16 +109,16 @@ components:
     typography: "{typography.body-md}"
     height: 72px
   button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
+    backgroundColor: "{colors.tertiary}"
+    textColor: "{colors.on-tertiary}"
     typography: "{typography.label-md}"
     rounded: "{rounded.full}"
     padding: 12px 24px
   button-primary-hover:
-    backgroundColor: "{colors.primary-hover}"
-    textColor: "{colors.on-primary}"
+    backgroundColor: "{colors.tertiary-hover}"
+    textColor: "{colors.on-tertiary}"
   button-primary-active:
-    backgroundColor: "{colors.primary-active}"
+    backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
   button-primary-disabled:
     backgroundColor: "{colors.disabled}"
@@ -123,11 +130,11 @@ components:
     rounded: "{rounded.full}"
     padding: 12px 24px
   button-secondary-hover:
-    backgroundColor: "{colors.secondary}"
+    backgroundColor: "{colors.accent-mint}"
     textColor: "{colors.primary}"
   card-product:
-    backgroundColor: "{colors.secondary}"
-    textColor: "{colors.on-secondary}"
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.on-surface}"
     typography: "{typography.title-md}"
     rounded: "{rounded.md}"
     padding: "{spacing.md}"
@@ -138,7 +145,7 @@ components:
     rounded: "{rounded.full}"
     padding: 4px 10px
   tag-offer:
-    backgroundColor: "{colors.tertiary-strong}"
+    backgroundColor: "{colors.tertiary}"
     textColor: "{colors.on-tertiary}"
     typography: "{typography.label-md}"
     rounded: "{rounded.full}"
@@ -177,6 +184,15 @@ components:
     textColor: "{colors.on-secondary}"
     rounded: "{rounded.md}"
     padding: "{spacing.md}"
+  category-circle:
+    backgroundColor: "{colors.accent-pink}"
+    textColor: "{colors.on-surface}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+  band-section:
+    backgroundColor: "{colors.secondary-soft}"
+    textColor: "{colors.on-surface}"
+    rounded: "{rounded.lg}"
   box-lead-form:
     backgroundColor: "{colors.secondary}"
     textColor: "{colors.on-secondary}"
@@ -193,7 +209,7 @@ components:
     rounded: "{rounded.md}"
     padding: "{spacing.lg}"
   footer:
-    backgroundColor: "{colors.primary}"
+    backgroundColor: "{colors.footer}"
     textColor: "{colors.on-primary}"
     typography: "{typography.body-sm}"
     padding: "{spacing.2xl}"
@@ -203,113 +219,121 @@ components:
 
 ## Overview
 
-Brote es una tienda online de jardinería para personas que están empezando con plantas: sustratos, fertilizantes, productos contra plagas, herramientas y maceteros. Su usuaria principal es Camila, 29 años, que vive en un departamento con balcón, compra desde el celular de noche, quiere una casa bonita con plantas y necesita que la guíen para que no se le mueran.
+Brote es una tienda online de jardinería para personas que están empezando con plantas: suculentas, cactus, maceteros, sustratos, fertilizantes y herramientas. Su usuaria principal es Camila, 29 años, que vive en un departamento con balcón, compra desde el celular de noche, quiere una casa bonita con plantas y necesita que la guíen para que no se le mueran.
 
-El estilo es **natural, fresco, cálido, simple y vivo**: un rincón verde y tranquilo, con mucha luz natural, hojas, maceteros de greda, tierra y madera. La interfaz es espaciosa, con mucho espacio en blanco y fotos reales de plantas sanas en departamentos. Nada técnico ni frío: el tono visual transmite que cuidar plantas no es complicado.
+El estilo es **fresco, vivo, amable y juguetón**: fondo casi blanco, verdes profundos, toques de rosa fucsia y bandas verde lima suaves. Mucho espacio en blanco, fotos de plantas sanas recortadas sobre círculos de colores y pequeñas ilustraciones (hojas, líneas onduladas) que dan un aire hecho a mano. Nada técnico ni frío: cuidar plantas no es complicado.
 
 ## Colors
 
-La paleta sale del moodboard: hojas, greda, tierra y madera.
+La paleta se armó en Canva (proyecto "Proyecto brote") y se ajustó con los colores reales del diseño.
 
-- **Primary (#3F5E4A):** Verde salvia oscuro, el color de la marca. Botones principales, enlaces, logo y footer.
-- **Secondary (#EDE4D3):** Arena. Fondos de secciones, product cards, kits y cajas destacadas.
-- **Tertiary (#C0643A):** Terracota, el color de la greda. Solo para acentos: contador del carrito, íconos y detalles. Tiene contraste 3.9:1 sobre el fondo, así que nunca se usa en párrafos.
-- **Tertiary-strong (#A9552F):** Terracota oscuro para fondos de etiquetas con texto blanco (ofertas, ahorro de los kits): alcanza 5.2:1.
-- **Neutral (#FBF8F2):** Crema. Fondo general del sitio; evita el blanco frío.
-- **On-surface (#2B2B28):** Carbón, para textos y títulos. Contraste 13.4:1 sobre el fondo.
-- **On-surface-variant (#6B675E):** Gris cálido para bajadas y textos secundarios. Contraste 5.3:1.
-- **Outline (#E2D9C6):** Bordes de tarjetas y separadores. Los chips e inputs usan un borde un poco más marcado, #D9CFBB.
+- **Primary (#305941):** Verde bosque. Títulos, enlaces, logo, íconos y texto de marca. Contraste 7.8:1 sobre el fondo.
+- **Footer (#3A5745):** Verde bosque un poco más claro, solo para el fondo del footer (una franja verde #2F8F5B más viva cierra la página con el copyright).
+- **Tertiary (#A93B6A):** Fucsia. Es el color de la acción: botones principales ("Comprar plantitas", "Agregar al carrito", "Suscríbete"), precios destacados, nombre científico, categorías y enlaces de guía. Contraste 5.9:1 sobre el fondo y 6.0:1 con texto blanco encima.
+- **Secondary (#E6ECB7):** Verde lima suave. Bandas de sección (Destacados del mes, newsletter), caja "Descarga nuestra guía" y botón "Mi cuenta".
+- **Secondary-soft (#E7E9CD):** Lima grisáceo para círculos de categoría y fondos secundarios.
+- **Accent-green (#4C8D62):** Verde medio. Solo decorativo (ilustraciones, íconos grandes, subrayados ondulados). Contraste 3.9:1: nunca se usa para texto normal ni como fondo de texto blanco.
+- **Accent-olive (#ACB84A):** Verde oliva. Solo decorativo (líneas onduladas, círculo del hero).
+- **Accent-pink (#F8E8F0):** Rosa pálido. Círculos detrás de las plantas y fondos de categorías.
+- **Accent-mint (#E8F3EC):** Menta pálido. Círculos de categorías y hover de botones secundarios.
+- **Neutral (#FEFDF9):** Blanco cálido. Fondo general del sitio.
+- **On-surface (#202924):** Verde casi negro para textos. Contraste 14.7:1.
+- **On-surface-variant (#5E6B63):** Gris verdoso para textos secundarios. Contraste 5.5:1.
+- **Outline (#D5DBBE):** Bordes de cards, inputs y separadores.
 - **Success (#2F7A4A)** y **Error (#B23A2E):** Mensajes de confirmación y errores de formulario.
 
-Proporción de uso por pantalla: 60 % neutros (fondo y texto), 30 % secundario, 10 % principal y terciario.
+Proporción de uso por pantalla: 60 % neutro y blanco, 25 % verde lima y rosa pálido (bandas y círculos), 15 % verde bosque y fucsia.
 
 ## Typography
 
 Dos familias de Google Fonts:
 
-- **Fraunces** (serif cálida, con toque artesanal) para títulos, nombres de productos y títulos de artículos.
+- **Bree Serif** (serif redondeada y amable, la del logo) para títulos, nombres de productos y títulos de artículos.
 - **Inter** (sans serif muy legible en pantallas pequeñas) para textos, botones, etiquetas y formularios.
 
-Escala: `headline-display` para el h1 (48px en desktop, 36px en mobile), `headline-lg` para h2 (32px / 28px), `headline-md` para h3 (24px / 20px), `title-md` para nombres de productos y títulos de cards, `body-md` para párrafos, `label-md` para botones y `label-sm` en mayúsculas para categorías y etiquetas. Cada pantalla tiene un solo h1.
+Escala: `headline-display` para el h1 (48px en desktop, 36px en mobile; la frase final va subrayada con una línea ondulada verde oliva), `headline-lg` para h2 (32px / 28px), `headline-md` para h3 (24px / 20px), `title-md` para nombres de productos y títulos de cards, `body-md` para párrafos, `label-md` para botones y `label-sm` para categorías (en fucsia o verde bosque). Cada pantalla tiene un solo h1.
 
 ## Layout
 
 - **Grilla:** contenido centrado con ancho máximo de 1200px y márgenes laterales de 32px (16px en mobile).
-- **Espaciado:** escala fija de 4, 8, 16, 24, 32, 48 y 64px. Entre secciones, 64px en desktop y 48px en mobile. Padding interno de tarjetas, 16px. Separación entre tarjetas de una grilla, 24px (16px en mobile).
+- **Espaciado:** escala fija de 4, 8, 16, 24, 32, 48 y 64px. Entre secciones, 64px en desktop y 48px en mobile. Padding interno de tarjetas, 16px. Separación entre tarjetas, 24px (16px en mobile).
 - **Breakpoints (mobile first):** mobile hasta 767px, tablet de 768 a 1023px, desktop desde 1024px.
-- **Columnas:** las grillas de productos, kits y artículos usan 1 columna en mobile, 2 en tablet y 3 en desktop.
-- **Mobile:** la navbar muestra logo, carrito y menú hamburguesa; los filtros de la tienda se abren desde un botón "Filtrar"; en el hero y en la ficha de producto, la imagen va arriba y el texto abajo; en el carrito, el resumen va debajo de la lista. Nunca hay scroll horizontal en la página.
+- **Estructura de la home:** hero con plantas sobre círculos y caja de guía gratis; fila de 6 categorías en círculos (Suculentas, Cactus, Maceteros, Sustratos, Fertilizantes, Herramientas); producto recomendado (foto + ficha); banda lima "Destacados del mes" con 4 cards; blog con 3 artículos; newsletter; footer.
+- **Títulos de sección:** centrados, con una línea ondulada verde oliva a cada lado.
+- **Columnas:** destacados 4 en desktop, 2 en tablet, 1 en mobile; blog 3 / 2 / 1; categorías 6 / 3 / 2.
+- **Mobile:** la navbar muestra logo, carrito y menú hamburguesa; en el hero y en el producto recomendado, la imagen va arriba y el texto abajo. Nunca hay scroll horizontal en la página.
 
 ## Elevation & Depth
 
-Diseño plano. La jerarquía se logra con **capas de color** (fondo crema, tarjetas arena o blancas) y bordes de 1px color outline, no con sombras. La única sombra es la de hover en tarjetas: `0 4px 12px rgba(0,0,0,.08)`.
+Diseño plano. La jerarquía se logra con **bandas y círculos de color** y bordes de 1px color outline, no con sombras. La única sombra es la de hover en tarjetas: `0 4px 12px rgba(0,0,0,.08)`.
 
 ## Shapes
 
-Formas suaves y amables: radio de **8px** (`rounded.md`) en tarjetas, cajas, inputs e imágenes, y **píldora** (`rounded.full`) en botones, chips y etiquetas. No se mezclan esquinas rectas con redondeadas en una misma vista.
+Formas suaves y redondeadas: **píldora** (`rounded.full`) en botones, chips, campos de correo y círculos de categoría; **8px** (`rounded.md`) en cards, imágenes e inputs de formulario; **24px** (`rounded.lg`) en bandas y cajas grandes como la de la guía gratis. Las líneas onduladas son un detalle decorativo y siempre van en verde oliva.
 
 ## Components
 
 ### Navbar
 
-Logo a la izquierda; enlaces Tienda, Blog, Nosotros y Contacto; buscador; ícono de carrito con contador en círculo terracota. Es igual en todas las páginas; el enlace de la sección actual va subrayado. Borde inferior de 1px.
+Logo "brote" con ícono de hojas a la izquierda; enlaces Inicio, Blog, Nosotros y Tienda; botón "Mi cuenta" en píldora lima; ícono de carrito. El enlace de la sección actual va en negrita y subrayado en fucsia. Fondo neutro; una franja verde oliva fina cierra el borde superior de la página.
 
 ### Botones
 
-- **button-primary:** verde salvia con texto blanco, píldora. Un solo botón principal por sección. Hover 10 % más oscuro, active 20 % más oscuro, disabled en gris (`disabled`) sin cursor de mano.
-- **button-secondary:** blanco con borde de 2px y texto verde salvia; hover con fondo arena.
-- El texto de los botones siempre es un verbo: "Ver productos", "Agregar al carrito", "Quiero la guía", "Calcular".
+- **button-primary:** fucsia con texto blanco, píldora. Un solo botón principal por sección. Hover más oscuro (`tertiary-hover`), active en verde bosque, disabled en gris sin cursor de mano.
+- **button-secondary:** fondo blanco, borde de 1.5px y texto verde bosque (o fucsia en las cards de producto); hover con fondo menta.
+- El texto de los botones siempre es un verbo: "Comprar plantitas", "Agregar al carrito", "Suscríbete a nuestras novedades".
+
+### Hero
+
+Título en `headline-display` verde bosque con la frase final ("poco demandan") subrayada con línea ondulada verde oliva, bajada con negritas en palabras clave, botón principal, línea de retiro en tienda y envíos, y a la derecha un collage de plantas sobre círculos rosa pálido y lima. Debajo, la caja de guía gratis (`band-section`): foto pequeña, pregunta y enlace subrayado en fucsia "Descarga nuestra guía gratis".
+
+### Categorías (`category-circle`)
+
+Círculo de 160px con fondo rosa, lima o menta, la foto de producto recortada dentro y el nombre en `label-md` debajo. Un círculo por categoría; toda la pieza es clicable.
+
+### Producto recomendado
+
+Foto grande con radio 8px a la izquierda; a la derecha, "Brote recomienda", nombre en `headline-lg`, nombre científico en fucsia, descripción, tres datos con ícono (Cuidado, Riego, Luz con su nivel), precio en Inter 700 grande y botón principal "Agregar al carrito".
 
 ### Product card (`card-product`)
 
-Imagen cuadrada con radio de 8px, etiqueta de tipo de planta (`tag-plant`, por ejemplo "Interior"), nombre del producto en `title-md`, precio en Inter 700 y botón secundario "Ver producto".
+Card blanca sobre la banda lima: imagen con radio de 8px, nombre en `title-md`, descripción corta en `body-sm`, precio en Inter 700 y botón secundario "Agregar al carrito".
 
 - El precio siempre es visible.
 - El nombre ocupa máximo 2 líneas; si es más largo, termina en "…".
 - Agotado: imagen en escala de grises y botón deshabilitado con el texto "Agotado".
 - Hover: sombra y la imagen se agranda al 103 %.
 
-### Kit por tipo de planta (`card-kit`)
+### Card de artículo (`card-article`)
 
-Tarjeta horizontal: imagen, nombre ("Kit plantas de interior"), lista de lo que incluye (sustrato, fertilizante y macetero), precio, etiqueta de ahorro en terracota oscuro (`tag-offer`, "Ahorra $2.500") y botón principal "Agregar kit".
+Imagen con radio 8px, categoría en `label-sm` verde bosque (por ejemplo "Jardinería en casa"), título en `title-md` (máximo 3 líneas), extracto de 3 líneas y enlace "Leer más >>" en verde bosque. Toda la card es clicable; hover con sombra.
 
-### Chips de categoría y filtros
+### Newsletter (`box-lead-form`)
 
-- **chip:** blanco con borde de 1.5px #D9CFBB; **chip-active:** verde salvia con texto blanco. Solo una categoría seleccionada a la vez.
-- **Filtros de tienda:** columna de 240px con casillas "Tipo de planta" (Interior, Exterior, Suculentas y cactus, Huerto) y rango de precio. Las casillas marcadas usan el color primario.
+Banda lima con el título "Tu próximo rincón verde empieza aquí", campo de correo en píldora blanca con etiqueta visible, botón principal "Suscríbete a nuestras novedades" y fotografía de suculentas en maceteros de cemento a la derecha. Al enviar, mensaje de éxito en verde (`message-success`).
 
 ### Campo de texto (`input-field`)
 
-Blanco, borde de 1.5px #D9CFBB, radio 8px. Focus: borde primario y halo de 3px del primario al 20 %. Error: borde rojo y mensaje debajo (`message-error`) que dice qué pasó y cómo corregirlo ("Revisa el correo: falta el .cl o .com"). Todos los campos tienen etiqueta visible.
+Blanco, borde de 1.5px color outline, radio 8px (píldora en el campo de newsletter). Focus: borde verde bosque y halo de 3px del primario al 20 %. Error: borde rojo y mensaje debajo (`message-error`) que dice qué pasó y cómo corregirlo ("Revisa el correo: falta el .cl o .com"). Todos los campos tienen etiqueta visible.
 
-### Formulario de leads (`box-lead-form`)
+### Chips y filtros
 
-Caja arena con la oferta como título ("Guía gratis de cuidados + 10 % en tu primera compra"), un solo campo de correo, botón principal "Quiero la guía" y texto de privacidad con enlace a la política. Al enviar, mensaje de éxito en verde (`message-success`).
-
-### Card de artículo (`card-article`)
-
-Blanca con borde de 1px: imagen, categoría en `label-sm` mayúsculas color gris cálido, título en `title-md` (máximo 3 líneas) y tiempo de lectura. Toda la card es clicable; hover con sombra.
-
-### Diagnóstico por síntoma
-
-Caja arena con el título "¿Qué le pasa a tu planta?" y tres botones secundarios con ícono: Hojas amarillas, Manchas en las hojas, Plagas.
-
-### Guía de uso (`box-usage-guide`)
-
-Tres columnas con ícono verde: "Para qué plantas", "Cómo usarlo", "Cada cuánto". Lenguaje simple; si aparece un término técnico, se explica entre paréntesis.
+- **chip:** blanco con borde de 1.5px outline; **chip-active:** verde bosque con texto blanco. Solo una categoría seleccionada a la vez.
+- **Filtros de tienda:** columna de 240px con casillas por categoría y rango de precio; las casillas marcadas usan el color primario.
 
 ### Resumen del carrito (`box-cart-summary`)
 
-Caja arena con subtotal, campo de comuna y botón "Calcular", costo de despacho, total en Inter 700 20px y botón principal "Ir a pagar". Mientras no se calcula el despacho, en vez del total dice "Calcula el despacho para ver el total".
+Caja lima con subtotal, campo de comuna y botón "Calcular", costo de despacho, total en Inter 700 20px y botón principal "Ir a pagar". Mientras no se calcula el despacho, en vez del total dice "Calcula el despacho para ver el total".
 
 ### Footer
 
-Fondo verde salvia con texto blanco: logo, enlaces a Preguntas frecuentes, Términos y condiciones, Política de privacidad y Contacto, y redes sociales.
+Fondo verde bosque (`footer`) con texto blanco: logo, descripción breve, íconos de Instagram, TikTok y Facebook, y columna de enlaces (Inicio, Blog, Nosotros, Tiendas, FAQ, Términos y condiciones, Política de privacidad). Debajo, franja verde con "© 2026 Brote. Todos los derechos reservados."
 
 ## Do's and Don'ts
 
-- Do usar fotos reales de plantas sanas en interiores con luz natural.
-- Do usar el terracota solo en acentos, y el terracota oscuro para etiquetas con texto blanco.
+- Do usar fotos reales de plantas sanas, recortadas sobre círculos de color o con esquinas de 8px.
+- Do reservar el fucsia para acciones y datos clave (botones, nombre científico, enlaces de guía).
+- Do usar el verde medio (#4C8D62) y el oliva solo como detalle decorativo, nunca para texto.
 - Do mantener contraste AA (4.5:1) en todo el texto normal.
 - Do escribir en español de Chile, en lenguaje simple y sin términos técnicos.
 - Don't usar más de dos familias tipográficas.

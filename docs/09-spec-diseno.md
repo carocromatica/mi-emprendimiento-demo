@@ -26,19 +26,41 @@ La spec de diseño tiene dos partes:
 
 ```text
 Pantalla: Landing de Brote (index), versión desktop. Usa el design system del proyecto.
-Objetivo: que Camila entienda qué es Brote, vaya a la tienda y deje su correo.
+Objetivo: que Camila entienda qué vende Brote, vaya a la tienda y deje su correo.
+Estilo: fondo blanco cálido, verdes profundos, fucsia solo en acciones, bandas
+verde lima suaves, círculos de colores detrás de las plantas y líneas
+onduladas verde oliva en los títulos de sección.
 Componentes, de arriba hacia abajo:
-1. Navbar.
-2. Hero: a la izquierda, h1 "Plantas sanas, casa bonita", bajada "Todo lo que
-   tus plantas necesitan, con guías simples para cuidarlas.", button-primary
-   "Ver productos" y button-secondary "Leer guías"; a la derecha, foto de un
-   balcón de departamento con plantas y luz natural.
-3. Sección "Plantas fáciles para empezar": 3 cards (Potus, Monstera,
-   Suculentas) con foto, nombre y enlace "Ver lo que necesita".
-4. box-lead-form: "Guía gratis de cuidados + 10 % en tu primera compra",
-   campo de correo, botón "Quiero la guía", texto de privacidad.
-5. Sección "Del blog": 3 card-article.
-6. Footer.
+1. Navbar: logo "brote", enlaces Inicio, Blog, Nosotros y Tienda, botón "Mi cuenta"
+   en píldora lima y ícono de carrito.
+2. Hero: a la izquierda, h1 "Plantas que encantan y poco demandan" (la frase
+   "poco demandan" subrayada con línea ondulada verde oliva), bajada "Suculentas
+   resistentes y fáciles de cuidar, lindas y perfectas para darle vida a tu
+   escritorio, dormitorio o rincón favorito.", button-primary "Comprar
+   plantitas" y la línea "Retiro en tienda Villa Alemana, V Región. Envíos a
+   todo Chile"; a la derecha, collage de suculentas en maceteros sobre
+   círculos rosa pálido y lima.
+3. Caja de guía (verde lima, esquinas de 24px): foto pequeña, "¿Quieres
+   iniciarte en la jardinería y no sabes por dónde empezar?" y enlace
+   subrayado fucsia "Descarga nuestra guía gratis".
+4. Título "Conoce nuestros productos" y 6 círculos de categoría: Suculentas,
+   Cactus, Maceteros, Sustratos, Fertilizantes, Herramientas.
+5. Producto recomendado: foto grande a la izquierda; a la derecha "Brote
+   recomienda", título "Árbol de jade, tu amigo verde", "Nombre científico:
+   Crassula ovata" en fucsia, descripción, datos Cuidado Bajo, Riego Moderado
+   y Luz Alta con ícono, precio $7900 y button-primary "Agregar al carrito".
+6. Banda verde lima grisácea "Destacados del mes": 4 card-product (foto,
+   nombre "Haworthia", descripción corta, precio $5990 y botón secundario
+   "Agregar al carrito").
+7. Sección "Blog": 3 card-article (foto, categoría "Jardinería en casa",
+   título "Macetas bonitas, raíces felices", extracto y "Leer más >>").
+8. Newsletter en banda verde lima: título "Tu próximo rincón verde empieza
+   aquí", campo de correo "Ingresa tu correo", button-primary "Suscríbete a
+   nuestras novedades" y foto de suculentas en maceteros de cemento.
+9. Footer verde bosque: logo, descripción, íconos de Instagram, TikTok y
+   Facebook, enlaces Inicio, Blog, Nosotros, Tiendas, FAQ, Términos y
+   condiciones y Política de privacidad; franja inferior con "© 2026 Brote.
+   Todos los derechos reservados."
 ```
 
 ### 2. Tienda

@@ -31,7 +31,9 @@ Incluye landing, blog y prototipo de tienda online.
 
 ## Sitio publicado
 
-Pendiente: se publica en GitHub Pages en la Fase 3.
+Todavía no hay sitio publicado: esta evaluación llega hasta el prototipo referencial. La publicación en GitHub Pages es de la etapa de código.
+
+**Prototipo en Stitch:** [pendiente: pegar aquí el link del proyecto de Stitch]. El QA está en [docs/11-qa.md](docs/11-qa.md).
 
 ## Uso de IA
 

@@ -167,23 +167,28 @@ Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, comp
 ```css
 :root {
   /* Colores */
-  --color-primary: #3F5E4A;
-  --color-primary-hover: #34503F;
-  --color-primary-active: #2A4033;
-  --color-secondary: #EDE4D3;
-  --color-accent: #C0643A;
-  --color-accent-strong: #A9552F;
-  --color-bg: #FBF8F2;
-  --color-text: #2B2B28;
-  --color-text-soft: #6B675E;
-  --color-border: #E2D9C6;
-  --color-border-strong: #D9CFBB;
-  --color-disabled: #CFCAC0;
+  --color-primary: #305941;
+  --color-primary-hover: #284A36;
+  --color-primary-active: #203B2B;
+  --color-secondary: #E6ECB7;
+  --color-secondary-soft: #E7E9CD;
+  --color-accent: #A93B6A;
+  --color-accent-hover: #92315A;
+  --color-green: #4C8D62;
+  --color-olive: #ACB84A;
+  --color-pink: #F8E8F0;
+  --color-mint: #E8F3EC;
+  --color-footer: #3A5745;
+  --color-bg: #FEFDF9;
+  --color-text: #202924;
+  --color-text-soft: #5E6B63;
+  --color-border: #D5DBBE;
+  --color-disabled: #CFD3CB;
   --color-success: #2F7A4A;
   --color-error: #B23A2E;
 
   /* Tipografía */
-  --font-title: 'Fraunces', serif;
+  --font-title: 'Bree Serif', serif;
   --font-body: 'Inter', sans-serif;
 
   /* Espaciados */
@@ -204,7 +209,7 @@ Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, comp
 
 - **Clases:** en inglés, en minúsculas y con guiones: `.navbar`, `.hero`, `.btn-primary`, `.btn-secondary`, `.product-card`, `.article-card`, `.chip`, `.chip.is-active`, `.lead-form`, `.usage-guide`, `.kit-card`, `.diagnosis`, `.cart-summary`, `.footer`.
 - **Mobile first:** los estilos base son para celular; desde 768 px (tablet) y desde 1024 px (desktop) se agregan media queries.
-- **Fuentes:** Fraunces e Inter se cargan desde Google Fonts con un `<link>` en el `<head>` de cada página.
+- **Fuentes:** Bree Serif e Inter se cargan desde Google Fonts con un `<link>` en el `<head>` de cada página.
 
 ## 5. Criterios de aceptación
 
@@ -227,7 +232,7 @@ Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, comp
 **Diseño**
 - [ ] Todos los colores del CSS salen de las variables de `:root`, y sus valores coinciden con `DESIGN.md`.
 - [ ] El sitio no usa Tailwind ni el CSS exportado de Stitch.
-- [ ] Los títulos usan Fraunces y los textos Inter.
+- [ ] Los títulos usan Bree Serif y los textos Inter.
 - [ ] El precio es visible en todas las product cards.
 - [ ] El nombre de los productos ocupa máximo 2 líneas.
 - [ ] Los botones y las cards tienen estado hover.
