@@ -423,3 +423,13 @@ Los enlaces del footer llevan una viñeta: una **florcita** lima de 16px: cinco 
 - Do hacer que todo enlace y botón suba 3px al pasar el mouse.
 - Don't mover enlaces o botones con `margin` o `top`: usa `translate`.
 
+
+
+### Blog
+
+Diseño tipo revista (referencia: Medium), en `blog.html`:
+
+- **Columna principal:** primero la entrada **destacada** (imagen apaisada 2:1 sobre un fondo de color de la paleta con una suculenta recortada, etiqueta "Destacado · categoría", título en Bree Serif de 36px, bajada y tiempo de lectura) y debajo las demás entradas como **bloques horizontales**: foto a la izquierda (220px, 4:3; en móvil 112px cuadrada) y a la derecha categoría, título, texto (2 líneas) y tiempo de lectura, separados por una línea fina. Toda la entrada es clicable. Las fotos son las suculentas recortadas de `img/portada/` sobre fondos lima, rosa pálido, celadón o menta, con la sombra suave del collage.
+- **Barra lateral derecha** (desde 1024px, pegada al hacer scroll, con línea fina a la izquierda): "Categorías" (Todos, Cuidados básicos, Plagas y enfermedades, Decoración con plantas, con el número de entradas; la activa va con fondo verde menta `mint` y texto verde bosque en negrita; al pasar el mouse, un menta más suave) y debajo el panel lima "¿Qué le pasa a tu planta?" con los tres botones de diagnóstico. En móvil las categorías pasan arriba como chips con scroll horizontal y el panel de diagnóstico va al final.
+- **Filtro:** al elegir una categoría se muestran solo sus entradas (JS en la propia página, sin recargar).
+- Las 7 entradas son de ejemplo y todas enlazan a `articulo.html`.

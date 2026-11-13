@@ -56,50 +56,96 @@
     </div>
   </header>
   <main>
-    <div class="container section">
-      <h1>Blog</h1>
-      <section class="diagnosis" aria-labelledby="titulo-diagnostico">
-        <h2 id="titulo-diagnostico">¿Qué le pasa a tu planta?</h2>
-        <div class="btn-row">
-          <a class="btn-secondary" href="articulo.html">🍂 Hojas amarillas</a>
-          <a class="btn-secondary" href="articulo.html">🔸 Manchas en las hojas</a>
-          <a class="btn-secondary" href="articulo.html">🐛 Plagas</a>
-        </div>
-      </section>
-      <nav class="chips" aria-label="Categorías del blog" style="margin-bottom:var(--space-lg)">
-        <a class="chip is-active" href="blog.html" aria-current="true">Todos</a>
-        <a class="chip" href="blog.html">Cuidados básicos</a>
-        <a class="chip" href="blog.html">Plagas y enfermedades</a>
-        <a class="chip" href="blog.html">Decoración con plantas</a>
-      </nav>
-      <section class="post-grid" aria-label="Artículos">
-        <div class="grid-3">
-            <article class="article-card">
-              <img src="img/blog/hojas-amarillas.svg" alt="Monstera con hojas amarillas" width="300" height="300">
-              <span class="label-caps">Plagas y enfermedades</span>
+    <div class="container section blog-page">
+      <h1 class="blog-title">Blog</h1>
+      <div class="blog-layout">
+        <div class="blog-feed">
+        <article class="post-featured" data-cat="cuidados">
+          <a class="post-thumb t-lima" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/portada/maceta-echeveria-agavoides.webp" alt="" width="640" height="640"></a>
+          <div class="post-body">
+            <span class="post-label">Destacado · Cuidados básicos</span>
+            <h2><a href="articulo.html">Cuánto regar tus plantas de interior (y por qué se te mueren)</a></h2>
+            <p>Casi todas las plantas de interior mueren por exceso de agua, no por falta. Te enseñamos a saber cuándo toca regar con solo meter un dedo en la tierra.</p>
+            <span class="post-meta">4 min de lectura</span>
+          </div>
+        </article>
+          <div class="post-list" aria-label="Artículos">
+          <article class="post-row" data-cat="plagas">
+            <a class="post-thumb t-celadon" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/portada/maceta-aeonium-haworthii.webp" alt="" width="640" height="640" loading="lazy"></a>
+            <div class="post-body">
+              <span class="post-label">Plagas y enfermedades</span>
               <h3><a href="articulo.html">Hojas amarillas: 5 causas y cómo solucionarlas</a></h3>
-              <p class="reading-time">5 min de lectura</p>
-            </article>
-            <article class="article-card">
-              <img src="img/blog/riego.svg" alt="Regadera junto a una monstera" width="300" height="300">
-              <span class="label-caps">Cuidados básicos</span>
-              <h3><a href="articulo.html">Cuánto regar tus plantas de interior (y por qué se te mueren)</a></h3>
-              <p class="reading-time">4 min de lectura</p>
-            </article>
-            <article class="article-card">
-              <img src="img/blog/poca-luz.svg" alt="Monstera en un rincón con poca luz" width="300" height="300">
-              <span class="label-caps">Decoración con plantas</span>
+              <p>Exceso de riego, poca luz, falta de nutrientes: revisa las cinco causas más comunes y arregla tu planta antes de que sea tarde.</p>
+              <span class="post-meta">5 min de lectura</span>
+            </div>
+          </article>
+          <article class="post-row" data-cat="decoracion">
+            <a class="post-thumb t-pink" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/portada/maceta-sedum-burrito.webp" alt="" width="640" height="640" loading="lazy"></a>
+            <div class="post-body">
+              <span class="post-label">Decoración con plantas</span>
               <h3><a href="articulo.html">5 plantas fáciles para un departamento con poca luz</a></h3>
-              <p class="reading-time">3 min de lectura</p>
-            </article>
-            <article class="article-card">
-              <img src="img/blog/trasplante.svg" alt="Potus junto a una pala de mano" width="300" height="300">
-              <span class="label-caps">Cuidados básicos</span>
+              <p>Sí se puede tener un rincón verde sin ventanal. Cinco plantas resistentes que perdonan los descuidos y se ven lindas en cualquier repisa.</p>
+              <span class="post-meta">3 min de lectura</span>
+            </div>
+          </article>
+          <article class="post-row" data-cat="cuidados">
+            <a class="post-thumb t-mint" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/portada/maceta-sedum-adolphi.webp" alt="" width="640" height="640" loading="lazy"></a>
+            <div class="post-body">
+              <span class="post-label">Cuidados básicos</span>
               <h3><a href="articulo.html">Cuándo trasplantar una planta</a></h3>
-              <p class="reading-time">4 min de lectura</p>
-            </article>
+              <p>Las raíces que asoman por abajo y la tierra que se seca en minutos son dos señales claras. Aprende el paso a paso para cambiarla de maceta sin estresarla.</p>
+              <span class="post-meta">4 min de lectura</span>
+            </div>
+          </article>
+          <article class="post-row" data-cat="plagas">
+            <a class="post-thumb t-lima" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/portada/maceta-echeveria-elegans.webp" alt="" width="640" height="640" loading="lazy"></a>
+            <div class="post-body">
+              <span class="post-label">Plagas y enfermedades</span>
+              <h3><a href="articulo.html">Cochinilla en suculentas: cómo reconocerla y sacarla</a></h3>
+              <p>Esas motas blancas y algodonosas entre las hojas no son moho. Te contamos cómo eliminarlas con materiales que ya tienes en casa.</p>
+              <span class="post-meta">5 min de lectura</span>
+            </div>
+          </article>
+          <article class="post-row" data-cat="decoracion">
+            <a class="post-thumb t-pink" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/portada/maceta-graptopetalum-paraguayense.webp" alt="" width="640" height="640" loading="lazy"></a>
+            <div class="post-body">
+              <span class="post-label">Decoración con plantas</span>
+              <h3><a href="articulo.html">3 ideas para decorar tu escritorio con suculentas</a></h3>
+              <p>Pequeñas, quietas y casi sin mantención: las suculentas son las compañeras ideales para trabajar. Tres combinaciones para inspirarte.</p>
+              <span class="post-meta">3 min de lectura</span>
+            </div>
+          </article>
+          <article class="post-row" data-cat="cuidados">
+            <a class="post-thumb t-celadon" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/portada/maceta-aeonium-arboreum.webp" alt="" width="640" height="640" loading="lazy"></a>
+            <div class="post-body">
+              <span class="post-label">Cuidados básicos</span>
+              <h3><a href="articulo.html">Sustrato para suculentas: la receta que sí funciona</a></h3>
+              <p>La tierra de jardín las ahoga. Mezcla tres ingredientes y consigue un sustrato que drena rápido y mantiene las raíces sanas.</p>
+              <span class="post-meta">4 min de lectura</span>
+            </div>
+          </article>
+          </div>
         </div>
-      </section>
+        <aside class="blog-aside">
+          <nav class="blog-cats" aria-label="Categorías del blog">
+            <h2>Categorías</h2>
+            <ul>
+            <li><a href="blog.html" class="is-active" aria-current="true" data-filter="todos"><span>Todos</span><span class="count">7</span></a></li>
+            <li><a href="blog.html" data-filter="cuidados"><span>Cuidados básicos</span><span class="count">3</span></a></li>
+            <li><a href="blog.html" data-filter="plagas"><span>Plagas y enfermedades</span><span class="count">2</span></a></li>
+            <li><a href="blog.html" data-filter="decoracion"><span>Decoración con plantas</span><span class="count">2</span></a></li>
+            </ul>
+          </nav>
+          <section class="diagnosis blog-diagnosis" aria-labelledby="titulo-diagnostico">
+            <h2 id="titulo-diagnostico">¿Qué le pasa a tu planta?</h2>
+            <div class="btn-row">
+              <a class="btn-secondary" href="articulo.html">🍂 Hojas amarillas</a>
+              <a class="btn-secondary" href="articulo.html">🔸 Manchas en las hojas</a>
+              <a class="btn-secondary" href="articulo.html">🐛 Plagas</a>
+            </div>
+          </section>
+        </aside>
+      </div>
     </div>
   </main>
   <footer class="site-footer footer-home">
@@ -131,5 +177,19 @@
       </nav>
     </div>
   </footer>
+  <script>
+    // Filtro de categorías del blog: muestra solo las entradas de la categoría elegida
+    (function () {
+      var links = document.querySelectorAll('[data-filter]'), items = document.querySelectorAll('[data-cat]');
+      links.forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          var f = a.getAttribute('data-filter');
+          links.forEach(function (l) { var on = l === a; l.classList.toggle('is-active', on); if (on) l.setAttribute('aria-current', 'true'); else l.removeAttribute('aria-current'); });
+          items.forEach(function (el) { el.hidden = f !== 'todos' && el.getAttribute('data-cat') !== f; });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
