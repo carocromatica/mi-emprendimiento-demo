@@ -180,7 +180,7 @@ Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, comp
   --color-mint: #E8F3EC;
   --color-footer: #3A5745;
   --color-bg: #FEFDF9;
-  --color-text: #202924;
+  --color-text: #1C2B22;
   --color-text-soft: #5E6B63;
   --color-border: #D5DBBE;
   --color-disabled: #CFD3CB;
@@ -189,7 +189,7 @@ Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, comp
 
   /* Tipografía */
   --font-title: 'Bree Serif', serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
 
   /* Espaciados */
   --space-xs: 4px;
@@ -209,7 +209,7 @@ Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, comp
 
 - **Clases:** en inglés, en minúsculas y con guiones: `.navbar`, `.hero`, `.btn-primary`, `.btn-secondary`, `.product-card`, `.article-card`, `.chip`, `.chip.is-active`, `.lead-form`, `.usage-guide`, `.kit-card`, `.diagnosis`, `.cart-summary`, `.footer`.
 - **Mobile first:** los estilos base son para celular; desde 768 px (tablet) y desde 1024 px (desktop) se agregan media queries.
-- **Fuentes:** Bree Serif e Inter se cargan desde Google Fonts con un `<link>` en el `<head>` de cada página.
+- **Fuentes:** Bree Serif y Source Sans 3 se cargan desde Google Fonts con un `<link>` en el `<head>` de cada página.
 
 ## 5. Criterios de aceptación
 
@@ -232,7 +232,7 @@ Un solo archivo, `css/styles.css`, ordenado en este orden: variables, base, comp
 **Diseño**
 - [ ] Todos los colores del CSS salen de las variables de `:root`, y sus valores coinciden con `DESIGN.md`.
 - [ ] El sitio no usa Tailwind ni el CSS exportado de Stitch.
-- [ ] Los títulos usan Bree Serif y los textos Inter.
+- [ ] Los títulos usan Bree Serif y los textos Source Sans 3.
 - [ ] El precio es visible en todas las product cards.
 - [ ] El nombre de los productos ocupa máximo 2 líneas.
 - [ ] Los botones y las cards tienen estado hover.
