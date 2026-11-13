@@ -366,11 +366,14 @@ textarea { min-height: 96px; resize: vertical; }
 .blog-card .more { color: var(--color-primary); font-weight: 700; font-size: .9375rem; display: inline-flex; align-items: center; min-height: 44px; position: relative; z-index: 1; }
 
 .newsletter { position: relative; background: var(--color-secondary); overflow: hidden; }
-.newsletter-inner { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: var(--space-3xl); padding-bottom: var(--space-3xl); }
+.newsletter-inner { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: calc(var(--space-3xl) * 2); padding-bottom: var(--space-3xl); }
 .newsletter-text { width: 100%; max-width: 440px; }
-.newsletter h2 { color: var(--color-primary); font-size: 2rem; line-height: 1.25; margin-bottom: var(--space-lg); }
+.newsletter h2 { color: var(--color-primary); font-size: 2rem; line-height: 1.25; margin-bottom: var(--space-sm); }
 .newsletter form { display: flex; flex-direction: column; gap: var(--space-md); }
-.newsletter input[type="email"] { width: 100%; border-radius: var(--radius-card); }
+.newsletter input[type="email"], .newsletter input[type="text"] { width: 100%; border-radius: var(--radius-card); }
+.newsletter-lead { margin: 0 0 var(--space-lg); font-size: 1.0625rem; color: var(--color-text); }
+.newsletter form { text-align: left; }
+.newsletter form .btn-primary { align-self: center; }
 .newsletter .field label { color: var(--color-primary); }
 .form-success { display: flex; align-items: center; gap: var(--space-sm); margin: var(--space-md) 0 0; font-size: .9375rem; font-weight: 600; color: var(--color-primary); }
 .form-success[hidden] { display: none; }
@@ -668,7 +671,7 @@ main { overflow-x: clip; }
   .featured-body { padding-top: var(--space-xl); }
   .highlights-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
   .newsletter { min-height: 520px; }
-  .newsletter-inner { min-height: 520px; justify-content: center; padding-bottom: var(--space-3xl); }
+  .container.newsletter-inner { min-height: 520px; justify-content: center; padding-top: calc(var(--space-3xl) * 2); padding-bottom: var(--space-3xl); }
     .footer-home .footer-grid { grid-template-columns: 1fr auto; }
   .hero-media, .hero-home .hero-media { order: 0; }
   .section { padding: var(--space-3xl) 0; }

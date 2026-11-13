@@ -171,13 +171,18 @@
   </div>
       <div class="container newsletter-inner">
         <div class="newsletter-text">
-          <h2>Tu próximo rincón verde empieza aquí</h2>
+          <h2>Un poquito de verde en tu correo</h2>
+          <p class="newsletter-lead">Suscríbete a Brote y recibe guías para cuidar tus plantas sin complicarte y ofertas para hacer crecer tu rincón verde.</p>
           <form action="#">
             <div class="field">
-              <label for="correo">Tu correo</label>
-              <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+              <label for="nombre-news">Tu nombre</label>
+              <input type="text" id="nombre-news" name="nombre" placeholder="¿Cómo te llamas?" autocomplete="given-name" required>
             </div>
-            <button class="btn-primary" type="submit">Suscríbete a nuestras novedades</button>
+            <div class="field">
+              <label for="correo">Tu correo</label>
+              <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" autocomplete="email" required>
+            </div>
+            <button class="btn-primary" type="submit">Quiero suscribirme</button>
           </form>
           <p class="privacy">Al suscribirte aceptas la <a href="privacidad.html">política de privacidad</a>.</p>
           <p class="form-success" id="correo-ok" role="status" hidden>
