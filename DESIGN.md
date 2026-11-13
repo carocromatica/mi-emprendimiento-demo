@@ -403,6 +403,8 @@ Caja lima con subtotal, campo de comuna y botón "Calcular", costo de despacho, 
 
 ### Footer
 
+**Es el mismo footer en las 12 páginas** (el de la portada, `footer-home`): logo claro, descripción, redes en SVG y la lista de enlaces con flechita (Inicio, Blog, Nosotros, Tiendas, FAQ, Términos y condiciones, Política de privacidad), con el borde superior ondulado lima.
+
 Fondo verde bosque (`footer`) con texto blanco: logo, descripción breve, íconos SVG de Instagram, TikTok y Facebook, sólidos y con calado: un círculo lima de 56px con el logo de cada red recortado (se ve el verde del footer a través); en hover pasa a blanco y sube 3px; son enlaces reales con etiqueta accesible, en el footer de las 12 páginas, y columna de enlaces (Inicio, Blog, Nosotros, Tiendas, FAQ, Términos y condiciones, Política de privacidad). Debajo, la franja `footer-strip` con "© 2026 Brote. Todos los derechos reservados."
 
 Los enlaces del footer llevan una viñeta: una flechita (›) lima de 14px a la izquierda del texto, que se corre 3px a la derecha al pasar el mouse. Es un ícono por CSS (máscara), así que se ve igual en las 12 páginas.
