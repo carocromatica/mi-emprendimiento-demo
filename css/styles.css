@@ -894,3 +894,15 @@ html.search-open .site-header { z-index: 20; }
   .lead-rosette-l { left: 4%; bottom: -110px; }
   .lead-rosette-r { right: 4%; top: -100px; }
 }
+
+/* Navbar: al pasar el mouse aparece la florcita del footer sobre el enlace y gira igual */
+@media (min-width: 1024px) {
+  .navbar-links a::before {
+    content: ""; position: absolute; left: 50%; top: -14px; width: 16px; height: 16px; translate: -50% 0;
+    background: var(--color-accent); opacity: 0; pointer-events: none;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='%23000'%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(0 12 12)'/%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(72 12 12)'/%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(144 12 12)'/%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(216 12 12)'/%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(288 12 12)'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='%23000'%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(0 12 12)'/%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(72 12 12)'/%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(144 12 12)'/%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(216 12 12)'/%3E%3Cpath d='M12 12C8.6 9.6 8.4 4.4 10.8 2.3C12.6 0.8 14.8 3 14.6 6.4C14.5 8.8 13 10.8 12 12Z' transform='rotate(288 12 12)'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+    transition: rotate .25s ease-out, opacity .2s ease-out;
+  }
+  .navbar-links a:hover::before, .navbar-links a:focus-visible::before { opacity: 1; rotate: 72deg; }
+}
+@media (prefers-reduced-motion: reduce) { .navbar-links a:hover::before, .navbar-links a:focus-visible::before { rotate: none; } }
