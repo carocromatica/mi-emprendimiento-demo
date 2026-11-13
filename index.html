@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/buscador.js" defer></script>
 </head>
-<body class="has-hero">
+<body class="has-hero is-home">
   <header class="site-header">
     <div class="container navbar">
       <a class="navbar-logo" href="index.html"><img src="img/marca/logo-oscuro.png" alt="Brote, ir al inicio" width="107" height="36"></a>
@@ -24,8 +24,8 @@
         <nav aria-label="Principal">
           <ul class="navbar-links">
             <li><a href="index.html" aria-current="page">Inicio</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="tienda.html">Tienda</a></li>
           </ul>
         </nav>
@@ -402,13 +402,6 @@
       }
       blob(); wave(); cut(); collage(); newsCollage(); allDots();
       window.matchMedia('(min-width: 1024px)').addEventListener('change', wave);
-    })();
-    // El menú parte verde lima sobre el hero y pasa a blanco al hacer scroll
-    (function () {
-      var header = document.querySelector('.site-header');
-      function update() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
-      window.addEventListener('scroll', update, { passive: true });
-      update();
     })();
     // Prototipo: confirma el envío sin enviar datos a ningún servidor
     document.querySelector('.newsletter form').addEventListener('submit', function (e) {

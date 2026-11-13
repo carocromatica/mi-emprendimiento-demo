@@ -44,3 +44,12 @@
     if (svg) desk.appendChild(svg);
   }
 })();
+
+// El menú parte verde lima y pasa a blanco al hacer scroll (en todas las páginas)
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  function update() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();

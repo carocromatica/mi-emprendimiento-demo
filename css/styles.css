@@ -596,9 +596,9 @@ main { overflow-x: clip; }
   .has-hero .navbar-account:focus-visible { outline-color: var(--color-accent); }
   /* Al hacer scroll el bloque baja al alto del menú (6px de franja + 72px + 1px de borde) y el texto pasa a una sola línea */
   .has-hero .navbar-account { transition: background-color .2s ease-out, height .25s ease-out, padding .25s ease-out; }
-  .has-hero .site-header.is-scrolled .navbar-account { height: 79px; padding: 0 var(--space-md); justify-content: center; border-radius: 0 0 var(--radius-card) var(--radius-card); }
-  .has-hero .site-header.is-scrolled .account-label-desktop { flex-direction: row; align-items: center; gap: var(--space-sm); font-size: 1.125rem; white-space: nowrap; }
-  .has-hero .site-header.is-scrolled .account-label-desktop svg { align-self: auto; width: 18px; height: 18px; }
+  .has-hero .site-header.is-scrolled .navbar-account, body:not(.is-home) .site-header .navbar-account { height: 79px; padding: 0 var(--space-md); justify-content: center; border-radius: 0 0 var(--radius-card) var(--radius-card); }
+  .has-hero .site-header.is-scrolled .account-label-desktop, body:not(.is-home) .site-header .account-label-desktop { flex-direction: row; align-items: center; gap: var(--space-sm); font-size: 1.125rem; white-space: nowrap; }
+  .has-hero .site-header.is-scrolled .account-label-desktop svg, body:not(.is-home) .site-header .account-label-desktop svg { align-self: auto; width: 18px; height: 18px; }
   .has-hero .account-label-mobile { display: none; }
   .has-hero .account-label-desktop { display: flex; flex-direction: column; gap: var(--space-sm); }
   .has-hero .account-label-desktop svg { align-self: flex-start; }
@@ -773,5 +773,11 @@ html.search-open .site-header { z-index: 20; }
 .account-hi { display: block; max-width: 100%; overflow-wrap: anywhere; }
 .account-sub { display: block; font-family: var(--font-body); font-size: .9375rem; font-weight: 600; opacity: .92; }
 @media (min-width: 1024px) {
-  .has-hero .site-header.is-scrolled .account-sub { display: none; }
+  .has-hero .site-header.is-scrolled .account-sub, body:not(.is-home) .site-header .account-sub { display: none; }
+}
+
+/* Móvil (celular): el menú es blanco desde el inicio y las chapitas van en lima, como al hacer scroll en desktop */
+@media (max-width: 767px) {
+  .has-hero .site-header, .has-hero .site-header.is-scrolled { background: var(--color-surface); border-bottom-color: var(--color-border); }
+  .has-hero .site-header .navbar-account, .has-hero .site-header .cart-link.navbar-cart { background: var(--color-secondary); }
 }
