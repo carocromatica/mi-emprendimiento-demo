@@ -61,7 +61,7 @@
         <header class="article-header">
           <span class="label-caps">Plagas y enfermedades · 5 min de lectura</span>
           <h1>Hojas amarillas: 5 causas y cómo solucionarlas</h1>
-          <img src="img/blog/hojas-amarillas.svg" alt="Monstera con varias hojas amarillas" width="300" height="300">
+          <img src="img/blog/hojas-amarillas.webp" alt="Monstera con varias hojas amarillas en una maceta de barro" width="1200" height="675">
         </header>
         <p>Que a una planta se le pongan amarillas las hojas es de las dudas más comunes. La buena noticia: casi siempre tiene solución si descubres la causa a tiempo.</p>
         <h2>1. Exceso de riego</h2>
@@ -102,20 +102,50 @@
           </form>
         </section>
       </article>
+      <section class="related" id="relacionadas" aria-labelledby="titulo-relacionadas">
+        <h2 id="titulo-relacionadas">Más notas del blog</h2>
+        <div class="related-grid">
+          <article class="related-card">
+            <a class="post-thumb" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/blog/regar-filodendro.webp" alt="" width="1200" height="675" loading="lazy"></a>
+            <span class="post-label">Cuidados básicos · 4 min de lectura</span>
+            <h3><a href="articulo.html">Cuánto regar tus plantas de interior (y por qué se te mueren)</a></h3>
+            <p>Casi todas mueren por exceso de agua, no por falta. Aprende a saber cuándo toca regar.</p>
+          </article>
+          <article class="related-card">
+            <a class="post-thumb" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/blog/trasplante-pothos.webp" alt="" width="1200" height="675" loading="lazy"></a>
+            <span class="post-label">Cuidados básicos · 4 min de lectura</span>
+            <h3><a href="articulo.html">Cuándo trasplantar una planta</a></h3>
+            <p>Las raíces que asoman por abajo y la tierra que se seca en minutos son dos señales claras.</p>
+          </article>
+          <article class="related-card">
+            <a class="post-thumb" href="articulo.html" tabindex="-1" aria-hidden="true"><img src="img/blog/cochinilla-echeveria.webp" alt="" width="1200" height="675" loading="lazy"></a>
+            <span class="post-label">Plagas y enfermedades · 5 min de lectura</span>
+            <h3><a href="articulo.html">Cochinilla en suculentas: cómo reconocerla y sacarla</a></h3>
+            <p>Esas motas blancas y algodonosas entre las hojas no son moho. Te contamos cómo eliminarlas.</p>
+          </article>
+        </div>
+      </section>
     </div>
-    <section class="lead-form">
-      <div class="container">
-        <div class="lead-box">
-          <h2>¿Te sirvió? Recibe la guía de cuidados gratis</h2>
-          <form action="#">
+    <section class="lead-band" aria-labelledby="titulo-guia">
+      <img class="lead-rosette lead-rosette-l" src="img/portada/graptopetalum-bellum.webp" alt="" width="380" height="380" loading="lazy">
+      <img class="lead-rosette lead-rosette-r" src="img/portada/echeveria-lilacina.webp" alt="" width="380" height="380" loading="lazy">
+      <div class="container lead-band-inner">
+        <h2 id="titulo-guia">Recibe guías de cuidados directo a tu correo</h2>
+        <form action="#" id="guia-form">
+          <div class="lead-fields">
+            <div class="field">
+              <label for="nombre">Tu nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" autocomplete="given-name" required>
+            </div>
             <div class="field">
               <label for="correo">Tu correo</label>
-              <input type="email" id="correo" name="correo" placeholder="tu@correo.cl" required>
+              <input type="email" id="correo" name="correo" placeholder="tu@correo.cl" autocomplete="email" required>
             </div>
-            <button class="btn-primary" type="submit">Quiero la guía</button>
-          </form>
-          <p class="privacy">Al suscribirte aceptas la <a href="privacidad.html">política de privacidad</a>.</p>
-        </div>
+          </div>
+          <button class="btn-primary" type="submit">Quiero suscribirme</button>
+        </form>
+        <p class="privacy">Al suscribirte aceptas la <a href="privacidad.html">política de privacidad</a>.</p>
+        <p class="form-success" id="guia-ok" role="status" hidden>¡Listo! Revisa tu correo, te llegará la guía gratis.</p>
       </div>
     </section>
   </main>
@@ -148,5 +178,9 @@
       </nav>
     </div>
   </footer>
+  <script>
+    // Prototipo: confirma el envío sin enviar datos a ningún servidor
+    document.getElementById('guia-form').addEventListener('submit', function (e) { e.preventDefault(); document.getElementById('guia-ok').hidden = false; this.reset(); });
+  </script>
 </body>
 </html>

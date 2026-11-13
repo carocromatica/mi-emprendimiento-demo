@@ -434,3 +434,12 @@ Diseño tipo revista (referencia: Medium), en `blog.html`:
 - **Barra lateral derecha** (desde 1024px, pegada al hacer scroll, con línea fina a la izquierda): "Categorías" (Todos, Cuidados básicos, Plagas y enfermedades, Decoración con plantas, con el número de entradas; la activa va con fondo verde menta `mint` y texto verde bosque en negrita; al pasar el mouse, un menta más suave) y debajo el panel lima "Suscríbete a nuestro newsletter": título, una línea de bajada, el campo de correo con etiqueta visible, el botón fucsia "Suscribirme" y, pegada al borde inferior, una roseta fija (`img/portada/echeveria-laui.webp`, no aleatoria, con la sombra suave) que solo se ve a la mitad porque el panel la recorta (en el prototipo solo muestra la confirmación, no envía datos). En móvil las categorías pasan arriba como chips con scroll horizontal y el newsletter va al final.
 - **Filtro:** al elegir una categoría se muestran solo sus entradas (JS en la propia página, sin recargar).
 - Las 7 entradas son de ejemplo y todas enlazan a `articulo.html`.
+
+
+### Artículo del blog
+
+- **Portada:** foto 16:9 (`object-fit: cover`, esquinas redondeadas) bajo el título, en un texto de 720px de ancho. Las fotos de las entradas viven en `img/blog/`.
+- **Orden:** cabecera, texto, producto recomendado, compartir, comentarios y, después, las **notas relacionadas**, todo antes de la banda de la guía.
+- **Notas relacionadas ("Más notas del blog"):** 3 cards en fila desde 768px (una columna en móvil), con foto 16:9, categoría y tiempo de lectura, título en Bree Serif y bajada de 2 líneas; toda la card es clicable.
+- **Banda de la guía gratis:** ocupa todo el ancho de la página, fondo lima `secondary`, con título centrado, campos de nombre y correo con etiqueta visible (apilados, uno bajo el otro, en todos los tamaños), el botón fucsia "Quiero suscribirme" debajo y centrado, con su ancho natural, y el aviso de privacidad. La decoran 2 rosetas transparentes fijas (`graptopetalum-bellum` abajo a la izquierda y `echeveria-lilacina` arriba a la derecha), inclinadas y cortadas por los bordes de la banda, con la sombra suave del collage. Se ocultan en móvil. En el prototipo solo muestra la confirmación, no envía datos.
+- **Márgenes:** `.container.section` repone el padding lateral que `.section` le quitaba.
