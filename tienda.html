@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/buscador.js" defer></script>
+  <script src="js/tienda.js" defer></script>
 </head>
 <body class="has-hero">
   <header class="site-header">
@@ -44,12 +45,12 @@
           <button type="button" class="search-close" data-search-close aria-label="Cerrar buscador"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
           <p class="search-title">Categorías</p>
           <ul class="search-cats">
-            <li><a href="tienda.html"><img src="img/home/cat-suculentas.png" alt="" loading="lazy" width="48" height="48">Suculentas</a></li>
-            <li><a href="tienda.html"><img src="img/home/cat-cactus.png" alt="" loading="lazy" width="48" height="48">Cactus</a></li>
-            <li><a href="tienda.html"><img src="img/home/cat-maceteros.png" alt="" loading="lazy" width="48" height="48">Maceteros</a></li>
-            <li><a href="tienda.html"><img src="img/home/cat-sustratos.png" alt="" loading="lazy" width="48" height="48">Sustratos</a></li>
-            <li><a href="tienda.html"><img src="img/home/cat-fertilizantes.png" alt="" loading="lazy" width="48" height="48">Fertilizantes</a></li>
-            <li><a href="tienda.html"><img src="img/home/cat-herramientas.png" alt="" loading="lazy" width="48" height="48">Herramientas</a></li>
+            <li><a href="tienda.html?cat=suculentas"><img src="img/home/cat-suculentas.png" alt="" loading="lazy" width="48" height="48">Suculentas</a></li>
+            <li><a href="tienda.html?cat=cactus"><img src="img/home/cat-cactus.png" alt="" loading="lazy" width="48" height="48">Cactus</a></li>
+            <li><a href="tienda.html?cat=maceteros"><img src="img/home/cat-maceteros.png" alt="" loading="lazy" width="48" height="48">Maceteros</a></li>
+            <li><a href="tienda.html?cat=sustratos"><img src="img/home/cat-sustratos.png" alt="" loading="lazy" width="48" height="48">Sustratos</a></li>
+            <li><a href="tienda.html?cat=fertilizantes"><img src="img/home/cat-fertilizantes.png" alt="" loading="lazy" width="48" height="48">Fertilizantes</a></li>
+            <li><a href="tienda.html?cat=herramientas"><img src="img/home/cat-herramientas.png" alt="" loading="lazy" width="48" height="48">Herramientas</a></li>
           </ul>
         </div>
       </div>
@@ -57,128 +58,75 @@
     </div>
   </header>
   <main>
-    <div class="container">
-      <section class="shop-header section" style="padding-bottom:0">
-        <h1>Tienda</h1>
-        <form class="search-form" role="search" action="tienda.html">
-          <label for="buscar-tienda" class="visually-hidden">Buscar productos o plantas</label>
-          <input type="search" id="buscar-tienda" name="q" placeholder="Buscar productos o plantas…">
-        </form>
-        <nav class="chips" aria-label="Categorías">
-          <a class="chip" href="tienda.html">Todos</a>
-          <a class="chip is-active" href="tienda.html" aria-current="true">Sustratos</a>
-          <a class="chip" href="tienda.html">Fertilizantes</a>
-          <a class="chip" href="tienda.html">Plagas y enfermedades</a>
-          <a class="chip" href="tienda.html">Herramientas</a>
-          <a class="chip" href="tienda.html">Insumos</a>
-        </nav>
-      </section>
-
-      <section class="kits section">
-        <h2 class="section-title">Kits para empezar</h2>
-        <div class="grid-3">
-          <article class="kit-card">
-            <img src="img/productos/kit-interior.svg" alt="Kit con potus, sustrato y fertilizante" width="96" height="96">
-            <div>
-              <h3>Kit plantas de interior</h3>
-              <ul><li>Sustrato 10 L</li><li>Fertilizante líquido 500 ml</li><li>Macetero de greda 18 cm</li></ul>
-              <div class="price-row"><span class="price">$17.490</span><span class="tag-offer">Ahorra $2.500</span></div>
-              <a class="btn-primary" href="carrito.html">Agregar kit</a>
-            </div>
-          </article>
-          <article class="kit-card">
-            <img src="img/productos/kit-suculentas.svg" alt="Kit con suculenta y sustrato" width="96" height="96">
-            <div>
-              <h3>Kit suculentas</h3>
-              <ul><li>Sustrato para suculentas 5 L</li><li>Fertilizante suave 250 ml</li><li>Macetero de greda 12 cm</li></ul>
-              <div class="price-row"><span class="price">$12.990</span><span class="tag-offer">Ahorra $1.900</span></div>
-              <a class="btn-primary" href="carrito.html">Agregar kit</a>
-            </div>
-          </article>
-          <article class="kit-card">
-            <img src="img/productos/kit-huerto.svg" alt="Kit con planta y sustrato para huerto" width="96" height="96">
-            <div>
-              <h3>Kit huerto</h3>
-              <ul><li>Sustrato para huerto 20 L</li><li>Humus de lombriz 5 L</li><li>Pala de mano</li></ul>
-              <div class="price-row"><span class="price">$19.990</span><span class="tag-offer">Ahorra $3.200</span></div>
-              <a class="btn-primary" href="carrito.html">Agregar kit</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <div class="shop-layout">
-        <div>
-          <input type="checkbox" id="filters-toggle" class="filters-toggle">
-          <label for="filters-toggle" class="btn-secondary btn-block filters-toggle-button">Filtrar (1)</label>
-          <div class="filters-panel">
-            <aside class="filters" aria-labelledby="titulo-filtros">
-              <h2 id="titulo-filtros" class="visually-hidden">Filtrar</h2>
-              <fieldset>
-                <legend>Tipo de planta</legend>
-                <label><input type="checkbox" name="tipo" value="interior" checked> Interior</label>
-                <label><input type="checkbox" name="tipo" value="exterior"> Exterior</label>
-                <label><input type="checkbox" name="tipo" value="suculentas"> Suculentas y cactus</label>
-                <label><input type="checkbox" name="tipo" value="huerto"> Huerto</label>
-              </fieldset>
-              <fieldset>
-                <legend>Precio máximo</legend>
-                <label for="precio" class="visually-hidden">Precio máximo</label>
-                <input type="range" id="precio" name="precio" min="2000" max="30000" step="1000" value="10000">
-                <p class="reading-time">Hasta $10.000</p>
-              </fieldset>
-            </aside>
-          </div>
-        </div>
-        <section class="product-grid" aria-labelledby="titulo-productos">
-          <h2 id="titulo-productos" class="visually-hidden">Productos</h2>
-          <div class="grid-3">
-            <article class="product-card">
-              <div class="media"><img src="img/productos/sustrato-interior.svg" alt="Bolsa de sustrato para plantas de interior" width="300" height="300"></div>
-              <span class="tag-plant">Interior</span>
-              <h3 class="product-name">Sustrato para plantas de interior 10 L</h3>
-              <p class="price">$7.990</p>
-              <a class="btn-secondary" href="producto.html">Ver producto</a>
-            </article>
-            <article class="product-card">
-              <div class="media"><img src="img/productos/tierra-de-hoja.svg" alt="Bolsa de tierra de hoja" width="300" height="300"></div>
-              <span class="tag-plant">Interior</span>
-              <h3 class="product-name">Tierra de hoja 20 L</h3>
-              <p class="price">$5.490</p>
-              <a class="btn-secondary" href="producto.html">Ver producto</a>
-            </article>
-            <article class="product-card">
-              <div class="media"><img src="img/productos/sustrato-suculentas.svg" alt="Bolsa de sustrato para suculentas" width="300" height="300"></div>
-              <span class="tag-plant">Suculentas</span>
-              <h3 class="product-name">Sustrato para suculentas y cactus con arena de río 5 L</h3>
-              <p class="price">$6.490</p>
-              <a class="btn-secondary" href="producto.html">Ver producto</a>
-            </article>
-            <article class="product-card">
-              <div class="media"><img src="img/productos/perlita.svg" alt="Bolsa de perlita" width="300" height="300"></div>
-              
-              <h3 class="product-name">Perlita 5 L</h3>
-              <p class="price">$4.990</p>
-              <a class="btn-secondary" href="producto.html">Ver producto</a>
-            </article>
-            <article class="product-card">
-              <div class="media"><img src="img/productos/humus.svg" alt="Bolsa de humus de lombriz" width="300" height="300"></div>
-              
-              <h3 class="product-name">Humus de lombriz 5 L</h3>
-              <p class="price">$6.990</p>
-              <a class="btn-secondary" href="producto.html">Ver producto</a>
-            </article>
-            <article class="product-card">
-              <div class="media"><img src="img/productos/sustrato-huerto.svg" alt="Bolsa de sustrato para huerto" width="300" height="300"></div>
-              <span class="tag-plant">Huerto</span>
-              <h3 class="product-name">Sustrato para huerto 20 L</h3>
-              <p class="price">$8.490</p>
-              <a class="btn-secondary" href="producto.html">Ver producto</a>
-            </article>
-          </div>
-        </section>
+    <div class="container shop-page">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <ol id="shop-crumbs">
+          <li><a href="index.html">Inicio</a></li>
+          <li aria-current="page">Tienda</li>
+        </ol>
+      </nav>
+      <div class="shop-title-row">
+        <h1 id="shop-h1">Tienda</h1>
+        <span class="shop-count" id="shop-count" aria-live="polite"></span>
       </div>
+
+      <div class="shop-tiles" id="shop-tiles" role="group" aria-label="Categorías"></div>
+
+      <div class="shop-toolbar">
+        <button type="button" class="shop-tool" id="btn-filtrar" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 7h10M17 7h4M3 17h4M11 17h10"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>
+          Filtrar por<span class="shop-badge" id="filtros-n" hidden></span>
+        </button>
+        <button type="button" class="shop-tool" id="btn-ordenar" aria-haspopup="dialog">
+          Ordenar por
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div class="shop-active" id="shop-active" aria-label="Filtros activos"></div>
+
+      <div class="shop-grid" id="shop-grid"></div>
+      <p class="shop-empty" id="shop-empty" hidden>No encontramos productos con esos filtros. Prueba quitando alguno.</p>
+      <nav class="pagination" id="shop-pag" aria-label="Páginas de la tienda" hidden></nav>
     </div>
+
+    <dialog class="drawer" id="drawer-filtros" aria-labelledby="df-titulo">
+      <div class="drawer-head">
+        <h2 id="df-titulo">Filtrar por</h2>
+        <button type="button" class="drawer-close" data-drawer-close aria-label="Cerrar"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="drawer-body">
+        <details class="drawer-sec" open>
+          <summary>Categoría</summary>
+          <div class="drawer-opts" id="df-cats"></div>
+        </details>
+        <details class="drawer-sec">
+          <summary>Tipo de planta</summary>
+          <div class="drawer-opts" id="df-tipos"></div>
+        </details>
+        <details class="drawer-sec">
+          <summary>Precio</summary>
+          <div class="drawer-opts">
+            <label for="df-precio">Precio máximo</label>
+            <input type="range" id="df-precio" min="3000" max="20000" step="500" value="20000">
+            <p class="drawer-price" id="df-precio-txt">Hasta $20.000</p>
+          </div>
+        </details>
+      </div>
+      <div class="drawer-foot">
+        <button type="button" class="btn-secondary" id="df-borrar">Borrar</button>
+        <button type="button" class="btn-primary" id="df-aplicar">Aplicar</button>
+      </div>
+    </dialog>
+
+    <dialog class="drawer" id="drawer-orden" aria-labelledby="do-titulo">
+      <div class="drawer-head">
+        <h2 id="do-titulo">Ordenar por</h2>
+        <button type="button" class="drawer-close" data-drawer-close aria-label="Cerrar"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="drawer-body">
+        <ul class="order-list" id="order-list"></ul>
+      </div>
+    </dialog>
   </main>
   <footer class="site-footer footer-home">
     <div class="container footer-grid">

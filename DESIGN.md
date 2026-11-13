@@ -397,7 +397,7 @@ Blanco, borde visible de 1.5px en verde medio (`accent-green`, 3.9:1: alcanza pa
 ### Chips y filtros
 
 - **chip:** blanco con borde de 1.5px outline; **chip-active:** verde bosque con texto blanco. Solo una categoría seleccionada a la vez.
-- **Filtros de tienda:** columna de 240px con casillas por categoría y rango de precio; las casillas marcadas usan el color primario.
+- **Filtros de tienda:** viven en un **drawer** (ver la sección Tienda), no en una columna.
 
 ### Resumen del carrito (`box-cart-summary`)
 
@@ -447,6 +447,18 @@ Es una **landing**, no un listado: no usa cards con foto (eso es del blog) ni fi
 - **Un bloque grande por guía:** portada inclinada (−4° / +4° alternando) y, al otro lado, número grande en fucsia (01, 02, 03), título de 40px, descripción, 3 puntos con la florcita fucsia y botón "Quiero esta guía". Alternan de lado y el segundo va sobre fondo menta; en móvil se apilan.
 - **Banda final:** lima, con onda superior y dos rosetas, "Las tres guías, en tu correo" y el botón "Quiero las tres guías" (conecta con el footer lima).
 - **Formulario:** cada botón abre un diálogo modal (`<dialog>`, fondo oscuro al 55 %, se cierra con la X, Esc o clic fuera) con la guía pedida, "Tu nombre" y "Tu correo" apilados y el botón "Enviarme la guía" centrado. En el prototipo solo muestra la confirmación; no envía datos ni existen los PDF.
+
+### Tienda (`tienda.html`)
+
+Inspirada en el listado de Casaideas: limpia, con mucho producto a la vista y los controles en drawers.
+
+- **Cabecera y migas:** migas de pan que siguen a la categoría elegida: *Inicio › Tienda* y, al filtrar por una categoría, *Inicio › Tienda › Suculentas* ("Tienda" pasa a ser un enlace que quita el filtro). El título cambia al nombre de la categoría (o "Tienda" si no hay ninguna) y el conteo de productos va junto a él. Los enlaces de las categorías de la portada y del buscador llegan ya filtrados (`tienda.html?cat=suculentas`).
+- **Franja de categorías:** un primer círculo **"Todos los productos"** (sin foto: el texto va dentro, en Bree Serif; menta con texto verde bosque y, cuando es el activo, verde bosque con texto lima) seguido de las **6 categorías de la portada** en círculos pequeños (96px, 88px en móvil) con la foto del producto recortada sobre un fondo de la paleta (lima, rosa pálido, celadón o menta) y el nombre en Bree Serif debajo, centrado: Suculentas, Cactus, Maceteros, Sustratos, Fertilizantes y Herramientas, con las mismas fotos de la portada. Sin bloque cuadrado, igual que las categorías de la portada. Al pulsar uno filtra por esa categoría (anillo verde bosque de 3px y nombre en negrita subrayado cuando está activo; pulsarlo de nuevo lo quita) y el círculo sube 3px al pasar el mouse. En móvil van con scroll horizontal.
+- **Barra de herramientas:** línea fina arriba y dos controles de texto en mayúsculas, verde bosque y en negrita: "Filtrar por" (ícono de ajustes y una chapita fucsia con el número de filtros activos) y "Ordenar por" (con flecha). Debajo, los filtros activos como chips menta con X para quitarlos y "Borrar todo".
+- **Grilla de productos:** sin card ni borde. Cada producto es una foto cuadrada recortada sobre un fondo de color de la paleta (esquinas de 16px, sombra suave bajo la planta o el producto), la etiqueta "Nuevo" fucsia arriba a la izquierda cuando corresponde, el nombre en Bree Serif (2 líneas) y el precio en negrita. Toda la ficha es un enlace; al pasar el mouse la imagen crece un 6 % y el nombre se subraya. 2 columnas en móvil, 3 desde 768px y 4 desde 1100px, 12 productos por página con la paginación numerada del blog.
+- **Drawer de filtros:** panel que entra desde la derecha (440px de ancho, a pantalla completa en móvil) con fondo oscuro al 55 %. Título "FILTRAR POR" con la X y una línea gruesa verde bosque debajo; secciones desplegables con "+/−" (Categoría, Tipo de planta y Precio máximo con un deslizador); abajo, fijos, "Borrar" (secundario) y "Aplicar" (primario). Los filtros se aplican al pulsar "Aplicar".
+- **Drawer de orden:** mismo panel, con una lista de opciones (Recomendado, Más vendidos, Menor precio, Mayor precio, Nombre del producto, Nuevo); la elegida va en negrita y subrayada y al pulsar una se aplica y se cierra.
+- **Datos:** los 26 productos de ejemplo (12 suculentas en maceta, un cactus, un set de maceteros, un set de herramientas, sustratos, fertilizantes, neem y 3 kits; cada kit aparece en las categorías de lo que contiene) y sus precios están en `js/tienda.js`; son de prototipo. El buscador del menú envía `tienda.html?q=` y la tienda filtra por ese texto.
 
 ### Artículo del blog
 
