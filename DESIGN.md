@@ -403,11 +403,11 @@ Caja lima con subtotal, campo de comuna y botón "Calcular", costo de despacho, 
 
 ### Footer
 
-**Es el mismo footer en las 12 páginas** (el de la portada, `footer-home`): logo claro, descripción, redes en SVG y la lista de enlaces con flechita (Inicio, Blog, Nosotros, Tiendas, FAQ, Términos y condiciones, Política de privacidad), con el borde superior ondulado lima.
+**Es el mismo footer en las 12 páginas** (el de la portada, `footer-home`): logo claro, descripción, redes en SVG y los enlaces en **2 columnas**: Inicio, Nosotros, Blog y Tienda a la izquierda; Contacto, FAQ, Términos y condiciones y Política de privacidad a la derecha, con el borde superior ondulado lima.
 
-Fondo verde bosque (`footer`) con texto blanco: logo, descripción breve, íconos SVG de Instagram, TikTok y Facebook, sólidos y con calado: un círculo lima de 56px con el logo de cada red recortado (se ve el verde del footer a través); en hover pasa a blanco y sube 3px; son enlaces reales con etiqueta accesible, en el footer de las 12 páginas, y columna de enlaces (Inicio, Blog, Nosotros, Tiendas, FAQ, Términos y condiciones, Política de privacidad). Debajo, la franja `footer-strip` con "© 2026 Brote. Todos los derechos reservados."
+Fondo verde bosque (`footer`) con texto blanco: logo, descripción breve, íconos SVG de Instagram, TikTok y Facebook, sólidos y con calado: un círculo lima de 56px con el logo de cada red recortado (se ve el verde del footer a través); en hover pasa a blanco y sube 3px; son enlaces reales con etiqueta accesible, en el footer de las 12 páginas, y columna de enlaces (Inicio, Nosotros, Blog, Tienda, Contacto, FAQ, Términos y condiciones, Política de privacidad). Debajo, la franja `footer-strip` con "© 2026 Brote. Todos los derechos reservados."
 
-Los enlaces del footer llevan una viñeta: una flechita (›) lima de 14px a la izquierda del texto, que se corre 3px a la derecha al pasar el mouse. Es un ícono por CSS (máscara), así que se ve igual en las 12 páginas.
+Los enlaces del footer llevan una viñeta: una **florcita** lima de 16px: cinco pétalos en forma de gota que nacen de un mismo punto central y se abren en molinete, como una plumeria a la izquierda del texto, que gira 72° al pasar el mouse. Es un ícono por CSS (máscara), así que se ve nítida a cualquier tamaño y no suma archivos. Con `prefers-reduced-motion` no gira.
 
 ## Do's and Don'ts
 
