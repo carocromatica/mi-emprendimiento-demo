@@ -313,7 +313,7 @@ Formas suaves y redondeadas: **píldora** (`rounded.full`) en botones, chips y c
 
 ### Navbar
 
-**Es la misma navbar en las 12 páginas.** Orden fijo, de izquierda a derecha: logo "brote", enlaces **Inicio, Nosotros, Blog y Tienda**, chapita de búsqueda, chapita del carrito y el bloque de cuenta; en móvil el menú reúne los enlaces y "Mi cuenta". En desktop y tablet parte lima y pasa a blanco al hacer scroll; **en móvil (celular) es blanco desde el inicio**, con las chapitas y el botón de cuenta en lima (`js/buscador.js`) y marca la página actual con negrita y subrayado fucsia (Contacto, que no está en el menú, se alcanza desde el footer y el bloque de cuenta). El bloque de cuenta cuelga 168px solo en la portada; en las demás páginas mide lo mismo que el menú (79px, una sola línea), igual que al hacer scroll en la portada. Detalle: botón "Mi cuenta" en píldora lima; ícono de carrito. El enlace de la sección actual va en negrita y subrayado en fucsia. Fondo neutro; una franja verde oliva fina cierra el borde superior de la página.
+**Es la misma navbar en las 12 páginas.** Orden fijo, de izquierda a derecha: logo "brote", enlaces **Inicio, Nosotros, Blog, Guías y Tienda**, chapita de búsqueda, chapita del carrito y el bloque de cuenta; en móvil el menú reúne los enlaces y "Mi cuenta". En desktop y tablet parte lima y pasa a blanco al hacer scroll; **en móvil (celular) es blanco desde el inicio**, con las chapitas y el botón de cuenta en lima (`js/buscador.js`) y marca la página actual con negrita y subrayado fucsia (Contacto, que no está en el menú, se alcanza desde el footer y el bloque de cuenta). El bloque de cuenta cuelga 168px solo en la portada; en las demás páginas mide lo mismo que el menú (79px, una sola línea), igual que al hacer scroll en la portada. Detalle: botón "Mi cuenta" en píldora lima; ícono de carrito. El enlace de la sección actual va en negrita y subrayado en fucsia. Fondo neutro; una franja verde oliva fina cierra el borde superior de la página.
 
 **Florcita en los enlaces (desde 1024px):** al pasar el mouse (o enfocar con el teclado) por Inicio, Nosotros, Blog o Tienda aparece sobre el texto, centrada, la misma florcita de 5 pétalos del footer (16px), en fucsia `accent`, y gira 72° igual que en el footer (.25s). Con `prefers-reduced-motion` aparece sin girar. No se usa en el menú móvil.
 
@@ -437,6 +437,16 @@ Diseño tipo revista (referencia: Medium), en `blog.html`:
 - **Filtro:** al elegir una categoría se muestran solo sus entradas (JS en la propia página, sin recargar).
 - Las 7 entradas son de ejemplo y todas enlazan a `articulo.html`.
 
+
+### Guías (`guias.html`)
+
+Es una **landing**, no un listado: no usa cards con foto (eso es del blog) ni fichas de producto (eso es de la tienda). Las guías se muestran como **portadas de PDF dibujadas en CSS** (formato 3:4, lomo oscuro a la izquierda, esquinas de 6/14px, sombra profunda, una roseta recortada abajo y el título en Bree Serif), cada una de un color de la paleta: lima vivo (*Diccionario de suculentas*), celadón (*Diccionario de sustratos*) y rosa pálido (*Cómo saber si mi sucu tiene problemas*).
+
+- **Hero:** banda lima a todo el ancho con borde inferior ondulado. Chapita blanca "3 guías gratis · PDF", título de 56px "Cuida tus suculentas" + "sin complicarte" en fucsia, bajada, botón "Quiero mis guías" (baja a las guías) y, a la derecha, las 3 portadas en **abanico** (lateral izquierda y derecha inclinadas ±8°, la del medio al frente). Dos rosetas recortadas decoran los bordes.
+- **Cómo funciona:** tira de 3 pasos con número en chapita menta (Elige tu guía, Deja tu nombre y correo, Revisa tu bandeja).
+- **Un bloque grande por guía:** portada inclinada (−4° / +4° alternando) y, al otro lado, número grande en fucsia (01, 02, 03), título de 40px, descripción, 3 puntos con la florcita fucsia y botón "Quiero esta guía". Alternan de lado y el segundo va sobre fondo menta; en móvil se apilan.
+- **Banda final:** lima, con onda superior y dos rosetas, "Las tres guías, en tu correo" y el botón "Quiero las tres guías" (conecta con el footer lima).
+- **Formulario:** cada botón abre un diálogo modal (`<dialog>`, fondo oscuro al 55 %, se cierra con la X, Esc o clic fuera) con la guía pedida, "Tu nombre" y "Tu correo" apilados y el botón "Enviarme la guía" centrado. En el prototipo solo muestra la confirmación; no envía datos ni existen los PDF.
 
 ### Artículo del blog
 
