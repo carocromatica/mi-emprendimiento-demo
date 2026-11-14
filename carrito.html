@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/buscador.js" defer></script>
+  <script src="js/productos.js" defer></script>
+  <script src="js/carrito.js" defer></script>
 </head>
 <body class="has-hero">
   <header class="site-header">
@@ -57,44 +59,48 @@
     </div>
   </header>
   <main>
-    <div class="container section">
-      <h1>Tu carrito</h1>
-      <div class="cart-layout">
-        <section class="cart" aria-label="Productos en el carrito">
-          <ul class="cart-items">
-            <li class="cart-item">
-              <img src="img/productos/sustrato-interior.svg" alt="Sustrato para plantas de interior" width="88" height="88">
-              <div>
-                <h2>Sustrato para plantas de interior</h2>
-                <div class="meta"><span>10 L</span><span class="qty"><button type="button" aria-label="Quitar uno">−</button><span>1</span><button type="button" aria-label="Agregar uno">+</button></span><strong class="price">$7.990</strong></div>
-              </div>
-            </li>
-            <li class="cart-item">
-              <img src="img/productos/fertilizante-liquido.svg" alt="Fertilizante líquido para plantas de interior" width="88" height="88">
-              <div>
-                <h2>Fertilizante líquido para plantas de interior</h2>
-                <div class="meta"><span>500 ml</span><span class="qty"><button type="button" aria-label="Quitar uno">−</button><span>1</span><button type="button" aria-label="Agregar uno">+</button></span><strong class="price">$5.990</strong></div>
-              </div>
-            </li>
-          </ul>
-          <p style="margin-top:var(--space-md)"><a href="tienda.html">← Seguir comprando</a></p>
+    <div class="container cart-page">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li aria-current="page">Carrito</li>
+        </ol>
+      </nav>
+      <div class="shop-title-row">
+        <h1>Tu carrito</h1>
+        <span class="shop-count" id="cart-count" aria-live="polite"></span>
+      </div>
+
+      <div class="cart-layout" id="cart-full" hidden>
+        <section aria-label="Productos en el carrito">
+          <ul class="cart-lines" id="cart-lines"></ul>
+          <p class="cart-back"><a href="tienda.html">← Seguir comprando</a></p>
         </section>
         <aside class="cart-summary" aria-labelledby="titulo-resumen">
-          <h2 id="titulo-resumen" style="font-size:1.375rem">Resumen</h2>
-          <div class="summary-row"><span>Subtotal</span><strong>$13.980</strong></div>
-          <form class="shipping-form" action="#">
-            <div class="field">
-              <label for="comuna">Tu comuna</label>
-              <input type="text" id="comuna" name="comuna" placeholder="Ej.: Ñuñoa">
-            </div>
-            <button class="btn-secondary" type="submit">Calcular</button>
-          </form>
-          <div class="summary-row"><span>Despacho</span><strong>$3.490</strong></div>
-          <div class="summary-row summary-total"><span>Total</span><span>$17.470</span></div>
-          <a class="btn-primary btn-block" href="#" aria-disabled="true">Ir a pagar</a>
-          <p class="reading-time" style="margin-top:var(--space-sm)">Prototipo: el pago no está disponible.</p>
+          <h2 id="titulo-resumen">Resumen</h2>
+          <div class="summary-row"><span>Subtotal</span><strong id="sum-sub"></strong></div>
+          <fieldset class="ship-opts">
+            <legend>Cómo lo recibes</legend>
+            <label><input type="radio" name="envio" value="retiro" checked> <span>Retiro en tienda<small>Villa Alemana, V Región</small></span><strong>Gratis</strong></label>
+            <label><input type="radio" name="envio" value="despacho"> <span>Despacho a domicilio<small>A todo Chile</small></span><strong>$3.490</strong></label>
+          </fieldset>
+          <div class="summary-row summary-total"><span>Total</span><span id="sum-total"></span></div>
+          <button class="btn-primary btn-block" type="button" id="btn-pagar">Ir a pagar</button>
+          <p class="reading-time cart-note" id="pay-note" role="status" hidden>Prototipo: el pago aún no está disponible.</p>
         </aside>
       </div>
+
+      <section class="cart-empty" id="cart-empty" hidden>
+        <img src="img/portada/maceta-echeveria-laui.webp" alt="" width="200" height="200">
+        <h2>Tu carrito está vacío</h2>
+        <p>Cuando agregues plantas o productos, los verás aquí.</p>
+        <a class="btn-primary" href="tienda.html">Ver la tienda</a>
+      </section>
+
+      <section class="pd-related" id="cart-rel" aria-labelledby="cart-rel-titulo" hidden>
+        <h2 id="cart-rel-titulo">También te puede gustar</h2>
+        <div class="shop-grid" id="cart-rel-grid"></div>
+      </section>
     </div>
   </main>
   <footer class="site-footer footer-home">

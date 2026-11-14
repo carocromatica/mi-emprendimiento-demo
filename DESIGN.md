@@ -467,10 +467,20 @@ Una sola página que se arma con los datos de `js/productos.js` según `producto
 - **Migas:** *Inicio › Tienda › Categoría › Producto*; la categoría lleva a `tienda.html?cat=…`.
 - **Dos columnas desde 768px:** a la izquierda la foto cuadrada grande (esquinas de 24px) sobre un fondo de la paleta, fija al hacer scroll, con la etiqueta "Nuevo" si corresponde; a la derecha la información. En móvil, la foto va arriba.
 - **Información:** categoría en mayúsculas pequeñas verde bosque (enlace), nombre en Bree Serif de 40px, precio de 28px en verde bosque y la descripción corta. Los kits agregan la etiqueta fucsia "Ahorra $…" junto al precio y un recuadro menta "Incluye" con su contenido.
-- **Compra:** selector de cantidad (píldora con − y +, de 1 a 20, zonas táctiles de 48px) junto al botón fucsia "Agregar al carrito"; al agregar aparece "¡Listo! Lo agregamos al carrito. Ver carrito" y la chapita del carrito suma la cantidad (se guarda en la sesión y se ve en todas las páginas). Debajo, dos líneas de información (retiro en tienda de Villa Alemana y envíos a todo Chile) con viñeta fucsia.
+- **Compra:** selector de cantidad (píldora con − y +, de 1 a 20, zonas táctiles de 48px) junto al botón fucsia "Agregar al carrito"; al agregar aparece "¡Listo! Lo agregamos al carrito. Ver carrito" y el producto se guarda en el carrito de la sesión y la chapita del carrito suma la cantidad en todas las páginas. Debajo, dos líneas de información (retiro en tienda de Villa Alemana y envíos a todo Chile) con viñeta fucsia.
 - **Acordeones:** "Cuidados y uso" (abierto: ideal para, cómo usarlo y cada cuánto, según la categoría) y "Envíos y retiro", con el mismo estilo "+/−" de los filtros de la tienda.
 - **Relacionados:** "También te puede gustar", 4 productos (primero los de la misma categoría) con las fichas de la tienda: 2 columnas en móvil y 4 en desktop.
 - **Datos:** descripciones, textos de cuidado por categoría y contenido de los kits son de ejemplo, escritos para el prototipo.
+
+### Carrito (`carrito.html`)
+
+Carrito funcional de prototipo: los productos y cantidades se guardan en la sesión del navegador (`js/buscador.js`, clave `brote-cart`) y se muestran con los datos de `js/productos.js`. Parte con 2 productos de ejemplo para que no se vea vacío.
+
+- **Cabecera:** migas (Inicio › Carrito), título "Tu carrito" y el número de productos al lado.
+- **Líneas de producto:** a la izquierda, una lista sin cards separada por líneas finas: miniatura cuadrada sobre fondo de la paleta (88px, 120px desde 768px), categoría en mayúsculas pequeñas, nombre en Bree Serif (enlace a la ficha), precio unitario, selector de cantidad (píldora con − y +, de 1 a 20) y "Quitar" subrayado; a la derecha, el total de la línea en negrita. Al cambiar la cantidad el foco se queda en el mismo botón.
+- **Resumen:** panel lima a la derecha (fijo al hacer scroll desde 1024px; en móvil va debajo de la lista) con subtotal, la elección "Cómo lo recibes" en dos opciones blancas con borde verde bosque al seleccionarlas (*Retiro en tienda, Villa Alemana · Gratis* y *Despacho a domicilio, a todo Chile · $3.490*), el total y el botón fucsia "Ir a pagar", que en el prototipo solo avisa que el pago no está disponible.
+- **Vacío:** una maceta recortada, "Tu carrito está vacío", una línea de ayuda y el botón "Ver la tienda"; la chapita del carrito del menú se oculta cuando no hay productos.
+- **También te puede gustar:** 4 productos más vendidos que no estén en el carrito, con las fichas de la tienda.
 
 ### Artículo del blog
 

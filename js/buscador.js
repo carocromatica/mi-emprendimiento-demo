@@ -54,15 +54,26 @@
   update();
 })();
 
-// Carrito de prototipo: la cantidad se guarda en la sesión y se muestra en la chapita del carrito de todas las páginas
+// Carrito de prototipo: los productos y cantidades se guardan en la sesión y la chapita del carrito los suma en todas las páginas
 (function () {
-  var KEY = 'brote-carrito';
-  var count = function () { try { var v = sessionStorage.getItem(KEY); return v === null ? 2 : (parseInt(v, 10) || 0); } catch (e) { return 2; } };
+  var KEY = 'brote-cart';
+  var SEED = [{ id: 'sustrato-para-plantas-de-interior-10-l', q: 1 }, { id: 'fertilizante-liquido-para-plantas-de-interior-500-ml', q: 1 }]; // el carrito parte con 2 productos
+  function read() {
+    try { var v = sessionStorage.getItem(KEY); if (v !== null) return JSON.parse(v); } catch (e) {}
+    return SEED.map(function (x) { return { id: x.id, q: x.q }; });
+  }
+  function write(list) { try { sessionStorage.setItem(KEY, JSON.stringify(list)); } catch (e) {} paint(); document.dispatchEvent(new CustomEvent('brote-cart')); }
+  function count() { return read().reduce(function (n, x) { return n + x.q; }, 0); }
   function paint() {
     var n = count();
     document.querySelectorAll('.cart-count').forEach(function (el) { el.textContent = n; el.hidden = n === 0; });
     document.querySelectorAll('.navbar-cart').forEach(function (a) { a.setAttribute('aria-label', 'Carrito, ' + n + (n === 1 ? ' producto' : ' productos')); });
   }
-  window.broteCart = { add: function (q) { try { sessionStorage.setItem(KEY, count() + q); } catch (e) {} paint(); } };
+  window.broteCart = {
+    get: read, count: count,
+    add: function (id, q) { var l = read(), it = l.filter(function (x) { return x.id === id; })[0]; if (it) it.q = Math.min(20, it.q + q); else l.push({ id: id, q: q }); write(l); },
+    set: function (id, q) { write(read().map(function (x) { return x.id === id ? { id: id, q: Math.max(1, Math.min(20, q)) } : x; })); },
+    remove: function (id) { write(read().filter(function (x) { return x.id !== id; })); }
+  };
   paint();
 })();

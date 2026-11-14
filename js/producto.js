@@ -61,7 +61,7 @@
   });
   $('pd-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    if (window.broteCart) window.broteCart.add(q);
+    if (window.broteCart) window.broteCart.add(p.id, q);
     $('pd-ok').hidden = false;
   });
 
