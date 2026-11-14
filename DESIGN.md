@@ -482,6 +482,14 @@ Carrito funcional de prototipo: los productos y cantidades se guardan en la sesi
 - **Vacío:** una maceta recortada, "Tu carrito está vacío", una línea de ayuda y el botón "Ver la tienda"; la chapita del carrito del menú se oculta cuando no hay productos.
 - **También te puede gustar:** 4 productos más vendidos que no estén en el carrito, con las fichas de la tienda.
 
+### Contacto (`contacto.html`)
+
+- **Cabecera:** banda lima a todo el ancho con la chapita blanca "Respondemos de lunes a viernes", el título "Hablemos de *tus plantas*" (la segunda parte en fucsia), una bajada y dos rosetas recortadas y cortadas por los bordes (como en las guías).
+- **Dos columnas desde 768px (3 : 2):** a la izquierda la tarjeta del formulario (borde fino, esquinas de 24px) con "Escríbenos", los campos Nombre, Correo, "¿En qué te ayudamos?" (lista: duda sobre un producto, mi pedido, mi planta no se ve bien u otra consulta) y Mensaje, el botón fucsia "Enviar mensaje" centrado y el aviso de privacidad. Al enviar, el formulario se reemplaza por "¡Gracias! Recibimos tu mensaje…" (en el prototipo no envía datos). En móvil, la tarjeta va antes que la información.
+- **Información a la derecha:** 3 tarjetas menta con un ícono de línea en chapita lima (WhatsApp con su botón, Horario de atención y Nuestra tienda) y una tarjeta verde bosque "Síguenos" con los mismos íconos de redes del footer.
+- **Cierre:** una línea centrada que remite a las preguntas frecuentes.
+- **Datos:** el horario (lunes a viernes, de 10:00 a 18:00), la tienda en Villa Alemana y el WhatsApp (número de ejemplo) vienen del contenido que ya tenía el sitio.
+
 ### Artículo del blog
 
 - **Portada:** foto 16:9 (`object-fit: cover`, esquinas redondeadas) bajo el título, en un texto de 720px de ancho. Las fotos de las entradas viven en `img/blog/`.
