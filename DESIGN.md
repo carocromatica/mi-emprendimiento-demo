@@ -490,6 +490,14 @@ Carrito funcional de prototipo: los productos y cantidades se guardan en la sesi
 - **Cierre:** una línea centrada que remite a las preguntas frecuentes.
 - **Datos:** el horario (lunes a viernes, de 10:00 a 18:00), la tienda en Villa Alemana y el WhatsApp (número de ejemplo) vienen del contenido que ya tenía el sitio.
 
+### Preguntas frecuentes (`preguntas-frecuentes.html`)
+
+- **Cabecera:** banda lima a todo el ancho (la misma de Contacto) con la chapita blanca "Resolvemos tus dudas", el título "Preguntas *frecuentes*" (la segunda palabra en fucsia), una bajada y dos rosetas recortadas en los bordes.
+- **Herramientas:** un campo de búsqueda ("Busca tu pregunta…") que filtra mientras se escribe y tres chips de tema (Envíos y retiro, Pedidos y pagos, Plantas y guías); el chip activo va con fondo menta, borde verde bosque y texto en negrita, y pulsarlo de nuevo lo quita. Si no hay resultados aparece "No encontramos esa pregunta".
+- **Preguntas:** en una columna de 820px, agrupadas por tema con un título en Bree Serif. Cada pregunta es un acordeón (`<details>`) en una tarjeta con borde fino y esquinas de 16px; el signo "+" va en una chapita lima a la derecha y al abrir la tarjeta pasa a fondo menta y el signo a "−" sobre blanco. Se pueden abrir varias a la vez.
+- **Cierre:** panel verde bosque "¿No encontraste tu respuesta?" con el horario y el botón "Ir a contacto".
+- **Contenido:** las preguntas de envíos, plazos, cambios y medios de pago son las que ya tenía el sitio, con el despacho actualizado al carrito (retiro gratis o despacho de $3.490). Las demás las escribí para el prototipo.
+
 ### Artículo del blog
 
 - **Portada:** foto 16:9 (`object-fit: cover`, esquinas redondeadas) bajo el título, en un texto de 720px de ancho. Las fotos de las entradas viven en `img/blog/`.
