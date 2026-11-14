@@ -460,6 +460,18 @@ Inspirada en el listado de Casaideas: limpia, con mucho producto a la vista y lo
 - **Drawer de orden:** mismo panel, con una lista de opciones (Recomendado, Más vendidos, Menor precio, Mayor precio, Nombre del producto, Nuevo); la elegida va en negrita y subrayada y al pulsar una se aplica y se cierra.
 - **Datos:** los 26 productos de ejemplo (12 suculentas en maceta, un cactus, un set de maceteros, un set de herramientas, sustratos, fertilizantes, neem y 3 kits; cada kit aparece en las categorías de lo que contiene) y sus precios están en `js/tienda.js`; son de prototipo. El buscador del menú envía `tienda.html?q=` y la tienda filtra por ese texto.
 
+### Producto (`producto.html`)
+
+Una sola página que se arma con los datos de `js/productos.js` según `producto.html?id=…` (sin `id` muestra el sustrato de interior). La tienda y los relacionados enlazan con el `id` de cada producto.
+
+- **Migas:** *Inicio › Tienda › Categoría › Producto*; la categoría lleva a `tienda.html?cat=…`.
+- **Dos columnas desde 768px:** a la izquierda la foto cuadrada grande (esquinas de 24px) sobre un fondo de la paleta, fija al hacer scroll, con la etiqueta "Nuevo" si corresponde; a la derecha la información. En móvil, la foto va arriba.
+- **Información:** categoría en mayúsculas pequeñas verde bosque (enlace), nombre en Bree Serif de 40px, precio de 28px en verde bosque y la descripción corta. Los kits agregan la etiqueta fucsia "Ahorra $…" junto al precio y un recuadro menta "Incluye" con su contenido.
+- **Compra:** selector de cantidad (píldora con − y +, de 1 a 20, zonas táctiles de 48px) junto al botón fucsia "Agregar al carrito"; al agregar aparece "¡Listo! Lo agregamos al carrito. Ver carrito" y la chapita del carrito suma la cantidad (se guarda en la sesión y se ve en todas las páginas). Debajo, dos líneas de información (retiro en tienda de Villa Alemana y envíos a todo Chile) con viñeta fucsia.
+- **Acordeones:** "Cuidados y uso" (abierto: ideal para, cómo usarlo y cada cuánto, según la categoría) y "Envíos y retiro", con el mismo estilo "+/−" de los filtros de la tienda.
+- **Relacionados:** "También te puede gustar", 4 productos (primero los de la misma categoría) con las fichas de la tienda: 2 columnas en móvil y 4 en desktop.
+- **Datos:** descripciones, textos de cuidado por categoría y contenido de los kits son de ejemplo, escritos para el prototipo.
+
 ### Artículo del blog
 
 - **Portada:** foto 16:9 (`object-fit: cover`, esquinas redondeadas) bajo el título, en un texto de 720px de ancho. Las fotos de las entradas viven en `img/blog/`.

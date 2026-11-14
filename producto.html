@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/buscador.js" defer></script>
+  <script src="js/productos.js" defer></script>
+  <script src="js/producto.js" defer></script>
 </head>
 <body class="has-hero">
   <header class="site-header">
@@ -57,73 +59,17 @@
     </div>
   </header>
   <main>
-    <div class="container">
+    <div class="container product-page">
       <nav class="breadcrumb" aria-label="Ruta de navegación">
-        <ol>
+        <ol id="pd-crumbs">
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="tienda.html">Tienda</a></li>
-          <li><a href="tienda.html">Sustratos</a></li>
-          <li aria-current="page">Sustrato para plantas de interior</li>
         </ol>
       </nav>
-
-      <section class="product-detail">
-        <div class="media">
-          <img src="img/productos/sustrato-interior.svg" alt="Bolsa de sustrato para plantas de interior de 10 litros" width="300" height="300">
-        </div>
-        <div class="product-info">
-          <span class="tag-plant">Interior</span>
-          <h1>Sustrato para plantas de interior</h1>
-          <p class="price">$7.990</p>
-          <p>Mezcla liviana que retiene la humedad justa para que las raíces respiren. Ideal para monsteras, potus y helechos.</p>
-          <form action="carrito.html">
-            <fieldset class="format-options">
-              <legend>Formato</legend>
-              <input type="radio" id="f5" name="formato" value="5"><label class="chip" for="f5">5 L</label>
-              <input type="radio" id="f10" name="formato" value="10" checked><label class="chip" for="f10">10 L</label>
-              <input type="radio" id="f20" name="formato" value="20"><label class="chip" for="f20">20 L</label>
-            </fieldset>
-            <div class="btn-row" style="margin-top:var(--space-md)">
-              <button class="btn-primary" type="submit">Agregar al carrito</button>
-              <a class="btn-secondary" href="https://wa.me/56900000000?text=Hola%2C%20tengo%20una%20duda%20sobre%20el%20sustrato%20para%20plantas%20de%20interior">Consultar por WhatsApp</a>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <section class="usage-guide" aria-labelledby="titulo-guia">
-        <h2 id="titulo-guia">Guía de uso</h2>
-        <div class="usage-grid">
-          <div class="usage-item"><span class="icon" aria-hidden="true">🌿</span><h3>Para qué plantas</h3><p>Monstera, potus, helechos y otras plantas de interior.</p></div>
-          <div class="usage-item"><span class="icon" aria-hidden="true">🪴</span><h3>Cómo usarlo</h3><p>Llena el macetero hasta la mitad, ubica la planta y completa. Riega apenas trasplantes.</p></div>
-          <div class="usage-item"><span class="icon" aria-hidden="true">📅</span><h3>Cada cuánto</h3><p>Renuévalo una vez al año, idealmente en primavera.</p></div>
-        </div>
-      </section>
-
-      <section class="related section">
-        <h2 class="section-title">Productos relacionados</h2>
-        <div class="grid-3">
-            <article class="product-card">
-              <div class="media"><img src="img/productos/fertilizante-liquido.svg" alt="Botella de fertilizante líquido" width="300" height="300"></div>
-              <span class="tag-plant">Interior</span>
-              <h3 class="product-name">Fertilizante líquido para plantas de interior 500 ml</h3>
-              <p class="price">$5.990</p>
-              <a class="btn-secondary" href="producto.html">Ver producto</a>
-            </article>
-            <article class="product-card">
-              <div class="media"><img src="img/productos/perlita.svg" alt="Bolsa de perlita" width="300" height="300"></div>
-              
-              <h3 class="product-name">Perlita 5 L</h3>
-              <p class="price">$4.990</p>
-              <a class="btn-secondary" href="producto.html">Ver producto</a>
-            </article>
-            <article class="product-card">
-              <div class="media"><img src="img/productos/aceite-de-neem.svg" alt="Botella de aceite de neem" width="300" height="300"></div>
-              
-              <h3 class="product-name">Aceite de neem contra plagas 250 ml</h3>
-              <p class="price">$6.490</p>
-              <a class="btn-secondary" href="producto.html">Ver producto</a>
-            </article>
-        </div>
+      <div id="pd"></div>
+      <section class="pd-related" id="pd-related" aria-labelledby="pd-rel-titulo" hidden>
+        <h2 id="pd-rel-titulo">También te puede gustar</h2>
+        <div class="shop-grid" id="pd-rel-grid"></div>
       </section>
     </div>
   </main>

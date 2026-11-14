@@ -53,3 +53,16 @@
   window.addEventListener('scroll', update, { passive: true });
   update();
 })();
+
+// Carrito de prototipo: la cantidad se guarda en la sesión y se muestra en la chapita del carrito de todas las páginas
+(function () {
+  var KEY = 'brote-carrito';
+  var count = function () { try { var v = sessionStorage.getItem(KEY); return v === null ? 2 : (parseInt(v, 10) || 0); } catch (e) { return 2; } };
+  function paint() {
+    var n = count();
+    document.querySelectorAll('.cart-count').forEach(function (el) { el.textContent = n; el.hidden = n === 0; });
+    document.querySelectorAll('.navbar-cart').forEach(function (a) { a.setAttribute('aria-label', 'Carrito, ' + n + (n === 1 ? ' producto' : ' productos')); });
+  }
+  window.broteCart = { add: function (q) { try { sessionStorage.setItem(KEY, count() + q); } catch (e) {} paint(); } };
+  paint();
+})();

@@ -1,19 +1,6 @@
 // Tienda: grilla de productos con filtros y orden en drawers (prototipo, datos de ejemplo)
 (function () {
-  var CATS = [
-    { id: 'suculentas', label: 'Suculentas', img: 'img/home/cat-suculentas.png', tint: 't-pink' },
-    { id: 'cactus', label: 'Cactus', img: 'img/home/cat-cactus.png', tint: 't-lima' },
-    { id: 'maceteros', label: 'Maceteros', img: 'img/home/cat-maceteros.png', tint: 't-celadon' },
-    { id: 'sustratos', label: 'Sustratos', img: 'img/home/cat-sustratos.png', tint: 't-pink' },
-    { id: 'fertilizantes', label: 'Fertilizantes', img: 'img/home/cat-fertilizantes.png', tint: 't-lima' },
-    { id: 'herramientas', label: 'Herramientas', img: 'img/home/cat-herramientas.png', tint: 't-celadon' }
-  ];
-  var TIPOS = [
-    { id: 'interior', label: 'Interior' },
-    { id: 'exterior', label: 'Exterior' },
-    { id: 'suculentas', label: 'Suculentas y cactus' },
-    { id: 'huerto', label: 'Huerto' }
-  ];
+  var B = window.BROTE, CATS = B.CATS, TIPOS = B.TIPOS, PRODUCTS = B.PRODUCTS;
   var ORDEN = [
     { id: 'recomendado', label: 'Recomendado' },
     { id: 'vendidos', label: 'Más vendidos' },
@@ -22,37 +9,6 @@
     { id: 'nombre', label: 'Nombre del producto' },
     { id: 'nuevo', label: 'Nuevo' }
   ];
-  var P = function (name, cats, tipos, price, img, ventas, nuevo) { return { name: name, cats: [].concat(cats), tipos: tipos, price: price, img: img, ventas: ventas, nuevo: !!nuevo }; };
-  var M = 'img/portada/maceta-', S = 'img/productos/';
-  var PRODUCTS = [
-    P('Echeveria agavoides en maceta', 'suculentas', ['suculentas', 'interior'], 8990, M + 'echeveria-agavoides.webp', 95, 1),
-    P('Echeveria elegans en maceta', 'suculentas', ['suculentas', 'interior'], 6990, M + 'echeveria-elegans.webp', 98),
-    P('Echeveria laui en maceta', 'suculentas', ['suculentas', 'interior'], 9990, M + 'echeveria-laui.webp', 70, 1),
-    P('Aeonium arboreum en maceta', 'suculentas', ['suculentas', 'exterior'], 7490, M + 'aeonium-arboreum.webp', 80),
-    P('Aeonium arboreum alto en maceta', 'suculentas', ['suculentas', 'exterior'], 8490, M + 'aeonium-arboreum-alto.webp', 60),
-    P('Aeonium haworthii en maceta', 'suculentas', ['suculentas', 'interior'], 6990, M + 'aeonium-haworthii.webp', 75),
-    P('Aeonium rosetas en maceta', 'suculentas', ['suculentas', 'interior'], 7990, M + 'aeonium-rosetas.webp', 55),
-    P('Graptopetalum amethystinum en maceta', 'suculentas', ['suculentas', 'interior'], 8490, M + 'graptopetalum-amethystinum.webp', 65),
-    P('Graptopetalum paraguayense en maceta', 'suculentas', ['suculentas', 'interior'], 6490, M + 'graptopetalum-paraguayense.webp', 85),
-    P('Sedum adolphi en maceta', 'suculentas', ['suculentas', 'interior'], 5990, M + 'sedum-adolphi.webp', 50, 1),
-    P('Sedum burrito en maceta', 'suculentas', ['suculentas', 'interior'], 6990, M + 'sedum-burrito.webp', 90),
-    P('Cactus de barril en maceta blanca', 'cactus', ['suculentas', 'interior'], 7490, 'img/home/cat-cactus.png', 66),
-    P('Set de 3 maceteros de cerámica', 'maceteros', ['interior'], 12990, 'img/home/cat-maceteros.png', 74, 1),
-    P('Set de herramientas de jardinería', 'herramientas', ['interior', 'huerto'], 14990, 'img/home/cat-herramientas.png', 57),
-    P('Sedum dasyphyllum en maceta', 'suculentas', ['suculentas', 'exterior'], 4990, M + 'sedum-dasyphyllum.webp', 45),
-    P('Sustrato para plantas de interior 10 L', 'sustratos', ['interior'], 7990, S + 'sustrato-interior.svg', 100),
-    P('Tierra de hoja 20 L', 'sustratos', ['interior', 'exterior'], 5490, S + 'tierra-de-hoja.svg', 72),
-    P('Sustrato para suculentas y cactus con arena de río 5 L', 'sustratos', ['suculentas'], 6490, S + 'sustrato-suculentas.svg', 92),
-    P('Perlita 5 L', 'sustratos', ['suculentas', 'interior'], 4990, S + 'perlita.svg', 58),
-    P('Sustrato para huerto 20 L', 'sustratos', ['huerto'], 8490, S + 'sustrato-huerto.svg', 52),
-    P('Humus de lombriz 5 L', 'fertilizantes', ['huerto', 'exterior'], 6990, S + 'humus.svg', 62),
-    P('Fertilizante líquido para plantas de interior 500 ml', 'fertilizantes', ['interior'], 5990, S + 'fertilizante-liquido.svg', 88, 1),
-    P('Aceite de neem 250 ml', 'fertilizantes', ['interior', 'exterior'], 6490, S + 'aceite-de-neem.svg', 68),
-    P('Kit plantas de interior', ['maceteros', 'sustratos', 'fertilizantes'], ['interior'], 17490, S + 'kit-interior.svg', 78),
-    P('Kit suculentas', ['suculentas', 'maceteros', 'sustratos', 'fertilizantes'], ['suculentas'], 12990, S + 'kit-suculentas.svg', 82),
-    P('Kit huerto', ['sustratos', 'fertilizantes', 'herramientas'], ['huerto'], 19990, S + 'kit-huerto.svg', 48)
-  ];
-  PRODUCTS.forEach(function (p, i) { p.i = i; p.tint = ['t-lima', 't-pink', 't-celadon', 't-mint'][i % 4]; });
 
   var PER = 12, MAXP = 20000;
   var params = new URLSearchParams(location.search);
@@ -125,7 +81,7 @@
     var slice = list.slice((state.page - 1) * PER, state.page * PER);
     $('shop-count').textContent = list.length + (list.length === 1 ? ' producto' : ' productos');
     $('shop-grid').innerHTML = slice.map(function (p) {
-      return '<a class="shop-card" href="producto.html"><span class="shop-media ' + p.tint + '">' + (p.nuevo ? '<span class="shop-new">Nuevo</span>' : '') +
+      return '<a class="shop-card" href="producto.html?id=' + p.id + '"><span class="shop-media ' + p.tint + '">' + (p.nuevo ? '<span class="shop-new">Nuevo</span>' : '') +
         '<img src="' + p.img + '" alt="" width="400" height="400" loading="lazy"></span>' +
         '<span class="shop-name">' + esc(p.name) + '</span><span class="shop-price">' + money(p.price) + '</span></a>';
     }).join('');
