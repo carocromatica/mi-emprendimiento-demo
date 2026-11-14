@@ -4,9 +4,9 @@
 
 ## El emprendimiento
 
-**Brote** es un emprendimiento **ficticio** de jardinería en Santiago. Vende sustratos, fertilizantes, fitosanitarios, herramientas e insumos de jardinería, como maceteros y guías de plantas.
+**Brote** es un emprendimiento **ficticio** de jardinería en Villa Alemana. Vende sustratos, fertilizantes, fitosanitarios, herramientas e insumos de jardinería, como maceteros y guías de plantas.
 
-Hoy vende en su local de barrio y por Instagram, donde responde muchas consultas por mensaje directo: qué tierra usar, por qué a una planta se le ponen amarillas las hojas, cada cuánto abonar. Quiere empezar a vender online a todo Chile.
+Hoy vende en su local de Villa Alemana y por Instagram, donde responde muchas consultas por mensaje directo: qué tierra usar, por qué a una planta se le ponen amarillas las hojas, cada cuánto abonar. Quiere empezar a vender online a todo Chile.
 
 ## Propuesta de valor
 

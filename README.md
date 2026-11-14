@@ -1,6 +1,6 @@
 # Brote — Sitio web
 
-Brote es una tienda de jardinería en Santiago que ayuda a quienes están empezando con plantas a mantenerlas vivas y sanas.
+Brote es una tienda de jardinería en Villa Alemana que ayuda a quienes están empezando con plantas a mantenerlas vivas y sanas.
 Incluye landing, blog y prototipo de tienda online.
 
 > Proyecto de la **Evaluación Parcial 02 — Sitios Web y Landing Pages (DUOC)**.

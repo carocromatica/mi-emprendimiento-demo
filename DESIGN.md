@@ -253,7 +253,7 @@ components:
 
 ## Overview
 
-Brote es una tienda online de jardinería para personas que están empezando con plantas: suculentas, cactus, maceteros, sustratos, fertilizantes y herramientas. Su usuaria principal es Camila, 29 años, que vive en un departamento con balcón, compra desde el celular de noche, quiere una casa bonita con plantas y necesita que la guíen para que no se le mueran.
+Brote es una tienda online de jardinería para personas que están empezando con plantas: suculentas, cactus, maceteros, sustratos, fertilizantes y herramientas. Su usuaria principal es Camila, 29 años, que trabaja en una oficina en Viña del Mar, vive en un departamento con balcón en Quilpué, compra desde el celular de noche, quiere una casa bonita con plantas y necesita que la guíen para que no se le mueran.
 
 El estilo es **fresco, vivo, amable y juguetón**: fondo casi blanco, verdes profundos, toques de rosa fucsia y bandas verde lima suaves. Mucho espacio en blanco, fotos de plantas sanas recortadas sobre círculos de colores y pequeñas ilustraciones (hojas, líneas onduladas) que dan un aire hecho a mano. Nada técnico ni frío: cuidar plantas no es complicado.
 

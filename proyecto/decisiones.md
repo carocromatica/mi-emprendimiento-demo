@@ -47,7 +47,7 @@ Opciones para elegir tus otros plugins según lo que necesite tu sitio. Aquí no
 
 ## 3. Plan del tema (5 pts)
 
-- **Nombre del tema:** brote
+- **Nombre del tema:** brotheme-shop
 - **Custom o descargado:** custom, porque el diseño ya está hecho en HTML y CSS (`DESIGN.md`) y se traspasa a PHP sin adaptar un tema ajeno.
 - **Carta Gantt** del desarrollo del sitio (5 al 25 de noviembre):
 

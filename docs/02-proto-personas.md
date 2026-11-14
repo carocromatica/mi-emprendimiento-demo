@@ -4,9 +4,9 @@
 
 ## Proto-persona principal
 
-![Avatar ilustrado de Camila](img/camila.svg)
+![Camila Rojas, con una suculenta que se le está muriendo, en su departamento](img/camila-brote.png)
 
-**Camila Rojas, 29 años.** Diseñadora gráfica, trabaja híbrido y vive en un departamento con balcón en Santiago.
+**Camila Rojas, 29 años.** Diseñadora gráfica, trabaja en una oficina en Viña del Mar y vive en un departamento con balcón en Quilpué.
 
 > "Compro plantas preciosas y a los dos meses se me mueren."
 
@@ -37,27 +37,33 @@
 
 ## Segunda proto-persona (opcional)
 
-**Jorge Muñoz, 63 años.** Profesor jubilado, vive en una casa con patio en Maipú y tiene un huerto.
+![Jorge Muñoz, con una pala de jardín en el patio de su casa](img/jorge-brote.png)
 
-> "Sé lo que necesito, solo quiero encontrarlo rápido y que me llegue a la casa."
+**Jorge Muñoz, 42 años.** Vive en su casa propia con patio en Villa Alemana, y quiere empezar a jardinear. El clima del interior le mata todas las plantas.
+
+> "Quiero un patio verde, pero acá todo se me seca."
 
 ### Comportamientos
 
+- Está partiendo: compra de a poco, probando qué le resiste.
 - Usa el computador para comprar y el celular para WhatsApp.
-- Compra en temporada de siembra (primavera y otoño), en cantidades grandes.
+- Prefiere preguntar antes de comprar algo que no conoce.
 
 ### Necesidades
 
-- Encontrar rápido productos específicos por su nombre (humus, fungicida de cobre).
-- Comprar formatos grandes.
+- Saber qué plantas y productos aguantan el clima del interior (calor y sequedad en verano, frío en invierno).
+- Entender cómo cuidar su patio, con instrucciones simples.
+- Comprar formatos grandes para cubrir el patio.
 
 ### Motivaciones
 
-- Cosechar sus propias verduras.
+- Tener un patio verde en su casa propia.
+- Lograr, por fin, que una planta le dure.
 
 ### Frustraciones
 
-- Textos chicos y sitios con demasiados pasos.
+- Que las plantas se le mueran por el clima, sin saber qué hizo mal.
+- No saber qué sirve para su zona.
 - No poder preguntar a una persona antes de comprar.
 
 > Cuando las necesidades de Camila y Jorge entren en conflicto, gana Camila, que es la proto-persona principal.
