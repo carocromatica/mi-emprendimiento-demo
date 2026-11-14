@@ -7,18 +7,22 @@
 ```text
 Inicio (landing)
 ├── Tienda
+│   ├── Categoría: Suculentas
+│   ├── Categoría: Cactus
+│   ├── Categoría: Maceteros
 │   ├── Categoría: Sustratos
 │   ├── Categoría: Fertilizantes
-│   ├── Categoría: Plagas y enfermedades
 │   ├── Categoría: Herramientas
-│   ├── Categoría: Insumos
 │   ├── Ficha de producto
-│   └── Carrito
+│   ├── Carrito
+│   ├── Finalizar compra (pago con Mercado Pago)
+│   └── Mi cuenta
 ├── Blog
 │   ├── Categoría: Cuidados básicos
 │   ├── Categoría: Plagas y enfermedades
 │   ├── Categoría: Decoración con plantas
 │   └── Artículo
+├── Guías (3 guías gratis en PDF)
 ├── Nosotros
 ├── Contacto
 ├── Preguntas frecuentes
@@ -27,7 +31,7 @@ Inicio (landing)
 └── 404
 ```
 
-Las categorías no son páginas nuevas: son la misma página de tienda o de blog, filtrada.
+El menú tiene **Inicio, Nosotros, Blog, Guías y Tienda**; Contacto, Preguntas frecuentes, Términos y Política de privacidad están en el footer. Las categorías no son páginas nuevas: son la misma página de tienda o de blog, filtrada. En WordPress, Finalizar compra y Mi cuenta las crea WooCommerce.
 
 ![Mapa de sitio de Brote](img/mapa-de-sitio.png)
 
@@ -35,52 +39,71 @@ Las categorías no son páginas nuevas: son la misma página de tienda o de blog
 
 | Funcionalidad | Página |
 |---|---|
-| Captación de correos con la guía de cuidados | Inicio y Artículo |
-| Plantas fáciles para empezar | Inicio |
-| Buscar y filtrar productos | Tienda |
-| Ver detalle, guía de uso, elegir formato y agregar al carrito | Ficha de producto |
-| Consultar por WhatsApp | Ficha de producto |
-| Diagnóstico por síntoma | Blog (categoría Plagas y enfermedades) |
-| Kits por tipo de planta | Tienda |
-| Calcular despacho | Carrito |
+| Guías gratuitas en PDF a cambio del correo | Guías |
+| Suscripción al newsletter | Inicio, Blog y Artículo |
+| Producto recomendado y destacados del mes | Inicio |
+| Buscar productos | Menú (todas las páginas) y Tienda |
+| Explorar por categoría, filtrar y ordenar productos | Tienda |
+| Ver detalle, cómo usarlo, elegir cantidad y agregar al carrito | Ficha de producto |
+| Kits (sustrato, fertilizante y macetero) | Tienda y Ficha de producto |
+| Elegir retiro en tienda o despacho y ver el total | Carrito |
+| Pagar con Mercado Pago | Finalizar compra |
+| Crear cuenta y entrar a Mi cuenta | Menú |
 | Navegar por categorías, comentar y compartir | Blog y Artículo |
+| Producto recomendado dentro de un artículo | Artículo |
+| Escribir por WhatsApp o por el formulario con asunto | Contacto |
+| Buscar en las preguntas frecuentes | Preguntas frecuentes |
 
 ## User flows
 
 > Guía: [User flow](../evaluacion/guias/fase-1-requerimientos/06-user-flow.md)
 
-### Flujo 1: compra
+### Flujo 1: compra (Camila)
 
 ```text
 Instagram (reel de un balcón con plantas)
 → Landing
-→ [Clic en "Ver productos"]
+→ [Clic en "Comprar plantitas"]
 → Tienda
-→ [Filtra por "Sustratos" y "Plantas de interior"]
-→ Ficha de producto: Sustrato para plantas de interior
-→ [Revisa para qué plantas sirve y elige el formato de 10 L]
+→ [Filtra por "Suculentas" y tipo "Interior"]
+→ Ficha de producto: Echeveria elegans en maceta
+→ [Lee "Cuidados y uso" y elige la cantidad]
 ◇ ¿Tiene dudas?
-   ├── Sí → [Clic en "Consultar por WhatsApp"] → WhatsApp
+   ├── Sí → [Clic en "Escribir por WhatsApp" en Contacto] → WhatsApp
    └── No → [Clic en "Agregar al carrito"]
 → Carrito
-→ [Calcula despacho con su comuna]
-→ Fin: carrito listo para pagar
+→ [Elige retiro en tienda (gratis) o despacho a domicilio ($3.490)]
+→ [Clic en "Ir a pagar"]
+→ Fin: pago con Mercado Pago
 ```
 
-### Flujo 2: contenido
+### Flujo 2: contenido (Camila)
 
 ```text
 Google ("hojas amarillas monstera")
 → Artículo: "Hojas amarillas: 5 causas y cómo solucionarlas"
 → [Lee y hace clic en el producto recomendado]
-→ Ficha de producto: Fertilizante líquido para plantas de interior
+→ Ficha de producto: Fertilizante líquido para plantas de interior 500 ml
 ◇ ¿Quiere comprar ahora?
    ├── Sí → [Agregar al carrito] → Carrito
    └── No → [Vuelve al artículo y deja su correo para recibir la guía de cuidados]
           → Fin: lead captado
 ```
 
-### Diagrama de los dos flujos
+### Flujo 3: elegir para su patio (Jorge)
+
+```text
+Google ("plantas que resisten el calor patio")
+→ Tienda
+→ [Filtra por tipo "Exterior"]
+→ Ficha de producto: Aeonium arboreum en maceta
+◇ ¿Le sirve para su clima?
+   ├── Sí → [Agregar al carrito] → Carrito → Fin: retiro en tienda o despacho
+   └── No → [Escribe por el formulario de Contacto con el asunto "Una duda sobre un producto"]
+          → Fin: consulta enviada
+```
+
+### Diagrama de los flujos
 
 ![User flows de Camila](img/user-flows.png)
 
@@ -92,15 +115,16 @@ Google ("hojas amarillas monstera")
 
 | Categoría | Productos |
 |---|---|
-| Sustratos | Tierra de hoja, sustrato para plantas de interior, sustrato para suculentas, perlita |
-| Fertilizantes | Humus de lombriz, fertilizante líquido para plantas de interior, fertilizante para floración |
-| Plagas y enfermedades | Aceite de neem, jabón potásico, fungicida de cobre |
-| Herramientas | Tijera de podar, pala de mano, regadera, pulverizador |
-| Insumos | Maceteros de greda, platos para macetero, guías de plantas impresas, tutores |
+| Suculentas | 12 suculentas en maceta (Echeveria, Aeonium, Graptopetalum y Sedum) y el kit suculentas |
+| Cactus | Cactus de barril en maceta blanca |
+| Maceteros | Set de 3 maceteros de cerámica y el kit plantas de interior |
+| Sustratos | Sustrato para plantas de interior, tierra de hoja, sustrato para suculentas y cactus, perlita, sustrato para huerto y los kits |
+| Fertilizantes | Humus de lombriz, fertilizante líquido para plantas de interior, aceite de neem y los kits |
+| Herramientas | Set de herramientas de jardinería y el kit huerto |
 
-La categoría que vende fitosanitarios se llama **Plagas y enfermedades**: a Camila le frustran los nombres técnicos y busca por el problema que tiene, no por el tipo de producto.
+Cada kit aparece en las categorías de lo que contiene. "Plagas y enfermedades" no es una categoría de la tienda: es un tema del blog, porque Camila busca por el problema que tiene y no por el tipo de producto.
 
-Filtros adicionales de la tienda: **tipo de planta** (interior, exterior, suculentas y cactus, huerto) y **precio**.
+Filtros adicionales de la tienda: **tipo de planta** (interior, exterior, suculentas y cactus, huerto) y **precio máximo**. Orden: recomendado, más vendidos, menor precio, mayor precio, nombre y nuevo.
 
 ### Categorías del blog
 
@@ -108,4 +132,4 @@ Filtros adicionales de la tienda: **tipo de planta** (interior, exterior, sucule
 |---|---|---|---|
 | Cuidados básicos | "Cuánto regar tus plantas de interior (y por qué se te mueren)" | A Camila le frustra que se le mueran las plantas | Sustrato para plantas de interior, regadera |
 | Plagas y enfermedades | "Hojas amarillas: 5 causas y cómo solucionarlas" | Camila necesita que la guíen cuando una planta se ve mal | Fertilizante líquido, aceite de neem |
-| Decoración con plantas | "5 plantas fáciles para un departamento con poca luz" | Camila quiere una casa bonita con plantas | Maceteros de greda, guías de plantas |
+| Decoración con plantas | "5 plantas fáciles para un departamento con poca luz" | Camila quiere una casa bonita con plantas | Set de 3 maceteros de cerámica, kit de plantas de interior |

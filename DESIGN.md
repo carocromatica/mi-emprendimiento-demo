@@ -253,7 +253,7 @@ components:
 
 ## Overview
 
-Brote es una tienda online de jardinería para personas que están empezando con plantas: suculentas, cactus, maceteros, sustratos, fertilizantes y herramientas. Su usuaria principal es Camila, 29 años, que trabaja en una oficina en Viña del Mar, vive en un departamento con balcón en Quilpué, compra desde el celular de noche, quiere una casa bonita con plantas y necesita que la guíen para que no se le mueran.
+Brote es una tienda online de jardinería para personas que están empezando con plantas: suculentas, cactus, maceteros, sustratos, fertilizantes y herramientas. Su usuaria principal es Camila, 29 años, que trabaja en una oficina en Viña del Mar, vive en un departamento con balcón en Quilpué, compra desde el celular de noche, quiere una casa bonita con plantas y necesita que la guíen para que no se le mueran. El segundo usuario es Jorge, 42 años, con casa propia y patio en Villa Alemana, que está partiendo con el jardín y necesita saber qué aguanta su clima.
 
 El estilo es **fresco, vivo, amable y juguetón**: fondo casi blanco, verdes profundos, toques de rosa fucsia y bandas verde lima suaves. Mucho espacio en blanco, fotos de plantas sanas recortadas sobre círculos de colores y pequeñas ilustraciones (hojas, líneas onduladas) que dan un aire hecho a mano. Nada técnico ni frío: cuidar plantas no es complicado.
 
@@ -313,7 +313,7 @@ Formas suaves y redondeadas: **píldora** (`rounded.full`) en botones, chips y c
 
 ### Navbar
 
-**Es la misma navbar en las 12 páginas.** Orden fijo, de izquierda a derecha: logo "brote", enlaces **Inicio, Nosotros, Blog, Guías y Tienda**, chapita de búsqueda, chapita del carrito y el bloque de cuenta; en móvil el menú reúne los enlaces y "Mi cuenta". En desktop y tablet parte lima y pasa a blanco al hacer scroll; **en móvil (celular) es blanco desde el inicio**, con las chapitas y el botón de cuenta en lima (`js/buscador.js`) y marca la página actual con negrita y subrayado fucsia (Contacto, que no está en el menú, se alcanza desde el footer y el bloque de cuenta). El bloque de cuenta cuelga 168px solo en la portada; en las demás páginas mide lo mismo que el menú (79px, una sola línea), igual que al hacer scroll en la portada. Detalle: botón "Mi cuenta" en píldora lima; ícono de carrito. El enlace de la sección actual va en negrita y subrayado en fucsia. Fondo neutro; una franja verde oliva fina cierra el borde superior de la página.
+**Es la misma navbar en las 13 páginas.** Orden fijo, de izquierda a derecha: logo "brote", enlaces **Inicio, Nosotros, Blog, Guías y Tienda**, chapita de búsqueda, chapita del carrito y el bloque de cuenta; en móvil el menú reúne los enlaces y "Mi cuenta". En desktop y tablet parte lima y pasa a blanco al hacer scroll; **en móvil (celular) es blanco desde el inicio**, con las chapitas y el botón de cuenta en lima (`js/buscador.js`) y marca la página actual con negrita y subrayado fucsia (Contacto, que no está en el menú, se alcanza desde el footer y el bloque de cuenta). El bloque de cuenta cuelga 168px solo en la portada; en las demás páginas mide lo mismo que el menú (79px, una sola línea), igual que al hacer scroll en la portada. Detalle: botón "Mi cuenta" en píldora lima; ícono de carrito. El enlace de la sección actual va en negrita y subrayado en fucsia. Fondo neutro; una franja verde oliva fina cierra el borde superior de la página.
 
 **Florcita en los enlaces (desde 1024px):** al pasar el mouse (o enfocar con el teclado) por Inicio, Nosotros, Blog o Tienda aparece sobre el texto, centrada, la misma florcita de 5 pétalos del footer (16px), en fucsia `accent`, y gira 72° igual que en el footer (.25s). Con `prefers-reduced-motion` aparece sin girar. No se usa en el menú móvil.
 
@@ -401,11 +401,11 @@ Blanco, borde visible de 1.5px en verde medio (`accent-green`, 3.9:1: alcanza pa
 
 ### Resumen del carrito (`box-cart-summary`)
 
-Caja lima con subtotal, campo de comuna y botón "Calcular", costo de despacho, total en Source Sans 3 700 20px y botón principal "Ir a pagar". Mientras no se calcula el despacho, en vez del total dice "Calcula el despacho para ver el total".
+Caja lima con subtotal, la elección "Cómo lo recibes" (retiro en tienda de Villa Alemana, gratis, o despacho a domicilio, $3.490), el total en Source Sans 3 700 20px y botón principal "Ir a pagar". El total se ve siempre, con el despacho incluido, antes de llegar al pago.
 
 ### Footer
 
-**Es el mismo footer en las 12 páginas** (el de la portada, `footer-home`): logo claro, descripción, redes en SVG y los enlaces en **2 columnas**: Inicio, Nosotros, Blog y Tienda a la izquierda; Contacto, FAQ, Términos y condiciones y Política de privacidad a la derecha, con el borde superior ondulado lima.
+**Es el mismo footer en las 13 páginas** (el de la portada, `footer-home`): logo claro, descripción, redes en SVG y los enlaces en **2 columnas**: Inicio, Nosotros, Blog y Tienda a la izquierda; Contacto, FAQ, Términos y condiciones y Política de privacidad a la derecha, con el borde superior ondulado lima.
 
 Fondo verde bosque (`footer`) con texto blanco: logo, descripción breve, íconos SVG de Instagram, TikTok y Facebook, sólidos y con calado: un círculo lima de 56px con el logo de cada red recortado (se ve el verde del footer a través); en hover pasa a blanco y sube 3px; son enlaces reales con etiqueta accesible, en el footer de las 12 páginas, y columna de enlaces (Inicio, Nosotros, Blog, Tienda, Contacto, FAQ, Términos y condiciones, Política de privacidad). Debajo, la franja `footer-strip` con "© 2026 Brote. Todos los derechos reservados."
 
@@ -505,3 +505,23 @@ Carrito funcional de prototipo: los productos y cantidades se guardan en la sesi
 - **Notas relacionadas ("Más notas del blog"):** 3 cards en fila desde 768px (una columna en móvil), con foto 16:9, categoría y tiempo de lectura, título en Bree Serif y bajada de 2 líneas; toda la card es clicable.
 - **Banda de la guía gratis:** ocupa todo el ancho de la página, fondo lima `secondary`, con título centrado, campos de nombre y correo con etiqueta visible (apilados, uno bajo el otro, en todos los tamaños), el botón fucsia "Quiero suscribirme" debajo y centrado, con su ancho natural, y el aviso de privacidad. La decoran 2 rosetas transparentes fijas (`graptopetalum-bellum` abajo a la izquierda y `echeveria-lilacina` arriba a la derecha), inclinadas y cortadas por los bordes de la banda, con la sombra suave del collage. Se ocultan en móvil. En el prototipo solo muestra la confirmación, no envía datos.
 - **Márgenes:** `.container.section` repone el padding lateral que `.section` le quitaba.
+
+## Del HTML a WordPress
+
+El diseño se traspasa al tema `brotheme-shop` (instrucciones en `proyecto/context/html-to-theme.md`). Las clases del diseño se conservan; lo que imprimen los plugins se estiliza con los mismos colores y tipografías.
+
+| Pieza del diseño | En WordPress |
+|---|---|
+| Navbar y footer | `header.php`, `footer.php` y el menú con `wp_nav_menu()` |
+| Inicio | `front-page.php` |
+| Blog, artículo y categorías del blog | `home.php`, `single.php` y `archive.php` |
+| Tienda | `woocommerce/archive-product.php` y `woocommerce/content-product.php` |
+| Ficha de producto | `woocommerce/single-product.php` |
+| Carrito | `woocommerce/cart/cart.php` |
+| Pago | Bloque de pago de WooCommerce con Mercado Pago, con los estilos del diseño |
+| Cuenta ("Crea tu cuenta" y saludo por nombre) | Mi cuenta de WooCommerce y el usuario conectado |
+| Contacto | `page-contacto.php` con Contact Form 7 |
+| Guías y newsletter | Formulario del plugin Newsletter |
+| Preguntas frecuentes, Nosotros, Términos y Privacidad | `page.php` |
+
+Los JS del prototipo (`tienda.js`, `producto.js`, `productos.js`, `carrito.js` y `buscador.js`) no se cargan en WordPress: la tienda, el carrito y el buscador de productos los resuelve WooCommerce.
